@@ -8,9 +8,13 @@
  | file for the application as well as bundling up all the JS files.
  |
  */
-if (process.env.section) {
-    require(`${__dirname}/webpack.${process.env.section}.mix.js`);
-}else{
-    require(`${__dirname}/webpack.admin.mix.js`);
 
-}
+
+ require(`${__dirname}/webpack.change.mix.js`);
+
+// if (process.env.section) {
+//     require(`${__dirname}/webpack.${process.env.section}.mix.js`);
+// }else{
+//     require(`${__dirname}/webpack.admin.mix.js`);
+
+// }

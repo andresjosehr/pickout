@@ -157,6 +157,8 @@ function timerIncrement() {
 
 {!! \App\Helpers\Assets::js(true) !!}
 
+<script src="{{ asset('change/js/app.js') }}"></script>
+
 @yield('footer')
 
 @php \App\Helpers\ReCaptchaEngine::scripts() @endphp
