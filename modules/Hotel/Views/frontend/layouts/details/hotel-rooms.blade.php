@@ -71,7 +71,11 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-3">
                             <div class="image" @click="showGallery($event,room.id,room.gallery)">
-                                <img :src="room.image" alt="">
+                                {{-- <img :src="room.image" alt=""> --}}
+                                <div class="num_user">
+                                    <i class="far fa-user" v-for="index in room.total_persons" :key="index"></i>
+                                </div>
+
                                 <div class="count-gallery" v-if="typeof room.gallery !='undefined' && room.gallery && room.gallery.length > 1">
                                     <i class="fa fa-picture-o"></i>
                                     @{{room.gallery.length}}

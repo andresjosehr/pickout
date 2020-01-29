@@ -340,3 +340,57 @@
   }
 }
 
+h3.room-name {
+  margin-bottom: 15px !important;
+  font-size: 13px !important;
+  text-decoration: underline;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item {
+  display: flex;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon {
+  border: 0px !important;
+}
+
+.container .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li {
+  padding-right: 25px;
+  padding-left: 25px;
+  border-right: 1px solid #00000054;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon {
+  padding: 0 !important;
+  height: 23px !important;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .image {
+  height: 100%;
+  display: table;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .num_user {
+  text-align: center;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 1%;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item .num_user i {
+  color: black;
+  color: #5e6d77;
+}
+
+.num_user i {
+  padding-right: 1px;
+  padding-left: 1px;
+}
+

@@ -245,6 +245,13 @@
                         me.firstLoad = false;
                         if(json.rooms){
                             me.rooms = json.rooms;
+                            var num_child;
+                            var num_adult;
+                            for (var key in me.rooms) {
+                                if (me.rooms[key].children_html.split('x')[1]==undefined) num_child=0; else num_child=me.rooms[key].children_html.split('x')[1];
+                                if (me.rooms[key].adults_html.split('x')[1]==undefined) num_adult=0; else num_adult=me.rooms[key].adults_html.split('x')[1];
+                                me.rooms[key].total_persons=parseInt(num_child)+parseInt(num_adult);
+                            }
                             me.$nextTick(function () {
                                 me.initJs();
                             })

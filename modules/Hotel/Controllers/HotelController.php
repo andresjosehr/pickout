@@ -174,7 +174,7 @@ class HotelController extends Controller
             'body_class'=>'is_single'
         ];
         $this->setActiveMenu($row);
-        return view('Hotel::frontend.detail', $data);
+        return view('Hotel::frontend.detail', $data)->with('data', $data);
     }
 
     public function checkAvailability(){
