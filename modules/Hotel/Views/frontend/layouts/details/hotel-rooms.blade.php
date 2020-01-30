@@ -76,7 +76,7 @@
                     <div class="col-md-3">
                         <h3 class="room-name mb-1">Comodidades: </h3>
                         <span class="room-atributos text-dark border border-dark rounded" v-if="room.size != 0"><i class="far fa-ruler-combined"></i> @{{room.size}} m<sup>2</sup></span>
-                        <span v-for='attr in room.attrs[0]' class="room-atributos text-dark border border-dark rounded ">
+                        <span v-for='attr in room.attrs[0]' class="room-atributos text-dark border border-dark rounded mx-1">
                             <i v-if='attr=="TV"' class="far fa-tv"></i>  
                             <i v-if='attr=="Internet – Wifi"' class="far fa-wifi"></i>  
                             <i v-if='attr=="Baño Privado"' class="far fa-shower"></i>  
