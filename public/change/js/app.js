@@ -124,7 +124,7 @@ window.onload = function () {
     console.log(he + "px");
     $("body").append('<style>.avatar:after{height: ' + he + 'px;}</style>');
     $(".g-menu .main-menu.menu-generated .depth-0 .fa.fa-angle-down").first().click();
-    $(".g-menu .depth-0 .children-menu.menu-dropdown").first().css("max-height", $(".g-menu").height() + "px");
+    $(".g-menu .depth-0 .children-menu.menu-dropdown").first().css("max-height", $(".g-menu").height() - 8 + "px");
     $(".g-menu .depth-0 .children-menu.menu-dropdown").first().css("overflow", "auto");
     $(".g-menu .depth-2 i").click(function (e) {
       if ($(this).parent().parent().find("ul").is(":visible")) {

@@ -252,6 +252,7 @@
                                 if (me.rooms[key].adults_html.split('x')[1]==undefined) num_adult=0; else num_adult=me.rooms[key].adults_html.split('x')[1];
                                 me.rooms[key].total_persons=parseInt(num_child)+parseInt(num_adult);
                             }
+                            console.log(me.rooms);
                             me.$nextTick(function () {
                                 me.initJs();
                             })

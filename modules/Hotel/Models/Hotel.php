@@ -687,12 +687,27 @@ class Hotel extends Bookable
         $rooms = $this->rooms;
         $res = [];
         $this->tmp_rooms = [];
+
         foreach($rooms as $room){
+            $row = $this->roomClass::find($room->id);
+            $attr_id = $this->roomClass::find($room->id);
+
+            if (count($attr_id->terms->toArray())!=0) {
+                foreach ($attr_id->terms->toArray() as $element) {
+                    $attr_room[]=$this->termClass::find($element["term_id"])->name;
+                }
+            } else{
+                $attr_room[]='';
+            }
+
+
             if($room->isAvailableAt($filters)){
                 $res[] = [
                     'id'=>$room->id,
                     'title'=>$room->title,
-                    'price'=>$room->tmp_price ?? 0,
+                    'price'=>$room->price ?? 0,
+                    'size'=>$room->size,
+                    'attrs'=>array($attr_room),
                     'size_html'=>$room->size ? size_unit_format($room->size) : '',
                     'beds_html'=>$room->beds ? 'x'.$room->beds : '',
                     'adults_html'=>$room->adults ? 'x'.$room->adults : '',
@@ -701,11 +716,13 @@ class Hotel extends Bookable
                     'number'=>(int)$room->tmp_number ?? 0,
                     'image'=>$room->image_id ? get_file_url($room->image_id,'medium') :'',
                     'tmp_number'=>$room->tmp_number,
+                    'number'=>$room->number,
                     'gallery'=>$room->getGallery(),
                     'price_html'=>format_money($room->tmp_price).'<span class="unit">/'.($room->tmp_nights ? __(':count nights',['count'=>$room->tmp_nights]) : __(":count night",['count'=>$room->tmp_nights])).'</span>'
                 ];
                 $this->tmp_rooms[] = $room;
             }
+            unset($attr_room);
         }
         return $res;
     }

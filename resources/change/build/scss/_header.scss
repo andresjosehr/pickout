@@ -1,9 +1,25 @@
 @media(max-width: 768px) {
-
-
-
-	    	.g-menu{
+			.bravo-more-menu i.fa.fa-bars{
+				    font-size: 20px;
+				    top: -4px;
+				    position: relative;
+			}
+			.bravo_wrap .bravo_header .content .header-left{
+				    min-height: 47px !important;
+			}
+			.logo-header{
+				width: 65%;
+    			margin-bottom: -5px;
+			}
+/*	    	.g-menu{
 				margin-top: 34px !important;
+	    	}*/
+	    	.depth-0.active ul.children-menu.menu-dropdown{
+				     margin-top: -26px;
+	    	}
+
+	    	.depth-0.active .depth-1 ul.children-menu.menu-dropdown{
+				     margin-top: 0px !important;
 	    	}
 
             .bravo-menu-mobile{
@@ -13,10 +29,10 @@
                 padding: 37px 0;
             }
             .b-close{
-                padding: 17px 20px;
+                padding: 3.42px 20px;
                 width: 100%;
                 margin-right: -10px;
-                    background: white;
+                background: white;
             }
             .name-menu-responsive{
                 float: left;

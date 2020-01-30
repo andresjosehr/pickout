@@ -1,6 +1,29 @@
 @media (max-width: 768px) {
-  .g-menu {
-    margin-top: 34px !important;
+  .bravo-more-menu i.fa.fa-bars {
+    font-size: 20px;
+    top: -4px;
+    position: relative;
+  }
+
+  .bravo_wrap .bravo_header .content .header-left {
+    min-height: 47px !important;
+  }
+
+  .logo-header {
+    width: 65%;
+    margin-bottom: -5px;
+  }
+
+  /*	    	.g-menu{
+  				margin-top: 34px !important;
+  	    	}*/
+
+  .depth-0.active ul.children-menu.menu-dropdown {
+    margin-top: -26px;
+  }
+
+  .depth-0.active .depth-1 ul.children-menu.menu-dropdown {
+    margin-top: 0px !important;
   }
 
   .bravo-menu-mobile {
@@ -12,7 +35,7 @@
   }
 
   .b-close {
-    padding: 17px 20px;
+    padding: 3.42px 20px;
     width: 100%;
     margin-right: -10px;
     background: white;
@@ -341,9 +364,15 @@
 }
 
 h3.room-name {
-  margin-bottom: 15px !important;
-  font-size: 13px !important;
-  text-decoration: underline;
+  font-size: 18px !important;
+}
+
+.text-dark.room-price.mb-1 {
+  font-size: 11px;
+  font-size: 11px;
+  margin-top: -5px;
+  margin-left: 19px;
+  display: block;
 }
 
 .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item {
@@ -392,5 +421,90 @@ h3.room-name {
 .num_user i {
   padding-right: 1px;
   padding-left: 1px;
+}
+
+.hotel-info-gallery {
+  padding: 21px !important;
+}
+
+.hotel_rooms_form .hotel_list_rooms .room-item,
+.hotel_rooms_form .hotel_list_rooms {
+  border: 0px !important;
+}
+
+div .hotel_rooms_form .hotel_list_rooms .room-item,
+.hotel_rooms_form .room-card {
+  border: 3px solid #106fef !important;
+}
+
+.room-card {
+  border: 3px solid #106fef !important;
+}
+
+.room-card .far.fa-user {
+  position: relative;
+  top: -1px;
+}
+
+.room-atributos {
+  padding: 0px 6px;
+  font-size: 13px;
+  display: inline-block;
+  margin: 3px 0px;
+}
+
+.room-aviable {
+  font-size: 14.9px;
+}
+
+.room-price {
+  font-size: 21px;
+}
+
+.room-extras {
+  font-size: 14px;
+  line-height: 1.5;
+  /*border-bottom: 1px solid #a0a9b2;*/
+  padding: 6px 0;
+}
+
+.alert-few {
+  position: absolute;
+  width: 222px;
+  left: -102px;
+  top: 75px;
+}
+
+@media (max-width: 768px) {
+  .alert-few {
+    left: 0;
+    right: 0;
+    margin: -10px auto;
+  }
+
+  .room-item {
+    margin: 20px 15px !important;
+  }
+
+  .div-btn-resevar-aloj {
+    text-align: center;
+  }
+
+  h3.room-name {
+    text-align: center;
+  }
+
+  .text-dark.room-price.mb-1 {
+    font-size: 17px;
+    margin-left: 0px;
+  }
+
+  .text-dark.room-price.mb-1 span {
+    display: none;
+  }
+
+  .div-precio-aloj {
+    text-align: center;
+  }
 }
 
