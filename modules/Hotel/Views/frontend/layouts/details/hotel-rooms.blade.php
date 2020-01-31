@@ -73,8 +73,8 @@
                             <p class="text-dark mb-1">Precio para hasta: <br> <i class="far fa-user mx-1" v-for="index in room.total_persons" :key="index"></i></p>
                             <p class="text-dark mb-1">Nº de Camas: <br><i class="far fa-bed mx-1" v-for="index in room.total_persons" :key="index"></i></p>
                     </div>
-                    <div class="col-md-3 col-attr-room">
-                        <h3 class="room-name mb-1">Comodidades: </h3>
+                    <div class="col-md-3 col-attr-room col-attr-room-comodidades">
+                        <h3 class="room-name room-name-comodidades mb-1">Comodidades: </h3>
                         <span class="room-atributos text-dark border border-dark rounded" v-if="room.size != 0"><i class="far fa-ruler-combined"></i> @{{room.size}} m<sup>2</sup></span>
                         <span v-for='attr in room.attrs[0]' class="room-atributos text-dark border border-dark rounded mx-1">
                             <i v-if='attr=="TV"' class="far fa-tv"></i>  
@@ -82,31 +82,39 @@
                             <i v-if='attr=="Baño Privado"' class="far fa-shower"></i>  
                             <span v-html='attr'></span>
                         </span>
-
-                       {{--  <span class="room-atributos text-dark border border-dark rounded "><i class="far fa-tv"></i> Television</span>
-                        <span class="room-atributos text-dark border border-dark rounded "><i class="far fa-shower"></i> Baño privado</span><br>
-                        <span class="room-atributos text-dark border border-dark rounded "><i class="far fa-wifi"></i> Wifi - Internet</span> --}}
                     </div>
                     <div class="col-md-2 col-attr-room">
                             <h3 class="room-name mb-1"></h3>
                             <p class="text-success room-extras mb-1"><i class="far fa-mug-hot"></i> Desayuno incluido</p>
                     </div>
                     <div class="col-md-4 col-attr-room div-precio-aloj" v-if="!room.number">
-                            <h3 class="room-name mb-1">Precio:</h3>
-                            <p class="text-dark room-price mb-1">$ @{{room.price}}<span> x noche</span></p>
-                            <p v-if='room.number_==1' class="alert alert-danger alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>
+                        <div class="row p-0">
+                            <div class="col-6 col-md-12">
+                                <h3 class="room-name mb-1">Precio:</h3>
+                                <p class="text-dark room-price mb-1">$ @{{room.price}}<span> x noche</span></p>  
+                            </div>
+                            <div class="col-6 col-md-12">
+                                <p v-if='room.number_==1' class="alert alert-danger alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>
+                            </div>
+                        </div>
                     </div> 
                     <div class="col-md-4 col-attr-room" v-if="room.number">
-                            <div class="col-price">
-                                <div class="text-center">
-                                    <span class="price" v-html="room.price_html"></span>
+                        <div class="row p-0">
+                            <div class="col-6 col-6 col-md-12">
+                                <div class="col-price">
+                                    <div class="teºt-center">
+                                        <span class="price" v-html="room.price_html"></span>
+                                    </div>
+                                    <select v-if="room.number" v-model="room.number_selected" class="custom-select">
+                                        <option value="0">0</option>
+                                        <option v-for="i in (1,room.number)" :value="i">@{{i+' '+ (i > 1 ? i18n.rooms  : i18n.room)}} &nbsp;&nbsp; (@{{formatMoney(i*room.price)}})</option>
+                                    </select>
                                 </div>
-                                <select v-if="room.number" v-model="room.number_selected" class="custom-select">
-                                    <option value="0">0</option>
-                                    <option v-for="i in (1,room.number)" :value="i">@{{i+' '+ (i > 1 ? i18n.rooms  : i18n.room)}} &nbsp;&nbsp; (@{{formatMoney(i*room.price)}})</option>
-                                </select>
                             </div>
-                            <p v-if='room.number_==1' class="alert alert-danger alert-few-book alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>
+                            <div class="col-6 col-6 col-md-12">
+                              <p v-if='room.number_==1' class="alert alert-danger alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>  
+                            </div>
+                        </div>
                     </div>
 
 

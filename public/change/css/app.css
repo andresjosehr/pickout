@@ -368,7 +368,7 @@ h3.room-name {
 }
 
 .text-dark.room-price.mb-1 {
-  font-size: 24px !important;
+  font-size: 19px !important;
   margin-top: -5px;
   margin-left: 19px;
   display: block;
@@ -465,24 +465,41 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
 }
 
 .room-extras {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.5;
   /*border-bottom: 1px solid #a0a9b2;*/
   padding: 6px 0;
 }
 
-.alert-few {
+.alert-few-book {
+  top: 75px !important;
+  left: 31px !important;
   position: absolute;
-  width: 222px;
-  left: 46px;
-  top: 70px;
 }
 
-.alert-few-book {
-  top: 103px !important;
+.hotel_rooms_form .hotel_list_rooms .room-item .col-price .price {
+  margin-bottom: 0 !important;
+}
+
+.col-price {
+  padding: 0px !important;
+}
+
+.alert-few {
+  top: 10px;
 }
 
 @media (max-width: 768px) {
+  .alert-few {
+    /*position: absolute;
+       width: 222px;
+       left: 46px;
+       top: 70px;*/
+    font-size: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .alert-few {
     left: 0;
     right: 0;
@@ -497,10 +514,6 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
     text-align: center;
   }
 
-  h3.room-name {
-    text-align: center;
-  }
-
   .text-dark.room-price.mb-1 {
     font-size: 17px;
     margin-left: 0px;
@@ -510,24 +523,29 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
     display: none;
   }
 
-  .div-precio-aloj {
-    text-align: center;
+  .alert-few-book {
+    top: 86px !important;
+    left: 0px !important;
   }
 
-  .col-price select {
-    margin: 0 auto;
+  .hotel_rooms_form .hotel_list_rooms .room-item .col-price .price {
+    margin-bottom: 4px !important;
   }
 
-  .col-price .text-center {
-    text-align: center;
+  .col-attr-room br {
+    display: none;
   }
 
-  .room-item div {
-    text-align: center;
+  .room-name-comodidades {
+    display: none;
   }
 
-  .col-attr-room {
-    padding: 7px 0;
+  .hotel_rooms_form .hotel_list_rooms .room-item .price span {
+    font-size: 10px !important;
+  }
+
+  .col-attr-room-comodidades {
+    margin-left: -4px;
   }
 }
 
