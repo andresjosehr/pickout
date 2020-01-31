@@ -716,9 +716,8 @@ class Hotel extends Bookable
                     'number'=>(int)$room->tmp_number ?? 0,
                     'image'=>$room->image_id ? get_file_url($room->image_id,'medium') :'',
                     'tmp_number'=>$room->tmp_number,
-                    'number'=>$room->number,
                     'gallery'=>$room->getGallery(),
-                    'price_html'=>format_money($room->tmp_price).'<span class="unit">/'.($room->tmp_nights ? __(':count nights',['count'=>$room->tmp_nights]) : __(":count night",['count'=>$room->tmp_nights])).'</span>'
+                    'price_html'=>format_money($room->price).'<span class="unit">/'.($room->nights ? __(':count nights',['count'=>$room->nights]) : __(":count night",['count'=>$room->nights])).'</span>'
                 ];
                 $this->tmp_rooms[] = $room;
             }

@@ -368,10 +368,14 @@ h3.room-name {
 }
 
 .text-dark.room-price.mb-1 {
-  font-size: 15px !important;
+  font-size: 24px !important;
   margin-top: -5px;
   margin-left: 19px;
   display: block;
+}
+
+.text-dark.room-price.mb-1 span {
+  font-size: 12px;
 }
 
 .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item {
@@ -504,6 +508,22 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
 
   .div-precio-aloj {
     text-align: center;
+  }
+
+  .col-price select {
+    margin: 0 auto;
+  }
+
+  .col-price .text-center {
+    text-align: center;
+  }
+
+  .room-item div {
+    text-align: center;
+  }
+
+  .col-attr-room {
+    padding: 7px 0;
   }
 }
 
