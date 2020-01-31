@@ -128,15 +128,14 @@ div .hotel_rooms_form .hotel_list_rooms .room-item, .hotel_rooms_form .room-card
 		right: 0;
 		margin: -10px auto;
 	}
-	.room-item{
-		margin: 20px 15px !important;
-	}
 	.div-btn-resevar-aloj{
 		text-align: center;
 	}
 	.text-dark.room-price.mb-1 {
-    	font-size: 17px;
+    	font-size: 18px;
     	margin-left: 0px;
+    	font-weight: bolder;
+    	color: #106fef !important;
 	}
 	.text-dark.room-price.mb-1 span {
     	display: none;

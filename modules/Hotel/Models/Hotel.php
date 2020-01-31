@@ -693,13 +693,16 @@ class Hotel extends Bookable
             $attr_id = $this->roomClass::find($room->id);
 
             if (count($attr_id->terms->toArray())!=0) {
+                $k=0;
+                $attr_room[$k]=array();
                 foreach ($attr_id->terms->toArray() as $element) {
-                    $attr_room[]=$this->termClass::find($element["term_id"])->name;
+                    $attr_room[$k]["nombre"]=$this->termClass::find($element["term_id"])->name;
+                    $attr_room[$k]["icon"]=$this->termClass::find($element["term_id"])->icon;
+                    $k++;
                 }
             } else{
                 $attr_room[]='';
             }
-
 
             if($room->isAvailableAt($filters)){
                 $res[] = [
@@ -710,6 +713,7 @@ class Hotel extends Bookable
                     'attrs'=>array($attr_room),
                     'size_html'=>$room->size ? size_unit_format($room->size) : '',
                     'beds_html'=>$room->beds ? 'x'.$room->beds : '',
+                    'beds'=>$room->beds,
                     'adults_html'=>$room->adults ? 'x'.$room->adults : '',
                     'children_html'=>$room->children ? 'x'.$room->children : '',
                     'number_selected'=>0,

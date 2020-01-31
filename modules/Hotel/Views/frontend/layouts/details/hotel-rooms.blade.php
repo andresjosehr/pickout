@@ -65,22 +65,20 @@
     </div>
     <div class="start_room_sticky"></div>
     <div class="hotel_list_rooms" :class="{'loading':onLoadAvailability}">
-        <div class="row">
+        <div class="row m-0">
             <div class="col-md-12 room-item room-card p-3 my-3 rounded" v-for="room in rooms">
                 <div class="row">
                     <div class="col-md-3 col-attr-room">
                             <h3 class="room-name mb-1">@{{room.title}}</h3>
                             <p class="text-dark mb-1">Precio para hasta: <br> <i class="far fa-user mx-1" v-for="index in room.total_persons" :key="index"></i></p>
-                            <p class="text-dark mb-1">Nº de Camas: <br><i class="far fa-bed mx-1" v-for="index in room.total_persons" :key="index"></i></p>
+                            <p class="text-dark mb-1">Nº de Camas: <br><i class="far fa-bed mx-1" v-for="index in room.beds" :key="index"></i></p>
                     </div>
                     <div class="col-md-3 col-attr-room col-attr-room-comodidades">
                         <h3 class="room-name room-name-comodidades mb-1">Comodidades: </h3>
-                        <span class="room-atributos text-dark border border-dark rounded" v-if="room.size != 0"><i class="far fa-ruler-combined"></i> @{{room.size}} m<sup>2</sup></span>
+                        <span class="room-atributos text-dark border border-dark rounded mx-1" v-if="room.size != 0"><i class="far fa-ruler-combined"></i> @{{room.size}} m<sup>2</sup></span>
                         <span v-for='attr in room.attrs[0]' class="room-atributos text-dark border border-dark rounded mx-1">
-                            <i v-if='attr=="TV"' class="far fa-tv"></i>  
-                            <i v-if='attr=="Internet – Wifi"' class="far fa-wifi"></i>  
-                            <i v-if='attr=="Baño Privado"' class="far fa-shower"></i>  
-                            <span v-html='attr'></span>
+                            <i :class="attr.icon"></i>  
+                            <span v-html='attr.nombre'></span>
                         </span>
                     </div>
                     <div class="col-md-2 col-attr-room">
