@@ -1,4 +1,12 @@
 @media(max-width: 768px) {
+			.bravo-logo img{
+
+				width:130px;
+
+			}
+			.bravo-logo{
+				width: 100%;
+			}
 			.bravo-more-menu i.fa.fa-bars{
 				    font-size: 20px;
 				    top: -4px;
@@ -6,6 +14,7 @@
 			}
 			.bravo_wrap .bravo_header .content .header-left{
 				    min-height: 47px !important;
+				    text-align: center;
 			}
 			.logo-header{
 				width: 65%;
