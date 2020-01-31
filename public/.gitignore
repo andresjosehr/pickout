@@ -1,3 +1,5 @@
 #css/
 #module/**/*.css
 #module/**/*.map
+robots.txt
+sitemap.xml
