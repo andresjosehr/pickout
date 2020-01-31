@@ -714,6 +714,7 @@ class Hotel extends Bookable
                     'children_html'=>$room->children ? 'x'.$room->children : '',
                     'number_selected'=>0,
                     'number'=>(int)$room->tmp_number ?? 0,
+                    'number_'=>(int)$room->number,
                     'image'=>$room->image_id ? get_file_url($room->image_id,'medium') :'',
                     'tmp_number'=>$room->tmp_number,
                     'gallery'=>$room->getGallery(),

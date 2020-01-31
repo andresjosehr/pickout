@@ -106,6 +106,7 @@
                                     <option v-for="i in (1,room.number)" :value="i">@{{i+' '+ (i > 1 ? i18n.rooms  : i18n.room)}} &nbsp;&nbsp; (@{{formatMoney(i*room.price)}})</option>
                                 </select>
                             </div>
+                            <p v-if='room.number_==1' class="alert alert-danger alert-few-book alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>
                     </div>
 
 

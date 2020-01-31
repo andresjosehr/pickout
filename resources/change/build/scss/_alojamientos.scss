@@ -99,9 +99,12 @@ div .hotel_rooms_form .hotel_list_rooms .room-item, .hotel_rooms_form .room-card
 .alert-few{
 	position: absolute;
     width: 222px;
-    left: -102px;
-    top: 75px;
+    left: 46px;
+    top: 70px;
 }	
+.alert-few-book{
+	top: 103px !important;
+}
 @media(max-width: 768px) {
 	.alert-few{
 		left: 0;
