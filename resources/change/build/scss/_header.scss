@@ -1,6 +1,16 @@
-@media(max-width: 768px) {
-			.bravo-logo img{
 
+@media (max-width: 1023px){
+	#bravo_space{
+		right: 15px !important;
+    	position: absolute!important;
+	}
+.bravo_wrap .bravo_header .content .header-right {
+    width: 16% !important;
+}
+}
+@media(max-width: 768px) {
+	.bravo-logo img{
+				    margin-right: -10px;
 				width:130px;
 
 			}

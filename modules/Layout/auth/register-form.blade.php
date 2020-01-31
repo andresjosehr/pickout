@@ -4,26 +4,26 @@
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
                 <input type="text" class="form-control" name="first_name" autocomplete="off" placeholder="{{__("First Name")}}">
-                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}" alt="{{__("First Name")}}></i>
                 <span class="invalid-feedback error error-first_name"></span>
             </div>
         </div>
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
                 <input type="text" class="form-control" name="last_name" autocomplete="off" placeholder="{{__("Last Name")}}">
-                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}" alt="{{__("Last Name")}}></i>
                 <span class="invalid-feedback error error-last_name"></span>
             </div>
         </div>
     </div>
     <div class="form-group">
         <input type="email" class="form-control" name="email" autocomplete="off" placeholder="{{__('Email address')}}">
-        <i class="input-icon field-icon fa"><img src="{{url('images/ico_email_login_form.svg')}}"></i>
+        <i class="input-icon field-icon fa"><img src="{{url('images/ico_email_login_form.svg')}}" alt="{{__('Email address')}}"></i>
         <span class="invalid-feedback error error-email"></span>
     </div>
     <div class="form-group">
         <input type="password" class="form-control" name="password" autocomplete="off" placeholder="{{__('Password')}}">
-        <i class="input-icon field-icon fa"><img src="{{url('images/ico_pass_login_form.svg')}}"></i>
+        <i class="input-icon field-icon fa"><img src="{{url('images/ico_pass_login_form.svg')}}"  alt="{{__('Password')}}"></i>
         <span class="invalid-feedback error error-password"></span>
     </div>
     <div class="form-group">

@@ -28,3 +28,4 @@ Route::get('social-callback/{provider}', 'Auth\LoginController@socialCallBack');
 
 // Logs
 Route::get('admin/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware(['auth', 'dashboard','system_log_view']);
+Route::get('sitemap', 'HomeController@sitemap');

@@ -17,6 +17,8 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
+use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
 
 class HomeController extends Controller
 {
@@ -331,5 +333,9 @@ class HomeController extends Controller
         } catch (\Exception $e) {
             $this->sendError( $e->getMessage() );
         }
+    }
+    public function sitemap()
+    {
+        SitemapGenerator::create(config('app.url'))->writeToFile(public_path("sitemap.xml"));
     }
 }
