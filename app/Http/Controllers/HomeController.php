@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
+use Spatie\SchemaOrg\Schema as SchemaORG;
 
 class HomeController extends Controller
 {
@@ -39,6 +40,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return $localBusiness = Schema::organization()
+                                    ->name('Pickout')
+                                    ->email('info@pickout.cl')
+                                    ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));
+                                    
         $home_page_id = setting_item('home_page_id');
         if($home_page_id && $page = Page::where("id",$home_page_id)->where("status","publish")->first())
         {
@@ -336,6 +342,6 @@ class HomeController extends Controller
     }
     public function sitemap()
     {
-        SitemapGenerator::create(config('app.url'))->writeToFile(public_path("sitemap.xml"));
+        SitemapGenerator::create(config('https://pickout.cl'))->writeToFile(public_path("sitemap.xml"));
     }
 }
