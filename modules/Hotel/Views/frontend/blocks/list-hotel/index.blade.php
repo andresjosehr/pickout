@@ -100,7 +100,7 @@
     <div class="container"  style="max-width: 100% !important;">
     
         <div class="bravo-list-hotel layout_{{$style_list}}">
-
+            
             @if($title)
 
             <h2 class="title text-center font-weight-bold" style="padding-top: 30px;">

@@ -1,7 +1,7 @@
 @php
     $translation = $row->translateOrOrigin(app()->getLocale());
 @endphp
-<div class="item-loop {{$wrap_class ?? ''}}">
+<div class="item-loop {{$wrap_class ?? ''}} " itemscope itemtype="http://schema.org/Hotel">
     @if($row->is_featured == "1")
         <div class="featured">
             {{__("Featured")}}
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="item-title">
-        <a @if(!empty($blank)) target="_self" @endif href="{{$row->getDetailUrl()}}">
+        <a @if(!empty($blank)) target="_self" @endif href="{{$row->getDetailUrl()}}" itemprop='name'>
             @if($row->is_instant)
                 <i class="fa fa-bolt d-none"></i>
             @endif
@@ -43,7 +43,7 @@
             <div class="sale_info">{{$row->discount_percent}}</div>
         @endif
     </div>
-    <div class="location">
+    <div class="location" itemprop='address'>
         @if(!empty($row->location->name))
             @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
             {{$location->name ?? ''}}
