@@ -13,6 +13,8 @@
 #/.idea
 #/resources/ckeditor/node_modules/
 .env
+.htaccess
+/public/.htaccess
 #.phpunit.result.cache
 #Homestead.json
 #Homestead.yaml
