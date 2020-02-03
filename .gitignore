@@ -15,6 +15,7 @@
 .env
 .htaccess
 /public/.htaccess
+/public/robots.txt
 #.phpunit.result.cache
 #Homestead.json
 #Homestead.yaml

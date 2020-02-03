@@ -1,3 +1,4 @@
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -45,7 +46,6 @@
         ExpiresByType application/xhtml+xml "access plus 6000000 seconds"  
 </ifModule>  
 # END Expire headers  
-
 
 # BEGIN DISABLE HSTS
 <IfModule mod_headers.c>
