@@ -56,8 +56,11 @@ window.onload=function(){
                 }
             });
 
-        $(".topbar-right .socials").attr("itemscope", "");
-        $(".topbar-right .socials").attr("itemtype", "http://schema.org/Organization");
+        $(".bravo_topbar").attr("itemscope", "");
+        $(".bravo_topbar").attr("itemtype", "http://schema.org/Organization");
+        $(".bravo-logo").attr("itemprop", "url")
+        $(".bravo_topbar .topbar-left").attr("itemprop", "name")
+        $(".bravo-logo img").attr("itemprop", "logo")
         $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
 
         console.log($(".topbar-right .socials .fa.fa-facebook")[0])
