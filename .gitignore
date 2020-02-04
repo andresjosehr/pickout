@@ -14,7 +14,7 @@
 #/resources/ckeditor/node_modules/
 .env
 .htaccess
-/public/.htaccess
+public/.htaccess
 /public/robots.txt
 #.phpunit.result.cache
 #Homestead.json

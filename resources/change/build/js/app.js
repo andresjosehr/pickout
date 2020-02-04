@@ -56,5 +56,10 @@ window.onload=function(){
                 }
             });
 
+        $(".topbar-right .socials").attr("itemscope", "");
+        $(".topbar-right .socials").attr("itemtype", "http://schema.org/Organization");
+        $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
+
+        console.log($(".topbar-right .socials .fa.fa-facebook")[0])
 
     }
