@@ -1,4 +1,6 @@
 <?php
+
+//Route::get("admin/prueba/", "\Modules\Template\Admin\TemplateController@Prueba");
 // Admin Route
 Route::group(['prefix'=>'admin','middleware' => ['auth','dashboard']], function() {
     Route::match(['get','post'],'/',function (){

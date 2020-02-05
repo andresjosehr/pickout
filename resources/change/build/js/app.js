@@ -62,7 +62,4 @@ window.onload=function(){
         $(".bravo_topbar .topbar-left").attr("itemprop", "name")
         $(".bravo-logo img").attr("itemprop", "logo")
         $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
-
-        console.log($(".topbar-right .socials .fa.fa-facebook")[0])
-
     }

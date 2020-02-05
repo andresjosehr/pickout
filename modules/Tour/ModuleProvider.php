@@ -137,6 +137,7 @@ class ModuleProvider extends ModuleServiceProvider
         if(!Tour::isEnable()) return [];
 
         return [
+            'list_feature_tours'=>"\\Modules\\Tour\\Blocks\\ListFeatureTours",
             'list_tours'=>"\\Modules\\Tour\\Blocks\\ListTours",
             'form_search_tour'=>"\\Modules\\Tour\\Blocks\\FormSearchTour",
         ];
