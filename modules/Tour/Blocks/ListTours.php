@@ -46,6 +46,10 @@ class ListTours extends BaseBlock
                         [
                             'value'   => 'box_shadow',
                             'name' => __("Box Shadow")
+                        ],
+                        [
+                            'value'   => 'modern_carousel',
+                            'name' => __("Modern Carousel")
                         ]
                     ]
                 ],
@@ -107,14 +111,26 @@ class ListTours extends BaseBlock
                             'value'   => 'desc',
                             'name' => __("DESC")
                         ],
+                        [
+                            'value'   => 'destacados',
+                            'name' => __("Destacados")
+                        ],
+                        [
+                            'value'   => 'ofertas',
+                            'name' => __("Ofertas")
+                        ],
+                        [
+                            'value'   => 'mas_visto',
+                            'name' => __("Lo mas visto")
+                        ],
                     ]
                 ],
-                [
-                    'type'=> "checkbox",
-                    'label'=>__("Only featured items?"),
-                    'id'=> "is_featured",
-                    'default'=>true
-                ]
+                //[
+                    //'type'=> "checkbox",
+                   // 'label'=>__("Only featured items?"),
+                 //   'id'=> "is_featured",
+               //     'default'=>true
+             //   ]
             ]
         ]);
     }
@@ -126,7 +142,7 @@ class ListTours extends BaseBlock
 
     public function content($model = [])
     {
-        $model_Tour = Tour::select("bravo_tours.*")->with(['location','translations','hasWishList']);
+        $model_Tour = Tour::select("bravo_tours.*")->with(['location','translations','hasWishList'])->with("category_tour");
         if(empty($model['order'])) $model['order'] = "id";
         if(empty($model['order_by'])) $model['order_by'] = "desc";
         if(empty($model['number'])) $model['number'] = 5;
@@ -156,11 +172,23 @@ class ListTours extends BaseBlock
                     });
             }
         }
-        if(!empty($model['is_featured']))
-        {
+
+        //if(!empty($model['is_featured']))
+        //{
+        //    $model_Tour->where('is_featured',1);
+        //}
+
+
+        if ($model['order_by']!="destacados" && $model['order_by']!="ofertas"){ 
+            $model_Tour->orderBy("bravo_tours.".$model['order'], $model['order_by']); 
+        }
+        if ($model['order_by']=="destacados"){
             $model_Tour->where('is_featured',1);
         }
-        $model_Tour->orderBy("bravo_tours.".$model['order'], $model['order_by']);
+        if ($model['order_by']=="ofertas") {
+            $model_Tour->where('sale_price',"!=", null); $model_Tour->where('sale_price',"!=", 0.00);
+        }
+
         $model_Tour->where("bravo_tours.status", "publish");
         $model_Tour->with('location');
         $model_Tour->groupBy("bravo_tours.id");
@@ -171,6 +199,8 @@ class ListTours extends BaseBlock
             'title'      => $model['title'] ?? "",
             'desc'      => $model['desc'] ?? "",
         ];
+
+
         return view('Tour::frontend.blocks.list-tour.index', $data);
     }
 }

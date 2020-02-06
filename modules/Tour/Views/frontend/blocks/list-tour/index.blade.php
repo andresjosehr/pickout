@@ -74,6 +74,21 @@
 
             @endif
 
+            @if($style_list === "modern_carousel")
+
+                <i class="far fa-hiking"></i>
+                <div class="owl-carousel modern_carousel">
+
+                    @foreach($rows as $row)
+
+                        @include('Tour::frontend.layouts.search.loop-gird')
+
+                    @endforeach
+
+                </div>
+
+            @endif
+
         </div>
 
     </div>
