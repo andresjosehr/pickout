@@ -1,3 +1,9 @@
+@if($style_list === "modern_carousel")
+    <div class="modern_carousel">
+        <i class="far fa-hiking"></i>
+    </div>
+@endif
+
 <div class="bravo-list-tour {{$style_list}}">
 
     <div class="container">
@@ -76,7 +82,6 @@
 
             @if($style_list === "modern_carousel")
 
-                <i class="far fa-hiking"></i>
                 <div class="owl-carousel modern_carousel">
 
                     @foreach($rows as $row)

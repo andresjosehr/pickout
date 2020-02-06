@@ -1,6 +1,6 @@
 .modern_carousel{
 	background: black;
-	padding-top: 4.25rem;
+	padding-top: 1.25rem;
     padding-bottom: .5rem;
 }
 .modern_carousel h2, .modern_carousel h3{
@@ -8,19 +8,17 @@
 	color: white !important;
 }
 .modern_carousel .far.fa-hiking{
-
-	color: white;
+    color: #fff;
     font-size: 42px;
     background: #106eef;
-    padding: 19px 24.26px;
+    padding: 12.5px 17.26px;
     border-radius: 50px;
-
     position: absolute;
     right: 0;
     left: 0;
-    width: 80px;
+    width: 67px;
     margin: auto;
-    margin-top: -190px !important;
+    margin-top: -55px!important;
 }
 .modern_carousel .item-tour {
 	background: white
@@ -100,7 +98,9 @@
     top: -45px;
     transition:all .6s;
 }
-
+.modern_carousel .item-tour span, .modern_carousel .item-tour div {
+    cursor: pointer;
+}
 .modern_carousel .item-tour:before {
     content: " ";
     height: 100%;
@@ -113,10 +113,11 @@
     visibility: hidden;
     opacity:0;
     transition:all 200ms;
+    cursor: pointer;
 }
 .bravo_wrap .page-template-content .bravo-list-tour .modern_carousel .item-tour .service-review .list-star{
 	position: absolute !important;
-    top: 113px;
+    top: 102px;
     z-index: 999;
     left: -90px;
     transition: all .6s;
@@ -148,14 +149,14 @@
 }
 .modern_carousel .item-tour:hover .tipo-hover{
     font-size: 26px !important;
-    top: 17px;
+    top: 0px;
     transition: all .6s;
 }
 
 
 .modern_carousel .item-tour:hover .info {
 	position: absolute !important;
-    top: 62px !important;
+    top: 49px !important;
     transition: all .6s;
     z-index: 99;
 }

@@ -71,12 +71,6 @@
     @endif
     @if(isset($style_list))
         @if($style_list === "modern_carousel")
-        <div class="location location-hover">
-            @if(!empty($row->location->name))
-                @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
-                {{$location->name ?? ''}}
-            @endif
-        </div>
         <div class="location tipo-hover">
             @if(!empty($row->category_tour->name))
                 {{$row->category_tour->name}}

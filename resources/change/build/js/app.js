@@ -24,7 +24,6 @@ window.onload=function(){
 
             var he=$(".b-close").height()+$(".g-menu").height();
             he=he+33;
-            console.log(he+"px");
             $("body").append('<style>.avatar:after{height: ' + he + 'px;}</style>');
             $(".g-menu .main-menu.menu-generated .depth-0 .fa.fa-angle-down").first().click();
 
@@ -51,7 +50,6 @@ window.onload=function(){
                         $(this).addClass("active");
                     } else{
                         window.location.href=$(this).find("a").first().attr("href");
-                        console.log("No existe")
                     }
                 }
             });
@@ -62,4 +60,8 @@ window.onload=function(){
         $(".bravo_topbar .topbar-left").attr("itemprop", "name")
         $(".bravo-logo img").attr("itemprop", "logo")
         $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
+
+        $(".modern_carousel .item-tour").click(function(){
+            window.location.href = $(".modern_carousel .item-title a").attr("href");
+        });
     }
