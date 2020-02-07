@@ -42,13 +42,13 @@ window.onload=function(){
             if ($(document).width()<768) {
                 e.preventDefault();
             } else{
-                window.location.href = $(".modern_carousel .thumb-image a").attr("href");
+                window.location.href = $(this).parent().find("a").attr("href");
             }
         }); 
 
         $(".modern_carousel .div-redirect").single_double_click(function () {
         }, function () {
-          window.location.href = $(".modern_carousel .thumb-image a").attr("href");
+          window.location.href = $(this).parent().find("a").attr("href");
         })
 
 
