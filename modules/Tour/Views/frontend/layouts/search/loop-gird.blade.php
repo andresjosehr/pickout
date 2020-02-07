@@ -24,7 +24,7 @@
             <i class="fa fa-heart"></i>
         </div>
     </div>
-    <div class="location">
+    <div class="location location-default">
         @if(!empty($row->location->name))
             @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
             <i class="icofont-paper-plane"></i>
@@ -71,6 +71,7 @@
     @endif
     @if(isset($style_list))
         @if($style_list === "modern_carousel")
+        <div class="div-redirect"></div>
         <div class="location tipo-hover">
             @if(!empty($row->category_tour->name))
                 {{$row->category_tour->name}}

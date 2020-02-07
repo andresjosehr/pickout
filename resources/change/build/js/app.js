@@ -18,6 +18,40 @@
 
 
 window.onload=function(){
+
+    jQuery.fn.single_double_click = function(single_click_callback, double_click_callback, timeout) {
+      return this.each(function(){
+        var clicks = 0, self = this;
+        jQuery(this).click(function(event){
+          clicks++;
+          if (clicks == 1) {
+            setTimeout(function(){
+              if(clicks == 1) {
+                single_click_callback.call(self, event);
+              } else {
+                double_click_callback.call(self, event);
+              }
+              clicks = 0;
+            }, timeout || 300);
+          }
+        });
+      });
+    }
+
+        $(".modern_carousel .div-redirect").click(function(e){
+            if ($(document).width()<768) {
+                e.preventDefault();
+            } else{
+                window.location.href = $(".modern_carousel .thumb-image a").attr("href");
+            }
+        }); 
+
+        $(".modern_carousel .div-redirect").single_double_click(function () {
+        }, function () {
+          window.location.href = $(".modern_carousel .thumb-image a").attr("href");
+        })
+
+
         if ($(document).width()<768) {
 
 
@@ -39,16 +73,25 @@ window.onload=function(){
             });
 
         }
-
-        $(".g-menu .depth-0").click(function(e){
-    
+        $(".g-menu .depth-0").click(function(e){   
                 if ($(document).width()<768) {
                     if($(this).find(".children-menu.menu-dropdown").first().length){
                         $(".g-menu .depth-0").each(function(key, b) {
                             $(b).removeClass("active");
                         });
                         $(this).addClass("active");
+
+                        $(".modern_carousel .thumb-image a").click(function(e){
+                            //e.preventDefault();
+                            alert();
+                        });
+
                     } else{
+
+                        $(".modern_carousel .item-tour").click(function(){
+                            window.location.href = $(".modern_carousel .item-title a").attr("href");
+                        });
+
                         window.location.href=$(this).find("a").first().attr("href");
                     }
                 }
@@ -61,7 +104,4 @@ window.onload=function(){
         $(".bravo-logo img").attr("itemprop", "logo")
         $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
 
-        $(".modern_carousel .item-tour").click(function(){
-            window.location.href = $(".modern_carousel .item-title a").attr("href");
-        });
     }
