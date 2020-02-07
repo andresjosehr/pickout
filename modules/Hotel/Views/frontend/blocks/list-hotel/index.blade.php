@@ -155,6 +155,20 @@
 
                 @endif
 
+                @if($style_list === "modern_carousel")
+
+                    <div class="owl-carousel modern_carousel">
+
+                        @foreach($rows as $row)
+
+                            @include('Hotel::frontend.layouts.search.loop-grid')
+
+                        @endforeach
+
+                    </div>
+
+                @endif
+
                 <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
 
             </div>

@@ -11,15 +11,21 @@
     color: #fff;
     font-size: 42px;
     background: #106eef;
-    padding: 12.5px 17.26px;
+    padding: 7px 10.26px;
     border-radius: 50px;
     position: absolute;
     right: 0;
     left: 0;
-    width: 67px;
+    width: 54px;
     margin: auto;
     margin-top: -55px!important;
 }
+.modern_carousel .fa-hiking:before {
+    content: "";
+    margin-top: -2px;
+    display: block;
+}
+
 .modern_carousel .item-tour {
 	background: white
 }
@@ -280,5 +286,10 @@
     }
     .bravo_wrap .page-template-content .bravo-list-tour .modern_carousel .item-tour .info .g-price .price .onsale{
             left: 50px;
+    }
+
+    .modern_carousel .far.fa-hiking{
+        padding: 6px 9.26px;
+        width: 52px;
     }
 }

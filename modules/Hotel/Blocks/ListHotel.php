@@ -42,6 +42,10 @@ class ListHotel extends BaseBlock
                         [
                             'value'   => 'carousel',
                             'name' => __("Slider Carousel")
+                        ],
+                        [
+                            'value'   => 'modern_carousel',
+                            'name' => __("Modern Carousel")
                         ]
                     ]
                 ],
@@ -87,6 +91,18 @@ class ListHotel extends BaseBlock
                         [
                             'value'   => 'desc',
                             'name' => __("DESC")
+                        ],
+                        [
+                            'value'   => 'destacados',
+                            'name' => __("Destacados")
+                        ],
+                        [
+                            'value'   => 'ofertas',
+                            'name' => __("Ofertas")
+                        ],
+                        [
+                            'value'   => 'mas_visto',
+                            'name' => __("Lo mas visto")
                         ],
                     ],
                     "selectOptions"=> [
