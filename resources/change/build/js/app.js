@@ -40,6 +40,11 @@ window.onload=function(){
 
         $(".modern_carousel .div-redirect").click(function(e){
                 window.location.href = $(this).parent().find("a").attr("href");
+        });
+        $(".modern_carousel .thumb-image a").click(function(e){
+            if ($(document).width()<768) {
+                e.preventDefault();
+            }
         }); 
 
 
