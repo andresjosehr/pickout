@@ -135,6 +135,16 @@
     transition: all .6s;
 }
 
+.modern_carousel .item-tour:hover .div-redirect{
+    top: 0px;
+    transition: all .6s;
+}
+.modern_carousel .item-tour .div-redirect{
+    top: -135px;
+    cursor: pointer;
+    transition: all .6s;
+}
+
 .modern_carousel .item-tour .tipo-hover{
 	position: absolute !important;
 	top: -35px;

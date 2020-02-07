@@ -39,17 +39,8 @@ window.onload=function(){
     }
 
         $(".modern_carousel .div-redirect").click(function(e){
-            if ($(document).width()<768) {
-                e.preventDefault();
-            } else{
                 window.location.href = $(this).parent().find("a").attr("href");
-            }
         }); 
-
-        $(".modern_carousel .div-redirect").single_double_click(function () {
-        }, function () {
-          window.location.href = $(this).parent().find("a").attr("href");
-        })
 
 
         if ($(document).width()<768) {
