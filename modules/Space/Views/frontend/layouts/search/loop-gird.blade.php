@@ -83,7 +83,7 @@
         @endif
     </div>
     <div class="div-redirect"></div>
-    <div class="info-hover">
+    <div class="info-hover" style="display: none;">
         @if(setting_item('space_enable_review'))
     <?php
     $reviewData = $row->getScoreReview();
