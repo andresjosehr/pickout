@@ -50,7 +50,7 @@
 
             @if($style_list === "carousel")
 
-                <div class="owl-carousel">
+                <div class="owl-carousel carousel-default">
 
                     @foreach($rows as $row)
 

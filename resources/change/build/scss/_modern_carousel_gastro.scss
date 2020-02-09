@@ -1,0 +1,227 @@
+.modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel{
+	background: black;
+    padding: 20px 0px 0px !important;
+}
+.modern_carousel_gastro_parent .location-default{
+	display: none;
+}
+.modern_carousel_gastro_parent .location-modern{
+	display: block !important;
+}
+
+.modern_carousel_gastro_parent .item-loop:hover .div-redirect{
+    top: 0px;
+    transition: all .6s;
+}
+.modern_carousel_gastro_parent .item-loop .div-redirect{
+    top: -135px;
+    cursor: pointer;
+    transition: all .6s;
+}
+.modern_carousel_gastro_parent .div-redirect{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+}
+
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .item-loop .thumb-image {
+    height: 134px !important;
+}
+.modern_carousel_gastro_parent .thumb-image {
+    padding-bottom: 56% !important;
+}
+.modern_carousel_gastro_parent .item-loop{
+	background: white;
+}
+.modern_carousel_gastro_parent .service-review{
+	font-size: 13px;
+}
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .item-title {
+    padding: 0px 15px 5px !important;
+}
+.modern_carousel_gastro_parent .location{
+	padding-top: 10px !important;
+}
+.modern_carousel_gastro_parent .service-review-default, .amenities-default{
+	display: none !important;
+}
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop {
+    padding-bottom: 0px !important;
+}
+.modern_carousel_gastro_parent .item-loop{
+	border-radius: 4px;
+}
+.modern_carousel_gastro_parent .title, .modern_carousel_gastro_parent .sub-title{
+	color: white;
+	text-align: center;
+}
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space{
+	padding-top: 22px;
+}
+
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .owl-nav .owl-prev{
+	padding: 86px 22px!important;
+    background: rgba(170, 167, 167, 0.48);
+    border: 0px;
+    color: #fff;
+    margin-left: 0px!important;
+    left: 0;
+    position: absolute;
+}
+.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .owl-nav .owl-next{
+    padding: 86px 22px !important;
+    background: rgba(170, 167, 167, 0.48);
+    border: 0px;
+    color: white;
+    margin-left: 0px!important;
+    right: 0;
+    position: absolute;
+}
+
+.modern_carousel_gastro_parent .owl-carousel .owl-nav.disabled{
+
+	position: absolute !important;
+    margin: 0 auto;
+    right: 0 !important;
+    left: 0;
+    top: 0 !important;
+    text-align: center;
+
+}
+.modern_carousel_gastro_parent .item-loop:before {
+    content: " ";
+    background: rgba(16, 110, 239, 0.9);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.modern_carousel_gastro_parent .item-loop:hover:before{
+	opacity: 1;
+    transition: all .4s;
+}
+
+
+.modern_carousel_gastro_parent .info-hover{
+	position: absolute;
+    top: -180px;
+    width: 100%;
+    transition: all .4s;
+    z-index: 999;
+}
+.modern_carousel_gastro_parent .item-loop:hover .info-hover{
+    top: 20px;
+    transition: all .4s;
+}
+.modern_carousel_gastro_parent .service-review{
+	font-size: 13px;
+    font-weight: 600;
+}
+.modern_carousel_gastro_parent .info-hover div,.modern_carousel_gastro_parent  .info-hover span,.modern_carousel_gastro_parent  .info-hover a,.modern_carousel_gastro_parent  .info-hover i{
+	color: white !important;
+}
+.modern_carousel_gastro_ico .fa-utensils {
+    color: #fff;
+    font-size: 30px;
+    background: #106eef;
+    padding: 15px 13.2px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 58px;
+    margin: auto;
+    margin-top: 16px!important;
+    z-index: 999;
+
+}
+@media (max-width: 768px){
+	.modern_carousel_gastro_ico .far.fa-utensils{
+	    padding: 9.5px 8px;
+	    width: 35px;
+	    font-size: 18px;
+	    margin-top: -17px!important;
+	}
+	.modern_carousel_gastro_parent .amenity.bed{
+		margin-left: 19px;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .amenities .amenity .input-icon {
+     	margin-right: 0px !important;
+    }
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .amenities .amenity .input-icon{
+		display: block;
+	    margin-bottom: 8px;
+	    font-size: 11px;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .amenities {
+	    text-align: center;
+	}
+	.modern_carousel_gastro_parent	.info-hover div,.modern_carousel_gastro_parent .info-hover span,.modern_carousel_gastro_parent .info-hover a,.modern_carousel_gastro_parent .info-hover i{
+		font-size: 7px;
+	}
+	.modern_carousel_gastro_parent .service-review {
+	    font-size: 7px;
+	    display: flex;
+	    font-weight: 600;
+	    text-align: center;
+	    padding-left: 5px !important;
+	    padding-right: 5px !important;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .featured {
+    position: absolute;
+    top: 20px !important;
+    left: 0;
+    background: #ed0925;
+    display: inline-block;
+    padding: 0 4px !important;
+    color: #fff;
+    font-size: 8px !important;
+    font-weight: 500;
+    z-index: 1;
+    height: 16px !important;
+    line-height: 15px !important;
+}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .featured:after{
+		display: none;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .owl-nav .owl-prev{
+		display: none;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .owl-nav .owl-next{
+		display: none;
+
+	}
+	.modern_carousel_gastro_parent, .layout_modern_carousel{
+		padding: 0px !important;
+	}
+	.modern_carousel_gastro_parent .location i{
+		display: none;
+	}
+
+	.modern_carousel_gastro_parent .location i{
+		display: none;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .location {
+	    font-size: 9px !important;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .item-title {
+	    font-size: 9px !important;
+	}
+	.bravo_wrap .page-template-content .modern_carousel_gastro_parent .bravo-list-space .item-loop .thumb-image {
+	    height: 100px!important;
+	}
+}
+@media (min-width: 1200px){
+	.modern_carousel_gastro_parent.container {
+	        max-width: 100% !important;
+	        background: black;
+	}
+}

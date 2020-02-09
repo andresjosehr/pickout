@@ -1,0 +1,203 @@
+.location_modern_carousel{
+	display: none;
+}
+.modern_carousel_aloja_parent .info-hover, .modern_carousel_aloja_parent .location_modern_carousel{
+	display: block;
+}
+
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .thumb-image{
+	    height: 134px !important;
+	    padding-bottom: 47% !important;
+}
+
+.modern_carousel_aloja_parent .thumb-image {
+    padding-bottom: 56.656% !important;
+}
+
+.modern_carousel_aloja_parent .info-hover {
+    display: block !important;
+}
+
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .list-star .booking-item-rating-stars li .fa {
+    font-size: 11px !important;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .item-title {
+    padding: 0px 15px 5px !important;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .location{
+	padding-top: 12px !important;
+    margin-bottom: -3px !important;
+}
+.modern_carousel_aloja_parent .service-review-normal{
+	display: none;
+}
+.modern_carousel_aloja_parent .info-normal{
+	display: none;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop {
+    padding-bottom: 2px !important;
+    border-radius: 4px;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .star-rate{
+	position: relative !important;
+}
+.modern_carousel_aloja_parent .info-hover{
+	position: absolute;
+    top: -125px;
+    transition: all .4s;
+    z-index: 999;
+}
+.modern_carousel_aloja_parent .info-hover div, .modern_carousel_aloja_parent .info-hover span, .modern_carousel_aloja_parent .info-hover p{
+	color: white !important;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .star-rate{
+	bottom: 0;
+    top: 0;
+}
+.modern_carousel_aloja_parent .item-loop:hover .info-hover{
+    top: 0px;
+    transition: all .4s;
+}
+
+.modern_carousel_aloja_parent .rate-text{
+	font-size: 26px
+}
+
+.modern_carousel_aloja_parent .item-loop:before {
+    content: " ";
+    background: #106eefc9;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.modern_carousel_aloja_parent .item-loop:hover:before{
+	opacity: 1;
+    transition: all .4s;
+}
+.modern_carousel_aloja_parent .triangle-4{
+	display: none;
+}
+.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .title{
+	padding-top: 0px !important;
+}
+.bravo_wrap .modern_carousel_aloja_parent .page-template-content .bravo-list-hotel {
+    margin: 0px 0 30px !important;
+}
+
+.modern_carousel_aloja .fa-hotel {
+    color: #fff;
+    font-size: 30px;
+    background: #106eef;
+    padding: 15px 13.2px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 58px;
+    margin: auto;
+    margin-top: -38px!important;
+    z-index: 999;
+
+}
+	.modern_carousel_aloja_parent .item-loop .div-redirect{
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        background-size: 100% 100%;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+    }
+    .modern_carousel_aloja_parent .item-loop:hover .div-redirect{
+		    top: 0px;
+		    transition: all .6s;
+		}
+		.modern_carousel_aloja_parent .item-loop .div-redirect{
+		    top: -135px;
+		    cursor: pointer;
+		    transition: all .6s;
+		}
+    @media (max-width: 768px){
+	    .modern_carousel_aloja .far.fa-hotel{
+	        padding: 9.5px 8px;
+		    width: 35px;
+		    font-size: 18px;
+		    margin-top: -17px!important;
+	    }
+	    .modern_carousel_aloja_parent .list-hotel-dark{
+			padding-left: 0px!important;
+			padding-right: 0px !important;
+		}
+		.modern_carousel_aloja_parent .container{
+			padding-left: 0px!important;
+			padding-right: 0px !important;
+		}
+		.modern_carousel_aloja_parent .info-hover {
+		    top: -180px;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .location{
+			font-size: 10px !important;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .location i{
+			display: none;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .item-title a{
+			font-size: 9px !important;
+			font-weight: 600;
+		}
+
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .item-title{
+			margin-top: -9px;
+			padding-bottom: 0px !important;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .thumb-image {
+		    height: 100px!important;
+		    padding-bottom: 37%!important;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .featured {
+		    line-height: 2.2 !important;
+		    top: 7px!important;
+		    font-size: 8px!important;
+		    /* padding: 2px 4px!important; */
+		    height: 16px !important;
+		    padding: 0 4px !important;
+		    border-top-right-radius: 3px;
+		    border-bottom-right-radius: 3px;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .location {
+    		padding-top: 6px!important;
+    	}
+    	.modern_carousel_aloja_parent .rate-text{
+    		font-size: 15px!important;
+    	}
+    	.modern_carousel_aloja_parent span.fr_text{
+    		font-size: 9px !important;
+    	}
+    	.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price {
+    		margin-top: -8px !important;
+    	}
+    	.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .list-star .booking-item-rating-stars li .fa {
+		    font-size: 8px!important;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .list-star .booking-item-rating-stars{
+			margin-top: -20px !important;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price .price{
+			margin-top: -7px;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price .price .text-price{
+			display: flex;
+		}
+		.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price .price .unit {
+    		font-size: 8px !important;
+    	}
+    	.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price .price .unit{
+    		margin-top: 9px;
+    	}
+
+	}

@@ -85,15 +85,14 @@
         right: 0;
         margin: auto;
     }
-
-    
-    @media (min-width: 1200px) {
-        #car1 .owl-carousel.owl-drag .owl-item {
-            width: 266.25px !important;
-        }
-    }
 </style>
-<div class="container-fluid list-hotel-dark" id="car1"> 
+
+@if($style_list === "modern_carousel")
+    <div class="modern_carousel_aloja">
+        <i class="far fa-hotel"></i>
+    </div>
+@endif
+<div class="container-fluid list-hotel-dark @if($style_list==='modern_carousel') modern_carousel_aloja_parent @endif" id="car1"> 
     <div class="triangle-4"></div>
     <div class="triangle-5"></div>
 
@@ -157,7 +156,7 @@
 
                 @if($style_list === "modern_carousel")
 
-                    <div class="owl-carousel modern_carousel">
+                    <div class="owl-carousel modern_carousel_aloja">
 
                         @foreach($rows as $row)
 

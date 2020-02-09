@@ -41,6 +41,10 @@ class ListSpace extends BaseBlock
                         [
                             'value'   => 'carousel',
                             'name' => __("Slider Carousel")
+                        ],
+                        [
+                            'value'   => 'modern_carousel',
+                            'name' => __("Modern Carousel")
                         ]
                     ]
                 ],
@@ -87,6 +91,18 @@ class ListSpace extends BaseBlock
                             'value'   => 'desc',
                             'name' => __("DESC")
                         ],
+                        [
+                            'value'   => 'destacados',
+                            'name' => __("Destacados")
+                        ],
+                        [
+                            'value'   => 'ofertas',
+                            'name' => __("Ofertas")
+                        ],
+                        [
+                            'value'   => 'mas_visto',
+                            'name' => __("Lo mas visto")
+                        ],
                     ]
                 ],
                 [
@@ -121,12 +137,24 @@ class ListSpace extends BaseBlock
             }
         }
 
-        if(!empty($model['is_featured']))
+        if(!empty($model['order_by']) && $model['order_by']=="destacados")
         {
             $model_space->where('is_featured',1);
+            $model_space->orderBy("bravo_spaces.".$model['order'], "desc");
         }
 
-        $model_space->orderBy("bravo_spaces.".$model['order'], $model['order_by']);
+        if(!empty($model['order_by']) && $model['order_by']=="ofertas")
+        {
+            $model_space->where('sale_price',"!=", null); 
+            $model_space->where('sale_price',"!=", 0.00);
+            $model_space->orderBy("bravo_spaces.".$model['order'], "desc");
+        }
+
+        if(!empty($model['order_by']) && $model['order_by']!="destacados" && $model['order_by']!="ofertas")
+        {
+            $model_space->orderBy("bravo_spaces.".$model['order'], $model['order_by']);
+        }
+
         $model_space->where("bravo_spaces.status", "publish");
         $model_space->with('location');
         $model_space->groupBy("bravo_spaces.id");

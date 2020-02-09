@@ -17,20 +17,16 @@
                 @endif
             @endif
         </a>
-        @if($row->star_rate)
-            <div class="star-rate">
-                <div class="list-star">
-                    <ul class="booking-item-rating-stars">
-                        @for ($star = 1 ;$star <= $row->star_rate ; $star++)
-                            <li><i class="fa fa-star"></i></li>
-                        @endfor
-                    </ul>
-                </div>
-            </div>
-        @endif
         <div class="service-wishlist {{$row->isWishList()}}" data-id="{{$row->id}}" data-type="{{$row->type}}">
             <i class="fa fa-heart"></i>
         </div>
+    </div>
+    <div class="location  location_modern_carousel">
+        @if(!empty($row->location->name))
+            @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
+            <i class="icofont-paper-plane"></i>
+            {{$location->name ?? ''}}
+        @endif
     </div>
     <div class="item-title">
         <a @if(!empty($blank)) target="_self" @endif href="{{$row->getDetailUrl()}}" itemprop='name'>
@@ -43,18 +39,12 @@
             <div class="sale_info">{{$row->discount_percent}}</div>
         @endif
     </div>
-    <div class="location" itemprop='address'>
-        @if(!empty($row->location->name))
-            @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
-            {{$location->name ?? ''}}
-        @endif
-    </div>
     @if(setting_item('hotel_enable_review'))
     <?php
     $reviewData = $row->getScoreReview();
     $score_total = $reviewData['score_total'];
     ?>
-    <div class="service-review">
+    <div class="service-review service-review-normal">
         <span class="rate">
             @if($reviewData['total_review'] > 0) {{$score_total}}/5 @endif <span class="rate-text">{{$reviewData['review_text']}}</span>
         </span>
@@ -67,7 +57,7 @@
         </span>
     </div>
     @endif
-    <div class="info">
+    <div class="info info-normal">
         <div class="g-price">
             <div class="prefix">
                 <span class="fr_text">{{__("from")}}</span>
@@ -77,4 +67,34 @@
             </div>
         </div>
     </div>
+        <div class="info-hover" style="display: none;">
+            <div class="service-review">
+                <span class="rate">
+                    @if($reviewData['total_review'] > 0) {{$score_total}}/5 @endif <span class="rate-text">{{$reviewData['review_text']}}</span>
+                </span>
+            </div>
+            <div class="info">
+                <div class="g-price">
+                    <div class="prefix">
+                        <span class="fr_text">{{__("from")}}</span>
+                    </div>
+                    <br>
+                    <div class="price">
+                        <span class="text-price">{{ $row->display_price }} <span class="unit">{{__("/night")}}</span></span>
+                    </div>
+                </div>
+            </div>
+            @if($row->star_rate)
+                <div class="star-rate">
+                    <div class="list-star">
+                        <ul class="booking-item-rating-stars">
+                            @for ($star = 1 ;$star <= $row->star_rate ; $star++)
+                                <li><i class="fa fa-star"></i></li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
+            @endif
+            <div class="div-redirect"></div>
+        </div>
 </div>

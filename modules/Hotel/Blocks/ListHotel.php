@@ -109,12 +109,12 @@ class ListHotel extends BaseBlock
                         'hideNoneSelectedText' => "true"
                     ]
                 ],
-                [
-                    'type'=> "checkbox",
-                    'label'=>__("Only featured items?"),
-                    'id'=> "is_featured",
-                    'default'=>true
-                ]
+                //[
+                 //   'type'=> "checkbox",
+                  //  'label'=>__("Only featured items?"),
+                   // 'id'=> "is_featured",
+                    //'default'=>true
+                //]
             ]
         ]);
     }
@@ -141,12 +141,24 @@ class ListHotel extends BaseBlock
             }
         }
 
-        if(!empty($model['is_featured']))
+        if(!empty($model['order_by']) && $model['order_by']=="destacados")
         {
             $model_hotel->where('is_featured',1);
+            $model_hotel->orderBy("bravo_hotels.".$model['order'], "desc");
         }
 
-        $model_hotel->orderBy("bravo_hotels.".$model['order'], $model['order_by']);
+        if(!empty($model['order_by']) && $model['order_by']=="ofertas")
+        {
+            $model_hotel->where('sale_price',"!=", null); 
+            $model_hotel->where('sale_price',"!=", 0.00);
+            $model_hotel->orderBy("bravo_hotels.".$model['order'], "desc");
+        }
+
+        if(!empty($model['order_by']) && $model['order_by']!="destacados" && $model['order_by']!="ofertas")
+        {
+            $model_hotel->orderBy("bravo_hotels.".$model['order'], $model['order_by']);
+        }
+
         $model_hotel->where("bravo_hotels.status", "publish");
         $model_hotel->with('location');
         $model_hotel->groupBy("bravo_hotels.id");

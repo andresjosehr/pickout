@@ -39,8 +39,17 @@ window.onload=function(){
     }
 
         $(".modern_carousel .div-redirect").click(function(e){
-                window.location.href = $(this).parent().find("a").attr("href");
+            window.location.href = $(this).parent().find("a").attr("href");
         });
+
+        $(".modern_carousel_aloja .div-redirect").click(function(e){
+            window.location.href = $(this).parent().parent().find("a").attr("href");
+        });
+
+        $(".modern_carousel_gastro_parent .div-redirect").click(function(e){
+            window.location.href = $(this).parent().find("a").attr("href");
+        });
+
         $(".modern_carousel .thumb-image a").click(function(e){
             if ($(document).width()<768) {
                 e.preventDefault();

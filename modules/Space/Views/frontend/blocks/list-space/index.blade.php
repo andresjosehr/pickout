@@ -1,4 +1,11 @@
-<div class="container">
+
+@if($style_list === "modern_carousel")
+    <div class="modern_carousel_gastro_ico">
+        <i class="far fa-utensils"></i>
+    </div>
+@endif
+
+<div class="container @if($style_list === "modern_carousel") modern_carousel_gastro_parent @endif">
 
     <div class="bravo-list-space layout_{{$style_list}}">
 
@@ -44,7 +51,21 @@
 
             @if($style_list === "carousel")
 
-                <div class="owl-carousel">
+                <div class="owl-carousel carousel-default">
+
+                    @foreach($rows as $row)
+
+                        @include('Space::frontend.layouts.search.loop-gird')
+
+                    @endforeach
+
+                </div>
+
+            @endif
+
+            @if($style_list === "modern_carousel")
+
+                <div class="owl-carousel modern_carousel_gastro">
 
                     @foreach($rows as $row)
 
