@@ -213,7 +213,7 @@ jQuery(function($) {
 
     $(".bravo-list-hotel").each(function () {
         $(this).find(".owl-carousel").owlCarousel({
-            items: 4,
+            items: 6,
             loop: false,
             margin: 15,
             nav: false,
@@ -225,12 +225,12 @@ jQuery(function($) {
                     items: 2
                 },
                 1000: {
-                    items: 4
+                    items: 6
                 }
             }
         })
     });
-    
+
     $(".modern_carousel_aloja_parent .bravo-list-hotel").each(function() {
         $(this).find(".owl-carousel.modern_carousel_aloja").owlCarousel({
             items: 1,
