@@ -114,7 +114,7 @@
 
             @if($desc)
 
-                <h3 class="sub-title text-center">
+                <h3 class="sub-title">
 
                     {{$desc}}
 
