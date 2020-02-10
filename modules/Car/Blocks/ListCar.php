@@ -75,19 +75,7 @@ class ListCar extends BaseBlock
                         [
                             'value'   => 'title',
                             'name' => __("Title")
-                        ],
-                        [
-                            'value'   => 'destacados',
-                            'name' => __("Destacados")
-                        ],
-                        [
-                            'value'   => 'ofertas',
-                            'name' => __("Ofertas")
-                        ],
-                        [
-                            'value'   => 'mas_vistos',
-                            'name' => __("Mas Vistos")
-                        ],
+                        ]
                     ]
                 ],
                 [
@@ -102,6 +90,18 @@ class ListCar extends BaseBlock
                         [
                             'value'   => 'desc',
                             'name' => __("DESC")
+                        ],
+                        [
+                            'value'   => 'destacados',
+                            'name' => __("Destacados")
+                        ],
+                        [
+                            'value'   => 'ofertas',
+                            'name' => __("Ofertas")
+                        ],
+                        [
+                            'value'   => 'mas_vistos',
+                            'name' => __("Mas Vistos")
                         ],
                     ]
                 ],
@@ -132,12 +132,24 @@ class ListCar extends BaseBlock
             }
         }
 
-        if(!empty($model['is_featured']))
+        if(!empty($model['order_by']) && $model['order_by']=="destacados")
         {
             $model_car->where('is_featured',1);
+            $model_car->orderBy("bravo_cars.".$model['order'], "desc");
         }
 
-        $model_car->orderBy("bravo_cars.".$model['order'], $model['order_by']);
+        if(!empty($model['order_by']) && $model['order_by']=="ofertas")
+        {
+            $model_car->where('sale_price',"!=", null); 
+            $model_car->where('sale_price',"!=", 0.00);
+            $model_car->orderBy("bravo_cars.".$model['order'], "desc");
+        }
+
+        if(!empty($model['order_by']) && $model['order_by']!="destacados" && $model['order_by']!="ofertas")
+        {
+            $model_car->orderBy("bravo_cars.".$model['order'], $model['order_by']);
+        }
+
         $model_car->where("bravo_cars.status", "publish");
         $model_car->with('location');
         $model_car->groupBy("bravo_cars.id");
