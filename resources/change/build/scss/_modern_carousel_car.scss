@@ -4,6 +4,29 @@
 	}
 }
 
+DIV .container_car .sub-title {
+    margin-bottom: 20px!important;
+    margin-top: -30px!important;
+}
+
+.container_car .title-h2{
+    background: #0f6eef;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 19px !important;
+    color: white !important;
+}
+
+.container_car .title-div{
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin-top: -71px!important;
+}
+
 .container.container_car {
 	background: black;
 	padding-top: 20px;
@@ -141,17 +164,6 @@
     top: 0 !important;
     text-align: center;
 
-}
-.bravo_wrap .page-template-content .container_car .bravo-list-car .title{
-	position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: -85px !important;
-}
-.bravo_wrap .page-template-content .container_car .bravo-list-car .title span{
-	background: #0f6eef;
-    padding: 7px 11px;
-    border-radius: 7px;
 }
 
 .owl-carousel-modern .div-redirect{

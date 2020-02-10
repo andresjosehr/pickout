@@ -3,12 +3,18 @@
     <div class="bravo-list-car layout_{{$style_list}}">
 
         @if($title)
-
-        <h2 class="title">
-            <span>
+        @if($style_list === "modern_carousel")
+                <div class="title-div">
+                    <h2 class="title-h2 title"> 
+                        {{$title}}
+                    </h2>
+                </div>
+        @else
+            <h2 class="title">
                 {{$title}}  
-            </span>
-        </h2>
+            </h2>
+        @endif
+
 
         @endif
 

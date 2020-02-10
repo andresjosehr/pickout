@@ -87,11 +87,7 @@
     }
 </style>
 
-@if($style_list === "modern_carousel")
-    <div class="modern_carousel_aloja">
-        <i class="far fa-hotel"></i>
-    </div>
-@endif
+
 <div class="container-fluid list-hotel-dark @if($style_list==='modern_carousel') modern_carousel_aloja_parent @endif" id="car1"> 
     <div class="triangle-4"></div>
     <div class="triangle-5"></div>
@@ -102,11 +98,14 @@
             
             @if($title)
 
-            <h2 class="title text-center font-weight-bold" style="padding-top: 30px;">
-
-                {{$title}}
-
-            </h2>
+            @if($style_list === "modern_carousel")
+                <div class="title-div">
+                    <h2 class="title-h2 title"> 
+                        {{$title}}
+                    </h2>
+                </div>
+                @else
+            @endif
 
             @endif
 

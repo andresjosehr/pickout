@@ -1,9 +1,4 @@
 
-@if($style_list === "modern_carousel")
-    <div class="modern_carousel_gastro_ico">
-        <i class="far fa-utensils"></i>
-    </div>
-@endif
 
 <div class="container @if($style_list === "modern_carousel") modern_carousel_gastro_parent @endif">
 
@@ -11,11 +6,15 @@
 
         @if($title)
 
-        <h2 class="title">
-
-            {{$title}}
-
-        </h2>
+        @if($style_list === "modern_carousel")
+                <div class="title-div">
+                    <h2 class="title-h2"> 
+                        {{$title}}
+                    </h2>
+                </div>
+                @else
+                    <h2> {{$title}}</h2>
+                @endif
 
         @endif
 

@@ -115,7 +115,7 @@ jQuery(function($) {
     $(".bravo-list-tour").each(function() {
         $(this).find(".carousel-default").owlCarousel({
             items: 4,
-            loop: !0,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {
@@ -135,7 +135,7 @@ jQuery(function($) {
     $(".modern_carousel").each(function() {
         $(this).find(".owl-carousel").owlCarousel({
             items: 4,
-            loop: !0,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {
@@ -154,7 +154,7 @@ jQuery(function($) {
     $(".modern_carousel_gastro_parent .bravo-list-space").each(function() {
         $(this).find(".owl-carousel").owlCarousel({
             items: 7,
-            loop: !1,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {
@@ -174,7 +174,7 @@ jQuery(function($) {
     $(".bravo-list-space").each(function() {
         $(this).find(".owl-carousel.carousel-default").owlCarousel({
             items: 3,
-            loop: !1,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {
@@ -214,7 +214,7 @@ jQuery(function($) {
     $(".bravo-list-hotel").each(function () {
         $(this).find(".owl-carousel").owlCarousel({
             items: 6,
-            loop: false,
+            loop: true,
             margin: 15,
             nav: false,
             responsive: {
@@ -255,7 +255,7 @@ jQuery(function($) {
     $(".bravo-list-car").each(function() {
         $(this).find(".owl-carousel-default").owlCarousel({
             items: 4,
-            loop: !1,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {
@@ -275,7 +275,7 @@ jQuery(function($) {
     $(".bravo-list-car").each(function() {
         $(this).find(".owl-carousel-modern").owlCarousel({
             items: 7,
-            loop: !1,
+            loop: true,
             margin: 15,
             nav: !1,
             responsive: {

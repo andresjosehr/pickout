@@ -3,18 +3,24 @@
 	padding-top: 1.25rem;
     padding-bottom: .5rem;
 }
-.modern_carousel .title span{
+.modern-carousel-tour .title .title-h2{
     background: #0f6eef;
     padding: 7px 11px;
     border-radius: 7px;
     font-size: 19px;
 }
 
-.modern_carousel .title{
+.modern-carousel-tour .title .title-div{
     position: absolute;
+    margin-right: auto;
+    margin-left: auto;
     left: 0;
     right: 0;
-    margin-top: -72px!important;
+    width: fit-content;
+    margin-top: -58px!important;
+}
+.modern_carousel .sub-title{
+    margin-top: 20px;
 }
 
 .modern_carousel h2, .modern_carousel h3{

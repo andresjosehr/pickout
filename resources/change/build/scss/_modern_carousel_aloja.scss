@@ -1,3 +1,24 @@
+.modern_carousel_aloja_parent .title-h2{
+    background: #0f6eef;
+    padding: 7px 11px !important;
+    border-radius: 7px;
+    font-size: 19px !important;
+}
+
+.modern_carousel_aloja_parent .title-div{
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin-top: -74px!important;
+}
+div .modern_carousel_aloja_parent .sub-title {
+    margin-bottom: 20px!important;
+    margin-top: -30px!important;
+}
+
 .location_modern_carousel{
 	display: none;
 }
@@ -82,9 +103,6 @@
 .modern_carousel_aloja_parent .triangle-4{
 	display: none;
 }
-.bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .title{
-	padding-top: 0px !important;
-}
 .bravo_wrap .modern_carousel_aloja_parent .page-template-content .bravo-list-hotel {
     margin: 0px 0 30px !important;
 }
@@ -123,6 +141,17 @@
 		    transition: all .6s;
 		}
     @media (max-width: 768px){
+
+
+
+    	.modern_carousel_aloja_parent.list-hotel-dark{
+    		padding-left: 0px !important;
+    		padding-right: 0px !important;
+    	}
+
+    	.bravo_wrap .page-template-content .modern_carousel_aloja_parent .owl-nav .owl-prev, .bravo_wrap .page-template-content .modern_carousel_aloja_parent .owl-nav .owl-next{
+    		display: none;
+    	}
 	    .modern_carousel_aloja .far.fa-hotel{
 	        padding: 9.5px 8px;
 		    width: 35px;
