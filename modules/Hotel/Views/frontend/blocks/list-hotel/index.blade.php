@@ -106,6 +106,9 @@
                 </div>
                 @else
             @endif
+            <h2 class="title"> 
+                        {{$title}}
+            </h2>
 
             @endif
 
