@@ -253,7 +253,7 @@ jQuery(function($) {
     });
     
     $(".bravo-list-car").each(function() {
-        $(this).find(".owl-carousel").owlCarousel({
+        $(this).find(".owl-carousel-default").owlCarousel({
             items: 4,
             loop: !1,
             margin: 15,
@@ -267,6 +267,26 @@ jQuery(function($) {
                 },
                 1000: {
                     items: 4
+                }
+            }
+        })
+    });
+
+    $(".bravo-list-car").each(function() {
+        $(this).find(".owl-carousel-modern").owlCarousel({
+            items: 7,
+            loop: !1,
+            margin: 15,
+            nav: !1,
+            responsive: {
+                0: {
+                    items: 2.5
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 7
                 }
             }
         })

@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container @if($style_list === "modern_carousel") container_car @endif">
 
     <div class="bravo-list-car layout_{{$style_list}}">
 
         @if($title)
 
         <h2 class="title">
-
-            {{$title}}
-
+            <span>
+                {{$title}}  
+            </span>
         </h2>
 
         @endif
@@ -44,7 +44,21 @@
 
             @if($style_list === "carousel")
 
-                <div class="owl-carousel">
+                <div class="owl-carousel owl-carousel-default">
+
+                    @foreach($rows as $row)
+
+                        @include('Car::frontend.layouts.search.loop-gird')
+
+                    @endforeach
+
+                </div>
+
+            @endif
+
+            @if($style_list === "modern_carousel")
+
+                <div class="owl-carousel owl-carousel-modern">
 
                     @foreach($rows as $row)
 

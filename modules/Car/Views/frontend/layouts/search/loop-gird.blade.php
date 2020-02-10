@@ -32,13 +32,13 @@
             <div class="sale_info">{{$row->discount_percent}}</div>
         @endif
     </div>
-    <div class="location">
+    <div class="location location-default">
         @if(!empty($row->location->name))
             @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
             {{$location->name ?? ''}}
         @endif
     </div>
-    <div class="amenities clearfix">
+    <div class="amenities amenities-default clearfix">
         @if($row->passenger)
             <span class="amenity total" data-toggle="tooltip"  title="{{ __("Passenger") }}">
                 <i class="input-icon field-icon icon-passenger  "></i>
@@ -72,7 +72,7 @@
             </span>
         @endif
     </div>
-    <div class="info">
+    <div class="info info-default">
         <div class="g-price">
             <div class="prefix">
                 <span class="fr_text">{{__("from")}}</span>
@@ -80,6 +80,61 @@
             <div class="price">
                 <span class="onsale">{{ $row->display_sale_price }}</span>
                 <span class="text-price">{{ $row->display_price }} <span class="unit">{{__("/night")}}</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="info-hover" style="display: none;">
+        <div class="div-redirect"></div>
+        <div class="location location-modern">
+            @if(!empty($row->location->name))
+                @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
+                {{$location->name ?? ''}}
+            @endif
+        </div>
+        <div class="amenities amenities-modern clearfix">
+            @if($row->passenger)
+                <span class="amenity total" data-toggle="tooltip"  title="{{ __("Passenger") }}">
+                    <i class="input-icon field-icon icon-passenger  "></i>
+                    <span class="text">
+                        {{$row->passenger}}
+                    </span>
+                </span>
+            @endif
+            @if($row->gear)
+                <span class="amenity bed" data-toggle="tooltip" title="{{__("Gear Shift")}}">
+                    <i class="input-icon field-icon icon-gear"></i>
+                    <span class="text">
+                        {{$row->gear}}
+                    </span>
+                </span>
+            @endif
+            <div class="separator"></div>
+            @if($row->baggage)
+                <span class="amenity bath" data-toggle="tooltip" title="{{__("Baggage")}}" >
+                    <i class="input-icon field-icon icon-baggage"></i>
+                    <span class="text">
+                        {{$row->baggage}}
+                    </span>
+                </span>
+            @endif
+            @if($row->door)
+                <span class="amenity size" data-toggle="tooltip" title="{{__("Door")}}" >
+                    <i class="input-icon field-icon icon-door"></i>
+                    <span class="text">
+                        {{$row->door}}
+                    </span>
+                </span>
+            @endif
+        </div>
+        <div class="info info-modern">
+            <div class="g-price">
+                <div class="prefix">
+                    <span class="fr_text">{{__("from")}}</span>
+                </div><br>
+                <div class="price">
+                    <span class="onsale">{{ $row->display_sale_price }}</span>
+                    <span class="text-price">{{ $row->display_price }}<br> <span class="unit">{{__("/night")}}</span></span>
+                </div>
             </div>
         </div>
     </div>

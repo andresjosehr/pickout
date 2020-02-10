@@ -41,6 +41,10 @@ class ListCar extends BaseBlock
                         [
                             'value'   => 'carousel',
                             'name' => __("Slider Carousel")
+                        ],
+                        [
+                            'value'   => 'modern_carousel',
+                            'name' => __("Modern Carousel")
                         ]
                     ]
                 ],
@@ -72,6 +76,18 @@ class ListCar extends BaseBlock
                             'value'   => 'title',
                             'name' => __("Title")
                         ],
+                        [
+                            'value'   => 'destacados',
+                            'name' => __("Destacados")
+                        ],
+                        [
+                            'value'   => 'ofertas',
+                            'name' => __("Ofertas")
+                        ],
+                        [
+                            'value'   => 'mas_vistos',
+                            'name' => __("Mas Vistos")
+                        ],
                     ]
                 ],
                 [
@@ -89,12 +105,7 @@ class ListCar extends BaseBlock
                         ],
                     ]
                 ],
-                [
-                    'type'=> "checkbox",
-                    'label'=>__("Only featured items?"),
-                    'id'=> "is_featured",
-                    'default'=>true
-                ]
+
             ]
         ]);
     }
