@@ -88,9 +88,8 @@
 </style>
 
 
-<div class="container-fluid list-hotel-dark @if($style_list==='modern_carousel') modern_carousel_aloja_parent @endif" id="car1"> 
-    <div class="triangle-4"></div>
-    <div class="triangle-5"></div>
+<div class="container-fluid @if($style_list==='modern_carousel') modern_carousel_aloja_parent @endif" id="car1"> 
+
 
     <div class="container"  style="max-width: 100% !important;">
     
@@ -104,12 +103,12 @@
                         {{$title}}
                     </h2>
                 </div>
-                @else
-            @endif
+            @else
             <h2 class="title"> 
                         {{$title}}
             </h2>
 
+            @endif
             @endif
 
             @if($desc)
