@@ -1,4 +1,8 @@
 .modern_carousel_aloja_parent{
+	padding-top: 23 !important;
+}
+
+.modern_carousel_aloja_parent{
 	background: black !important;
 }
 .modern_carousel_aloja_parent .title-h2{
@@ -6,6 +10,7 @@
     padding: 7px 11px !important;
     border-radius: 7px;
     font-size: 19px !important;
+    color: white !important;
 }
 
 .modern_carousel_aloja_parent .title-div{
@@ -20,6 +25,8 @@
 div .modern_carousel_aloja_parent .sub-title {
     margin-bottom: 20px!important;
     margin-top: -30px!important;
+    text-align: center !important;
+    color: white !important;
 }
 
 .location_modern_carousel{
@@ -59,6 +66,7 @@ div .modern_carousel_aloja_parent .sub-title {
 	display: none;
 }
 .bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop {
+	background: white !important;
     padding-bottom: 2px !important;
     border-radius: 4px;
 }
