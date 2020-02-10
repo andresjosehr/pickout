@@ -51,8 +51,6 @@ window.onload=function(){
         });
 
         $(".owl-carousel-modern .div-redirect").click(function(e){
-            alert();
-            console.log($(this).parent().parent().find("a").attr("href"));
             window.location.href = $(this).parent().parent().find("a").attr("href");
         });
 

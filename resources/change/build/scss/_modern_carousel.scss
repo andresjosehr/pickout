@@ -3,6 +3,20 @@
 	padding-top: 1.25rem;
     padding-bottom: .5rem;
 }
+.modern_carousel .title span{
+    background: #0f6eef;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 19px;
+}
+
+.modern_carousel .title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -72px!important;
+}
+
 .modern_carousel h2, .modern_carousel h3{
 	text-align: center;
 	color: white !important;

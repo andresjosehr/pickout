@@ -1,6 +1,6 @@
 @if($style_list === "modern_carousel")
     <div class="modern_carousel">
-        <i class="far fa-hiking"></i>
+        {{-- <i class="far fa-hiking"></i> --}}
     </div>
 @endif
 
@@ -12,7 +12,9 @@
 
             <div class="title">
 
-               <h2> {{$title}}</h2>
+                <h2> 
+                    <span>{{$title}}</span>
+                </h2>
 
                 @if(!empty($desc))
 
