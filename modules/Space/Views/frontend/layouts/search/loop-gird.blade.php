@@ -1,7 +1,6 @@
 @php
     $translation = $row->translateOrOrigin(app()->getLocale());
 @endphp
-<script type="text/javascript">console.log("")</script>
 <div class="item-loop {{$wrap_class ?? ''}}">
     @if($row->is_featured == "1")
         <div class="featured">
