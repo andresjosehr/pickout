@@ -122,7 +122,7 @@ class ListSpace extends BaseBlock
 
     public function content($model = [])
     {
-        $model_space = Space::select("bravo_spaces.*")->with(['location','translations','hasWishList']);
+        $model_space = Space::select("bravo_spaces.*")->with(['location','translations','hasWishList', 'terms']);
         if(empty($model['order'])) $model['order'] = "id";
         if(empty($model['order_by'])) $model['order_by'] = "desc";
         if(empty($model['number'])) $model['number'] = 5;

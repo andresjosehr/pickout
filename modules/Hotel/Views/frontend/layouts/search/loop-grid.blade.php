@@ -39,6 +39,13 @@
             <div class="sale_info">{{$row->discount_percent}}</div>
         @endif
     </div>
+    <div class="location location-default">
+        @if(!empty($row->location->name))
+            @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
+            <i class="icofont-paper-plane"></i>
+            {{$location->name ?? ''}}
+        @endif
+    </div>
     @if(setting_item('hotel_enable_review'))
     <?php
     $reviewData = $row->getScoreReview();
@@ -70,7 +77,7 @@
         <div class="info-hover" style="display: none;">
             <div class="service-review">
                 <span class="rate">
-                    @if($reviewData['total_review'] > 0) {{$score_total}}/5 @endif <span class="rate-text">{{$reviewData['review_text']}}</span>
+                    @if($reviewData['total_review'] > 0) {{$score_total}}/5 @endif <span class="rate-text">{{$row->termsByAttributeInListingPage[0]->name}}</span>
                 </span>
             </div>
             <div class="info">

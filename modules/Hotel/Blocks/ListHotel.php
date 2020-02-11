@@ -126,7 +126,7 @@ class ListHotel extends BaseBlock
 
     public function content($model = [])
     {
-        $model_hotel = Hotel::select("bravo_hotels.*")->with(['location','translations','hasWishList']);
+        $model_hotel = Hotel::select("bravo_hotels.*")->with(['location','translations','hasWishList', 'termsByAttributeInListingPage']);
         if(empty($model['order'])) $model['order'] = "id";
         if(empty($model['order_by'])) $model['order_by'] = "desc";
         if(empty($model['number'])) $model['number'] = 5;
