@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-12">
                                 <div class="title-div-location">
-                                    <h3 class="title-h2-location title">{{__("Explore the place")}}</h3>
+                                    <h3 class="title-h2-location title">{{__("Explore the City")}}</h3>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-12">
