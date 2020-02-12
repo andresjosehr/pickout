@@ -1,6 +1,6 @@
 @if($translation->trip_ideas)
     <div class="g-trip-ideas">
-        <h3 class="py-5">{{__("Trip Ideas")}}</h3>
+        <h3 class="pt-3 text-center">{{__("Trip Ideas")}}</h3>
         @if(!empty($translation->trip_ideas))
             @php if(!is_array($translation->trip_ideas)) $translation->trip_ideas = json_decode($translation->trip_ideas); @endphp
             <div class="row justify-content-center">

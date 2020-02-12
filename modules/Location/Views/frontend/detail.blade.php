@@ -25,6 +25,19 @@
                 <div class="container">
                     @include('Location::frontend.layouts.details.location-trip-idea')
                 </div>
+                <div class="row py-5 mt-4">
+                    <div class="col-md-12 col-lg-4">
+                        @if($row->image_id)
+                            <div class="g-thumbnail m-3">
+                                <img data-src="<?php echo $row->getImageUrl() ?>" class="img-fluid lazy" alt="">
+                            </div>
+                        @endif
+                    </div>
+                    <div class="col-md-12 col-lg-8">
+                        <h3>{{$translation->name}}</h3>
+                        @include('Location::frontend.layouts.details.location-overview')
+                    </div>
+                </div>
             </div>
                 @php $types = get_bookable_services() @endphp
                 @if(!empty($types))
