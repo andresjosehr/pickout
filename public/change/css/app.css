@@ -1060,12 +1060,48 @@ div .modern_carousel_aloja_parent .sub-title {
   }
 }
 
-DIV .container_car .sub-title {
+.container_car .sub-title {
   margin-bottom: 20px !important;
   margin-top: -30px !important;
 }
 
-.container_car .title-h2 {
+.bravo_wrap .bravo_detail_location .bravo-list-hotel {
+  margin-top: 23px !important;
+  margin-bottom: -26px !important;
+}
+
+.bravo_detail_location .modern-carousel-tour.modern_carousel {
+  padding-top: 4.9rem !important;
+}
+
+.bravo_detail_location .btn.btn-primary {
+  z-index: 999999999;
+  position: absolute;
+  margin-top: 56px !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.bravo_detail_location #module-car .btn {
+  margin-top: -11px !important;
+}
+
+div .title-div-location {
+  margin-top: 56px !important;
+}
+
+.bravo_wrap .bravo_detail_location .bravo-list-space {
+  margin: 3px 0 !important;
+}
+
+.modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel {
+  padding: 68px 0px 0px !important;
+}
+
+.container_car .title-h2,
+.title-h2-location {
   background: #0f6eef;
   padding: 7px 11px;
   border-radius: 7px;
@@ -1073,7 +1109,8 @@ DIV .container_car .sub-title {
   color: white !important;
 }
 
-.container_car .title-div {
+.container_car .title-div,
+.title-div-location {
   position: absolute;
   margin-right: auto;
   margin-left: auto;
@@ -1200,6 +1237,14 @@ DIV .container_car .sub-title {
   transition: all 200ms;
 }
 
+.bravo_detail_location .item-loop .thumb-image {
+  padding-bottom: 60% !important;
+}
+
+.bravo_wrap .bravo_detail_location .bravo_content .g-location-module .item-loop .thumb-image {
+  height: 133px !important;
+}
+
 .owl-carousel-modern .amenities-default,
 .owl-carousel-modern .info-default,
 .owl-carousel-modern .location-default {
@@ -1271,6 +1316,31 @@ DIV .container_car .sub-title {
 }
 
 @media (max-width: 768px) {
+  .bravo_detail_location .btn.btn-primary {
+    z-index: 999999999;
+    position: absolute;
+    margin-top: 56px !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .bravo_wrap .bravo_detail_location .bravo_content .g-location-module .location-module-nav li a.active {
+    border-bottom: 0px solid #106fef !important;
+  }
+
+  .bravo_detail_location .location-module-nav.nav.nav-pills.justify-content-lg-end {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  div .title-div-location {
+    margin-top: 126px !important;
+  }
+
   .bravo_wrap .page-template-content .bravo-list-car .owl-carousel-modern .owl-nav .owl-prev,
   .bravo_wrap .page-template-content .bravo-list-car .owl-carousel-modern .owl-nav .owl-next {
     display: none;

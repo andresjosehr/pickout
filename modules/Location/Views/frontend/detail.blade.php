@@ -25,14 +25,17 @@
                 <div class="container">
                     @include('Location::frontend.layouts.details.location-trip-idea')
                 </div>
+            </div>
                 @php $types = get_bookable_services() @endphp
                 @if(!empty($types))
                     <div class="g-location-module py-5 border-top border-bottom">
                         <div class="row">
-                            <div class="col-12 col-lg-5">
-                                <h3>{{__("Explore the place")}}</h3>
+                            <div class="col-12 col-lg-12">
+                                <div class="title-div-location">
+                                    <h3 class="title-h2-location title">{{__("Explore the place")}}</h3>
+                                </div>
                             </div>
-                            <div class="col-12 col-lg-7">
+                            <div class="col-12 col-lg-12">
                                 <ul class="location-module-nav nav nav-pills justify-content-lg-end">
                                     @php $i = 0 @endphp
                                     @foreach($types as $type=>$moduleClass)
@@ -57,17 +60,29 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="tab-content clearfix py-5">
+                        <div class="tab-content clearfix py-5 page-template-content">
                             @php $i=0 @endphp
                             @foreach($types as $type=>$moduleClass)
                                 @php  if(!$moduleClass::isEnable()) continue; @endphp
                                 @php $view = ucfirst($type).'::frontend.blocks.list-'.$type.'.index' @endphp
                                 @if(view()->exists($view))
                                     @if($data[$type]->count()>0)
-                                        <div class="tab-pane {{$i==0?'active':""}}" id="module-{{$type}}">
-                                            @include($view,['title'=>"",'style_list'=>'normal','desc'=>'','rows'=> $data[$type]])
-                                            <p class="text-center"><a class="btn btn-primary btn-search" href="{{$row->getLinkForPageSearch($type)}}">{{__('View More')}}</a></p>
-                                        </div>
+                                        @if($type=='car')
+                                            @php $Clase='container_car owl-carousel-modern' @endphp
+                                        @endif
+                                        @if($type=='hotel')
+                                            @php $Clase='modern_carousel_aloja_parent' @endphp
+                                        @endif
+                                        @if($type=='space')
+                                            @php $Clase='modern_carousel_gastro_parent' @endphp
+                                        @endif
+                                        @if($type=='tour')
+                                            @php $Clase='modern-carousel-tour' @endphp
+                                        @endif
+                                            <div class="tab-pane {{$i==0?'active':""}} {{$Clase}}" id="module-{{$type}}">
+                                                @include($view,['title'=>"",'style_list'=>'modern_carousel','desc'=>'','rows'=> $data[$type]])
+                                                <p class="text-center"><a class="btn btn-primary btn-search" href="{{$row->getLinkForPageSearch($type)}}">{{__('View More')}}</a></p>
+                                            </div>
                                         @php $i++ @endphp
                                     @endif
                                 @endif
@@ -76,6 +91,7 @@
                     </div>
 
                 @endif
+                <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <h3 class="py-5">{{__("The City Maps")}}</h3>
