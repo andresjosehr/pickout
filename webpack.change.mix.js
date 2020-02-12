@@ -10,5 +10,16 @@ mix.setPublicPath('public/change');
 // mix.setResourceRoot('../');
 
 mix.sass('resources/change/build/scss/app.scss', 'css');
-// mix.sass('public/libs/font-awesome/scss/fontawesome.scss', '../libs/font-awesome/css/font-awesome.css');
 mix.js('resources/change/build/js/app.js','js');
+
+mix.webpackConfig({
+  module: {
+    rules: [{
+      test: /\.js?$/,
+      use: [{
+        loader: 'babel-loader',
+        options: mix.config.babel()
+      }]
+    }]
+  }
+});

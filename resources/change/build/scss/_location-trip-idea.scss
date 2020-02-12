@@ -1,0 +1,52 @@
+.cuadro-trip-div{
+        cursor:pointer;
+        width: 100%;
+        height: 201px;
+        background: #f8f8f8;
+        text-align: center;
+    }
+.cuadro-trip-div .div-icon{
+    padding-top: 50px;
+}
+
+.cuadro-trip-div .div-icon i{
+    font-size: 4.375rem;
+}
+
+.cuadro-trip-div .div-title{
+    margin-top: 30px;
+}
+
+.cuadro-trip-div .div-title span{
+    font-size: 1.125rem;
+}
+.cuadro-trip-div:hover{
+        background: #254d86 !important;
+        transition: all .2s;
+    }
+    .cuadro-trip-div:hover span,.cuadro-trip-div:hover i{
+        color: white !important;
+        transition: all .2s;
+    }
+
+    .cuadro-trip-div span,.cuadro-trip-div i{
+        color: #254d86 !important;
+        transition: all .2s;
+    }
+
+
+    .info-tooltip-trip{
+        display: none;
+    }
+
+    @media (max-width: 768px){
+        .cuadro-trip-div .div-icon i{
+            font-size: 14.0625vw;
+        }
+        .cuadro-trip-div {
+            height: 135px;
+        }
+        .cuadro-trip-div .div-icon {
+    padding-top: 24px;
+}
+    }

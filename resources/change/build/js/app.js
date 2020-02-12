@@ -14,7 +14,18 @@
 ],[[0,"/build/js/manifest"]]]);
 
 
+import tippy, {animateFill}  from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/dist/backdrop.css';
+import 'tippy.js/animations/shift-away.css';
 
+tippy('.cuadro-trip-div', {
+  content (reference){
+    return $(reference).find(".info-tooltip-trip span").text();
+  },
+  animateFill: true,
+  plugins: [animateFill]
+});
 
 
 window.onload=function(){
@@ -113,4 +124,20 @@ window.onload=function(){
         $(".bravo-logo img").attr("itemprop", "logo")
         $(".topbar-right .socials .fa.fa-facebook").parent().attr("itemprop", "sameAs");
 
-    }
+
+
+
+        $(".cuadro-trip-div")
+          .mouseenter(function() {
+            window.elemento=this;
+            window.url_location=$( this ).attr("data-url");
+            console.log(window.url_location)
+            setTimeout(function(){
+                $(window.elemento).attr('onclick', 'window.location.href = "'+window.url_location+'";')
+            }, 10);
+          })
+          .mouseleave(function() {
+            $( window.elemento ).attr('onclick', '');
+          });
+
+}

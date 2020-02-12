@@ -80,6 +80,7 @@
                                                         <div class="col-md-4">
                                                             <input type="text" name="trip_ideas[{{$key}}][title]" class="form-control" value="{{$trip_idea['title']}}" placeholder="{{__("Title:")}}">
                                                             <input type="text" name="trip_ideas[{{$key}}][link]" class="form-control" value="{{$trip_idea['link']}}" placeholder="{{__("Link:")}}">
+                                                            <input type="text" name="trip_ideas[{{$key}}][icon]" class="form-control" value="@if(isset($trip_idea['icon']) && !empty($trip_idea['icon'])) {{$trip_idea['icon']}} @endif" placeholder="{{__("Icon:")}}">
                                                         </div>
                                                         <div class="col-md-5">
                                                             <textarea name="trip_ideas[{{$key}}][content]" class="form-control full-h" placeholder="...">{{$trip_idea['content']}}</textarea>
@@ -108,6 +109,7 @@
                                                 <div class="col-md-4">
                                                     <input type="text" __name__="trip_ideas[__number__][title]" class="form-control" placeholder="{{__("Title:")}}">
                                                     <input type="text" __name__="trip_ideas[__number__][link]" class="form-control" placeholder="{{__("Link:")}}">
+                                                    <input type="text" __name__="trip_ideas[__number__][icon]" class="form-control" placeholder="{{__("Icon:")}}">
                                                 </div>
                                                 <div class="col-md-5">
                                                     <textarea __name__="trip_ideas[__number__][content]" class="form-control full-h" placeholder="..."></textarea>

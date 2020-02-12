@@ -3,27 +3,23 @@
         <h3 class="py-5">{{__("Trip Ideas")}}</h3>
         @if(!empty($translation->trip_ideas))
             @php if(!is_array($translation->trip_ideas)) $translation->trip_ideas = json_decode($translation->trip_ideas); @endphp
-            @foreach($translation->trip_ideas as $key=>$trip_idea)
-                <div class="trip-idea mb-5">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-8 pr-lg-5 pb-5">
-                            <p class="trip-idea-category">{{__('FEATURED ARTICLE')}}</p>
-                            <h2 class="pb-3">{{@$trip_idea['title']}}</h2>
-                            <div class="description pb-3"><p>{{$trip_idea['content']}}</p></div>
-                            @if($trip_idea['link'])
-                                <p><a href="{{$trip_idea['link']}}" target="_blank" class="read-more">{{__('Read More')}}</a></p>
-                                @endif
+            <div class="row">
+                @foreach($translation->trip_ideas as $key=>$trip_idea)
+                    <div class="col-md-3 col-6 my-2 px-2 py-2">
+                        <div class="cuadro-trip-div" data-url='{{$trip_idea['link']}}'>
+                            <div class="div-icon">
+                                <i class="{{$trip_idea['icon']}}"></i>
+                            </div>
+                            <div class="div-title">
+                                <span>{{@$trip_idea['title']}}</span>
+                            </div>
+                            <div class="info-tooltip-trip">
+                                <span>{{$trip_idea['content']}}</span>
+                            </div>
                         </div>
-                        <div class="col-md-12 col-lg-4 pb-5">
-                            @if($trip_idea['image_id'])
-                            <img data-src="<?php echo get_file_url($trip_idea['image_id']) ?>" class="img-fluid lazy" alt="">
-                            @endif
-                        </div>
-
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
+            </div>
         @endif
-
-    </div>
 @endif

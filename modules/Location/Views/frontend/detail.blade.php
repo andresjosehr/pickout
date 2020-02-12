@@ -22,6 +22,9 @@
                         @endif
                     </div>
                 </div>
+                <div class="container">
+                    @include('Location::frontend.layouts.details.location-trip-idea')
+                </div>
                 @php $types = get_bookable_services() @endphp
                 @if(!empty($types))
                     <div class="g-location-module py-5 border-top border-bottom">
@@ -80,9 +83,6 @@
                 </div>
             </div>
             @include('Location::frontend.layouts.details.location-map')
-            <div class="container">
-                @include('Location::frontend.layouts.details.location-trip-idea')
-            </div>
         </div>
     </div>
 @endsection
