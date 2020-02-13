@@ -120,6 +120,7 @@ class ModuleProvider extends ModuleServiceProvider
             'form_search_car'=>"\\Modules\\Car\\Blocks\\FormSearchCar",
             'list_car'=>"\\Modules\\Car\\Blocks\\ListCar",
             'car_term_featured_box'=>"\\Modules\\Car\\Blocks\\CarTermFeaturedBox",
+            'feature_points'=>"\\Modules\\Car\\Blocks\\FeaturePoints",
         ];
     }
 }

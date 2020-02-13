@@ -3,14 +3,23 @@
         <div class="container">
             <div class="row">
                 @foreach($list_item as $k=>$item)
-                    <?php $image_url = get_file_url($item['icon_image'], 'full') ?>
+                    <?php 
+                    if (isset($item['icon_image'])) {
+                        $image_url = get_file_url($item['icon_image'], 'full');
+                    }
+                     ?>
                     <div class="col-md-4">
                         <div class="featured-item" style="color: #fff;">
                             <div class="image">
                                 @if(!empty($style) and $style == 'style2')
                                     <span class="number-circle" style="border-color: #ff6a3a;color: #ff6a3a;">{{$k+1}}</span>
                                 @else
-                                    <img src="{{$image_url}}" class="img-fluid">
+                                    @if (isset($item['icon_image'])) {
+                                        <img src="{{$image_url}}" class="img-fluid">
+                                    @endif
+                                    @if (isset($item['icon'])) 
+                                        <i style="font-size: 60px" class="{{ $item['icon'] }}"></i>
+                                    @endif
                                 @endif
                             </div>
                             <div class="content">
