@@ -400,6 +400,23 @@
   position: relative;
 }
 
+.bravo-list-locations.style_1 .title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 0px !important;
+}
+
+.bravo-list-locations.style_1 .sub-title {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.bravo-list-locations.style_1 .list-item {
+  margin-top: 1.5rem !important;
+}
+
 .bravo_wrap .bravo-list-hotel .item-loop .list-star .booking-item-rating-stars li .fa {
   font-size: 11px !important;
 }

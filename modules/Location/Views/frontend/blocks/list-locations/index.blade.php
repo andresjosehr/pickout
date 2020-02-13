@@ -1,6 +1,6 @@
 <div class="container">
 
-    <div class="bravo-list-locations @if(!empty($layout)) {{ $layout }} @endif">
+    <div class="bravo-list-locations @if(!empty($layout)) {{ $layout }} @endif @if($layout=='style_1') my-5 py-4 @endif">
 
         <h2 class="title">
 
@@ -64,6 +64,10 @@
                             $size_col2 = "";
                         }
 
+                    }
+
+                    if (!isset($size_col2)) {
+                        $size_col2='';
                     }
 
                     @endphp
