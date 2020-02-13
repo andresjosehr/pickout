@@ -8,7 +8,7 @@
                         $image_url = get_file_url($item['icon_image'], 'full');
                     }
                      ?>
-                    <div class="col-md-4">
+                    <div class="col-md-4" @if (isset($item['link']))  onclick="window.location.href = '{{$item['link']}}';" @endif style="cursor:pointer;">
                         <div class="featured-item" style="color: #fff;">
                             <div class="image">
                                 @if(!empty($style) and $style == 'style2')
