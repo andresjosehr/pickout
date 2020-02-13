@@ -21,10 +21,14 @@
         <div class="list-item">
 
             <div class="row">
-
+                @php 
+                $j=1;
+                $corto=false;
+                $DerechaAnterior=false;
+                @endphp
                 @foreach($rows as $key=>$row)
 
-                    <?php
+                    @php 
 
                     $size_col = 4;
 
@@ -34,22 +38,47 @@
 
                     }else{
 
-                        if($key == 0){
 
+                        if (!$DerechaAnterior && !$corto && $j==1) {
                             $size_col = 8;
+                        }
 
+                        if (!$DerechaAnterior && !$corto && $j==2) {
+                            $size_col = 4;
+                        }
+
+                        if ($DerechaAnterior && !$corto && $j==2) {
+                            $size_col = 8;
+                        }
+                        if ($DerechaAnterior && !$corto && $j==1) {
+                            $size_col = 4;
+                        }
+                        if ($corto) {
+                            $size_col = 4;
                         }
 
                     }
 
-                    ?>
+                    @endphp
 
-                    <div class="col-lg-{{$size_col}} col-md-6">
+                    <div class="col-lg-{{$size_col}} col-md-6 {{$layout}}-column">
 
                         @include('Location::frontend.blocks.list-locations.loop')
 
                     </div>
-
+                    @php 
+                        if (!$corto && $j==2) {
+                            $j=0;
+                            $corto=true;
+                        }
+                        if ($corto && $j==3){
+                            $j=0;
+                            $corto=false;
+                            if ($DerechaAnterior) $DerechaAnterior=false;
+                            if (!$DerechaAnterior) $DerechaAnterior=true;
+                        }
+                        $j++; 
+                    @endphp
                 @endforeach
 
             </div>

@@ -1943,6 +1943,25 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
   top: 10px;
 }
 
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item,
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image {
+  min-height: 223px !important;
+  max-height: 223px !important;
+}
+
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item {
+  border-radius: 0px !important;
+}
+
+.style_1-column {
+  padding: 0 0.2rem;
+}
+
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item {
+  margin-bottom: 0.2rem !important;
+  margin-top: 0.2rem !important;
+}
+
 @media (max-width: 768px) {
   .alert-few {
     /*position: absolute;
