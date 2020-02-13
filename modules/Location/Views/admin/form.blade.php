@@ -31,3 +31,10 @@
         <textarea name="content" class="d-none has-ckeditor" cols="30" rows="10">{{$translation->content}}</textarea>
     </div>
 </div>
+
+<div class="form-group">
+    <label class="control-label">{{__("Description")}} 2</label>
+    <div class="">
+        <textarea name="content2" class="d-none has-ckeditor" cols="30" rows="10">{{$translation->content2}}</textarea>
+    </div>
+</div>

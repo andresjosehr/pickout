@@ -18,6 +18,7 @@
             'name',
             'slug',
             'content',
+            'content2',
             'image_id',
             'map_lat',
             'map_lng',

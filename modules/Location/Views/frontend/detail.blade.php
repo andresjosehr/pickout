@@ -29,13 +29,20 @@
                     <div class="col-md-12 col-lg-4">
                         @if($row->image_id)
                             <div class="g-thumbnail m-3">
-                                <img data-src="<?php echo $row->getImageUrl() ?>" class="img-fluid lazy" alt="">
+                                <img data-src="{{$row->getBannerImageUrlAttribute('full')}}" class="img-fluid lazy" alt="">
                             </div>
                         @endif
                     </div>
                     <div class="col-md-12 col-lg-8">
                         <h3>{{$translation->name}}</h3>
-                        @include('Location::frontend.layouts.details.location-overview')
+                        @if($translation->content)
+                            <div class="g-overview">
+                                <div class="description">
+                                    <?php echo $translation->content2 ?>
+                                </div>
+                            </div>
+                        @endif
+
                     </div>
                 </div>
             </div>
