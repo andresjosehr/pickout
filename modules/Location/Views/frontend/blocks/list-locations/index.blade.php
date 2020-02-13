@@ -57,11 +57,18 @@
                             $size_col = 4;
                         }
 
+                        if (count($rows)==$key+1) {
+                            $size_col = "";
+                            $size_col2 = "col-lg";
+                        } else{
+                            $size_col2 = "";
+                        }
+
                     }
 
                     @endphp
 
-                    <div class="col-lg-{{$size_col}} col-md-6 {{$layout}}-column">
+                    <div class="col-lg-{{$size_col}} {{$size_col2}} col-md-6 {{$layout}}-column">
 
                         @include('Location::frontend.blocks.list-locations.loop')
 
