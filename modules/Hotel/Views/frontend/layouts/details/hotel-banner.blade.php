@@ -1,7 +1,46 @@
 @if($row->banner_image_id)
     <div class="bravo_banner" style="background-image: url('{{$row->getBannerImageUrlAttribute('full')}}')">
+        <div class="background-filter-banner-location"></div>
         <div class="container">
             <div class="bravo_gallery">
+                <div class="row div-banner-des">
+                    <div class="col-12 position-absolute caja-title-aloja">  
+                            <div class="banner-aloja-ubi mb-2">
+                                <span>Chile</span>
+                                <span>Puerto Natales</span>
+                            </div>
+                            <h1 class="aloja-title">Excursión a Torres del Paine</h1>
+                    </div>
+                    <div class="col-6 position-absolute caja-descrip-aloja">
+                            <div class="banner-aloja-review bravo_content">
+                                <div class="g-header">
+                                    <div class="review-score">
+                                        <div class="head">
+                                            <div class="left text-left">
+                                                <span class="head-rating">No Evaluado</span>
+                                                <span class="text-rating">de 0 comentarios</span>
+                                            </div>
+                                            <div class="score">
+                                                0<span>/5</span>
+                                            </div>
+                                        </div>
+                                        <div class="foot text-left">
+                                            0% de personas recomiendan
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner-aloja-descrip">
+                                Excursión imprescindible a Torres del Paine. Con un margen de horario adecuado, te permiten explorar el parque a tu ritmo
+                            </div>
+                            <div class="star-rate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                    </div>
+                </div>
                 <div class="btn-group">
                     @if($row->video)
                         <a href="#" class="btn btn-transparent has-icon bravo-video-popup" data-toggle="modal" data-src="{{ str_ireplace("watch?v=","embed/",$row->video) }}" data-target="#myModal">
@@ -42,5 +81,51 @@
             </div>
         </div>
     </div>
+
+    @for($i=1; $i<3; $i++)
+        <div class="container container-contact-aloja @if($i==2) container-contact-sticky @endif" style="height: 96px;">
+            <div class="bg-dark position-absolute w-100 barra-contact" style="left: 0;padding: 32px 0px;">
+                    <div class="contact-info-aloja" style="padding:13px 0px;">
+                        <div class="caja-contact-aloja mx-5">
+                            <div>
+                                <i class="fal fa-phone-alt mr-2"></i>
+                            </div>
+                            <div>
+                                <span class="contact-info-aloja-nom"> Telefono </span><br>
+                                <span class="contact-info-aloja-especi">+56612412200</span>
+                            </div>
+                        </div>
+                        <div class="caja-contact-aloja mx-5">
+                            <div>
+                                <i class="icofont-brand-whatsapp mr-2"></i>
+                            </div>
+                            <div>
+                                <span class="contact-info-aloja-nom"> Whatsapp </span><br>
+                                <span class="contact-info-aloja-especi">+565555555</span>
+                            </div>
+                        </div>
+                        <div class="caja-contact-aloja ml-5">
+                            <div>
+                                <i class="fal fa-envelope-open-text mr-2"></i>
+                            </div>
+                            <div>
+                                <span class="contact-info-aloja-nom"> Email </span><br>
+                                <span class="contact-info-aloja-especi">email@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="caja-contact-aloja mx-5">
+                            <div>
+                                <i class="icofont-web mr-2"></i>
+                            </div>
+                            <div>
+                                <span class="contact-info-aloja-nom"> Sitio web </span><br>
+                                <span class="contact-info-aloja-especi">https//sitio.com</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    @endfor
+    
 @endif
 

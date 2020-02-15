@@ -30,6 +30,15 @@ tippy('.cuadro-trip-div', {
 
 window.onload=function(){
 
+
+  $(document).scroll(function(){
+            if($(document).scrollTop()>700){
+                $(".container-contact-sticky").addClass("container-contact-sticky-fixed")
+            }else{
+                $(".container-contact-sticky").removeClass("container-contact-sticky-fixed")
+            }
+        });
+
     jQuery.fn.single_double_click = function(single_click_callback, double_click_callback, timeout) {
       return this.each(function(){
         var clicks = 0, self = this;

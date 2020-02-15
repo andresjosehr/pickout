@@ -1979,12 +1979,180 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
   margin-top: 0.2rem !important;
 }
 
+.aloja-title {
+  font-size: 4.0625rem !important;
+  font-weight: 900;
+  width: 75%;
+  line-height: 1;
+}
+
+.div-banner-des {
+  padding-top: 100px;
+}
+
+.banner-aloja-ubi span {
+  padding: 7px 10px;
+  background: white;
+  color: #254d86;
+  font-size: 13px;
+}
+
+.bravo_banner:before {
+  width: 62.1875rem;
+  height: 12.3125rem;
+  position: absolute;
+  z-index: 2;
+  right: 35%;
+  bottom: 0;
+  margin-right: 5.625rem;
+  content: "";
+  background-image: url(https://cdn.civitatis.com/images/bgs/activity-header.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  right: 50%;
+  -webkit-filter: hue-rotate(238deg);
+          filter: hue-rotate(238deg);
+}
+
+.banner-aloja-review span,
+.banner-aloja-review div {
+  color: white !important;
+}
+
+.banner-aloja-review {
+  z-index: 9;
+  position: relative;
+  padding-top: 62px !important;
+}
+
+.banner-aloja-descrip {
+  z-index: 9;
+  position: relative;
+  color: white;
+  width: 64%;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score {
+  background: white !important;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score span,
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score {
+  color: #0057c1 !important;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score:after {
+  border-bottom: 25px solid white;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head {
+  line-height: 1;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .foot {
+  margin-top: -2px;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .left .head-rating {
+  font-weight: 800;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score {
+  margin-left: 8px !important;
+  margin-top: -10px !important;
+}
+
+.div-banner-des .star-rate {
+  z-index: 9;
+  position: relative;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.contact-info-aloja {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: flex;
+}
+
+.contact-info-aloja div,
+.contact-info-aloja {
+  color: white;
+}
+
+.contact-info-aloja {
+  right: 0;
+}
+
+.contact-info-aloja div {
+  font-weight: 800;
+}
+
+span.contact-info-aloja-especi {
+  font-size: 16px;
+  margin-top: -7px;
+  display: block;
+}
+
+.contact-info-aloja-nom {
+  margin-top: -7px;
+}
+
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score:after {
+  left: -11px !important;
+}
+
+.caja-contact-aloja {
+  display: -webkit-box;
+  display: flex;
+  cursor: pointer;
+}
+
+.caja-contact-aloja:hover i,
+.caja-contact-aloja:hover span {
+  color: #3886f1;
+}
+
+.caja-contact-aloja i {
+  font-size: 36px;
+}
+
+.container-contact-sticky {
+  opacity: 0;
+  position: fixed;
+  top: 58px;
+  z-index: 9;
+  width: 100%;
+  max-width: 100%;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.container-contact-sticky-fixed {
+  opacity: 1;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.caja-descrip-aloja {
+  bottom: 0;
+}
+
+.caja-title-aloja {
+  bottom: 50%;
+}
+
 @media (max-width: 768px) {
   .alert-few {
-    /*position: absolute;
-       width: 222px;
-       left: 46px;
-       top: 70px;*/
     font-size: 11px;
     padding-left: 10px;
     padding-right: 10px;

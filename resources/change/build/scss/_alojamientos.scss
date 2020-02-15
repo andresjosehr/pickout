@@ -1,213 +1,333 @@
-
-h3.room-name{
-    font-size: 18px !important;
+h3.room-name {
+	font-size: 18px !important;
 }
-.text-dark.room-price.mb-1{
-		font-size: 19px !important;
-		margin-top: -5px;
-		margin-left: 19px;
-		display: block;
-	}
 
-	.text-dark.room-price.mb-1 span{
+.text-dark.room-price.mb-1 {
+	font-size: 19px !important;
+	margin-top: -5px;
+	margin-left: 19px;
+	display: block;
+}
+
+.text-dark.room-price.mb-1 span {
 	font-size: 12px;
-	}
+}
 
-.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item{
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item {
 	display: flex;
 }
 
-.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon{
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon {
 	border: 0px !important;
 }
 
-.container .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li{
-	    padding-right: 25px;
-    	padding-left: 25px;
-    	border-right: 1px solid #00000054;
+.container .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li {
+	padding-right: 25px;
+	padding-left: 25px;
+	border-right: 1px solid #00000054;
 }
-.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon{
+
+.hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item .field-icon {
 	padding: 0!important;
 	height: 23px !important;
 }
 
 .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
 }
-.hotel_rooms_form .hotel_list_rooms .room-item .image{
+
+.hotel_rooms_form .hotel_list_rooms .room-item .image {
 	height: 100%;
 	display: table;
 }
-.hotel_rooms_form .hotel_list_rooms .room-item .num_user{
+
+.hotel_rooms_form .hotel_list_rooms .room-item .num_user {
 	text-align: center;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0 auto;
-    width: 1%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 1%;
 }
 
-.hotel_rooms_form .hotel_list_rooms .room-item .num_user i{
+.hotel_rooms_form .hotel_list_rooms .room-item .num_user i {
 	color: black;
 	color: #5e6d77;
 }
 
-.num_user i{
+.num_user i {
 	padding-right: 1px;
 	padding-left: 1px;
 }
 
-.hotel-info-gallery{
+.hotel-info-gallery {
 	padding: 21px !important;
 }
 
-.hotel_rooms_form .hotel_list_rooms .room-item, .hotel_rooms_form .hotel_list_rooms{
+.hotel_rooms_form .hotel_list_rooms .room-item,
+.hotel_rooms_form .hotel_list_rooms {
 	border: 0px !important;
 }
-div .hotel_rooms_form .hotel_list_rooms .room-item, .hotel_rooms_form .room-card{
+
+div .hotel_rooms_form .hotel_list_rooms .room-item,
+.hotel_rooms_form .room-card {
 	border: 3px solid #106fef !important;
 }
 
 .room-card {
-    border: 3px solid #106fef !important;
+	border: 3px solid #106fef !important;
 }
-	.room-card .far.fa-user{
-	    position: relative;
-	    top: -1px;
-	}
 
-	.room-atributos{
-		padding: 0px 6px;
-	    font-size: 13px;
-	    display: inline-block;
-	    margin: 3px 0px;
-	}
-.room-aviable{
-	    font-size: 14.9px;
+.room-card .far.fa-user {
+	position: relative;
+	top: -1px;
 }
-.room-price{
+
+.room-atributos {
+	padding: 0px 6px;
+	font-size: 13px;
+	display: inline-block;
+	margin: 3px 0px;
+}
+
+.room-aviable {
+	font-size: 14.9px;
+}
+
+.room-price {
 	font-size: 21px;
 }
 
-.room-extras{
+.room-extras {
 	font-size: 17px;
 	line-height: 1.5;
 	/*border-bottom: 1px solid #a0a9b2;*/
-    padding: 6px 0;
+	padding: 6px 0;
 }
 
-.alert-few-book{
+.alert-few-book {
 	top: 75px !important;
 	left: 31px !important;
 	position: absolute;
 }
-.hotel_rooms_form .hotel_list_rooms .room-item .col-price .price{
+
+.hotel_rooms_form .hotel_list_rooms .room-item .col-price .price {
 	margin-bottom: 0 !important;
 }
-.col-price{
+
+.col-price {
 	padding: 0px !important;
 }
-.alert-few{
-		top: 10px;
-	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item, .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image{
-	min-height: 223px !important;
-    max-height: 223px !important;
+.alert-few {
+	top: 10px;
 }
-.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item{
+
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item,
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image {
+	min-height: 223px !important;
+	max-height: 223px !important;
+}
+
+.bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item {
 	border-radius: 0px !important;
 }
+
 .style_1-column {
-    padding: 0 .2rem;
+	padding: 0 .2rem;
 }
+
 .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item {
-    margin-bottom: .2rem !important;
-    margin-top: .2rem !important;
+	margin-bottom: .2rem !important;
+	margin-top: .2rem !important;
 }
 
+.aloja-title{
+	font-size: 4.0625rem !important;
+    font-weight: 900;
+    width: 75%;
+    line-height: 1;
+}
 
+.div-banner-des{
+	padding-top: 100px;
+}
 
+.banner-aloja-ubi span{
+	padding: 7px 10px;
+    background: white;
+    color: #254d86;
+    font-size: 13px;
+}
 
+.bravo_banner:before {
+    width: 62.1875rem;
+    height: 12.3125rem;
+    position: absolute;
+    z-index: 2;
+    right: 35%;
+    bottom: 0;
+    margin-right: 5.625rem;
+    content: "";
+    background-image: url(https://cdn.civitatis.com/images/bgs/activity-header.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    right: 50%;
+    filter: hue-rotate(238deg);
+}
+.banner-aloja-review span, .banner-aloja-review div{
+	color: white !important;
+}
+.banner-aloja-review{
+	z-index: 9;
+    position: relative;
+    padding-top: 62px !important;
+}
+.banner-aloja-descrip{
+	z-index: 9;
+    position: relative;
+    color: white;
+    width: 64%;
+    font-size: 1.2rem;
+    line-height: 1;
+}
 
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score{
+	background: white !important;
+}
 
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score span, .bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score{
+	color: #0057c1 !important;
+}
 
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score:after{
+	border-bottom: 25px solid white;
+}
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head{
+	line-height: 1;
+}
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .foot{
+    margin-top: -2px;
+}
 
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .left .head-rating{
+	font-weight: 800;
+}
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score {
+    margin-left: 8px !important;
+    margin-top: -10px !important;
+}
+.div-banner-des .star-rate{
+    z-index: 9;
+    position: relative;
+    font-size: 12px;
+    margin-top: 7px;
+}
+.contact-info-aloja{
+	bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: fit-content;
+    display: flex;
+}
 
+.contact-info-aloja div, .contact-info-aloja{
+	color: white;
+}
+.contact-info-aloja{
+	right: 0;
+}
 
+.contact-info-aloja div {
+    font-weight: 800;
+}
+span.contact-info-aloja-especi {
+    font-size: 16px;
+    margin-top: -7px;
+    display: block;
+}
+.contact-info-aloja-nom{
+	margin-top: -7px;
+}
 
+.bravo_wrap .bravo_detail_hotel .bravo_content.banner-aloja-review .g-header .review-score .head .score:after {
+    left: -11px !important;
+}
 
+.caja-contact-aloja{
+	display: flex;
+	cursor: pointer;
+}
+.caja-contact-aloja:hover i, .caja-contact-aloja:hover span{
+	color: #3886f1;
+}
+.caja-contact-aloja i{
+	font-size: 36px;
+}
+.container-contact-sticky{
+        opacity: 0;
+        position: fixed;
+        top: 58px;
+        z-index: 9;
+        width: 100%;
+        max-width: 100%;
+        transition: all .25s;
+    }
+    .container-contact-sticky-fixed{
+        opacity: 1;
+        transition: all .25s;
+    }
 
-
-
-
-
-
-
-
-
-
+    .caja-descrip-aloja{
+    	bottom: 0;
+    }
+    .caja-title-aloja{
+    	bottom: 50%;
+    }
 
 @media(max-width: 768px) {
-
-	.alert-few{
-	/*position: absolute;
-    width: 222px;
-    left: 46px;
-    top: 70px;*/
-    font-size: 11px;
-    padding-left: 10px;
-    padding-right: 10px;
-}	
-
-	.alert-few{
+	.alert-few {
+		font-size: 11px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.alert-few {
 		left: 0;
 		right: 0;
 		margin: -10px auto;
 	}
-	.div-btn-resevar-aloj{
+	.div-btn-resevar-aloj {
 		text-align: center;
 	}
 	.text-dark.room-price.mb-1 {
-    	font-size: 18px;
-    	margin-left: 0px;
-    	font-weight: bolder;
-    	color: #106fef !important;
+		font-size: 18px;
+		margin-left: 0px;
+		font-weight: bolder;
+		color: #106fef !important;
 	}
 	.text-dark.room-price.mb-1 span {
-    	display: none;
+		display: none;
 	}
 	.alert-few-book {
-	    top: 86px !important;
-	    left: 0px !important;
+		top: 86px !important;
+		left: 0px !important;
 	}
-	.hotel_rooms_form .hotel_list_rooms .room-item .col-price .price{
+	.hotel_rooms_form .hotel_list_rooms .room-item .col-price .price {
 		margin-bottom: 4px !important;
 	}
-	.col-attr-room br{
+	.col-attr-room br {
 		display: none;
 	}
-	.room-name-comodidades{
+	.room-name-comodidades {
 		display: none;
 	}
-	.hotel_rooms_form .hotel_list_rooms .room-item .price span{
+	.hotel_rooms_form .hotel_list_rooms .room-item .price span {
 		font-size: 10px !important;
 	}
-	.col-attr-room-comodidades{
+	.col-attr-room-comodidades {
 		margin-left: -4px;
 	}
 }
