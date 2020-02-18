@@ -89,7 +89,7 @@
                         <div class="row p-0">
                             <div class="col-6 col-md-12">
                                 <h3 class="room-name mb-1">Precio:</h3>
-                                <p class="text-dark room-price mb-1">$ @{{room.price}}<span> x noche</span></p>  
+                                <p class="text-dark room-price mb-1" v-html='room.price_html'></p>  
                             </div>
                             <div class="col-6 col-md-12">
                                 <p v-if='room.number_==1' class="alert alert-danger alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>

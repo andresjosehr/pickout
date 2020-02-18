@@ -52,7 +52,7 @@
                             <div class="banner-aloja-descrip">
                                 {{$row->termsByAttributeInListingPage[0]->name}} ubicado en {{$row->address}}, {{$row->location->name}}, cuenta con diferentes tipo de habitaciones con precio desde  {{$price}} $
                             </div>
-                            <div class="star-rate">
+                            <div class="star-rate star-rate-aloja">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -102,48 +102,48 @@
     </div>
 
     @for($i=1; $i<3; $i++)
-        <div class="container container-contact-aloja @if($i==2) container-contact-sticky @endif" style="height: 96px;">
-            <div class="bg-dark position-absolute w-100 barra-contact" style="left: 0;padding: 32px 0px;">
-                    <div class="contact-info-aloja" style="padding:13px 0px;">
+        <div class="container container-contact-aloja @if($i==2) container-contact-sticky @endif">
+            <div class="bg-dark position-absolute w-100 barra-contact">
+                    <div class="contact-info-aloja">
                         @if($row->phone)
-                            <a class="caja-contact-aloja mx-5" href="tel:{{$row->phone}}">
+                            <a class="caja-contact-aloja mx-md-5 mx-4" href="tel:{{$row->phone}}">
                                 <div>
-                                    <i class="fal fa-phone-alt mr-2"></i>
+                                    <i class="fal fa-phone-alt"></i>
                                 </div>
-                                <div>
+                                <div class='div-info-content'>
                                     <span class="contact-info-aloja-nom"> Telefono </span><br>
                                     <span class="contact-info-aloja-especi">{{$row->phone}}</span>
                                 </div>
                             </a>
                         @endif
                         @if($row->whatsapp)
-                            <a class="caja-contact-aloja mx-5" href="https://wa.me/{{$row->whatsapp}}">
+                            <a class="caja-contact-aloja mx-md-5 mx-4" href="https://wa.me/{{$row->whatsapp}}">
                                 <div>
-                                    <i class="icofont-brand-whatsapp mr-2"></i>
+                                    <i class="icofont-brand-whatsapp"></i>
                                 </div>
-                                <div>
+                                <div class='div-info-content'>
                                     <span class="contact-info-aloja-nom"> Whatsapp </span><br>
                                     <span class="contact-info-aloja-especi">{{$row->whatsapp}}</span>
                                 </div>
                             </a>
                         @endif
                         @if($row->email)
-                            <a class="caja-contact-aloja ml-5" href="mailto:{{$row->email}}">
+                            <a class="caja-contact-aloja mx-md-5 mx-4" href="mailto:{{$row->email}}">
                                 <div>
-                                    <i class="fal fa-envelope-open-text mr-2"></i>
+                                    <i class="fal fa-envelope-open-text"></i>
                                 </div>
-                                <div>
+                                <div class='div-info-content'>
                                     <span class="contact-info-aloja-nom">Enviar email </span><br>
                                     <span class="contact-info-aloja-especi">{{$row->email}}</span>
                                 </div>
                             </a>
                         @endif
                         @if($row->website)
-                            <a class="caja-contact-aloja mx-5" href="{{$row->website}}" target="_blank">
+                            <a class="caja-contact-aloja mx-md-5 mx-4" href="{{$row->website}}" target="_blank">
                                 <div>
-                                    <i class="icofont-web mr-2"></i>
+                                    <i class="icofont-web"></i>
                                 </div>
-                                <div>
+                                <div class='div-info-content'>
                                     <span class="contact-info-aloja-nom"> Ver sitio </span><br>
                                     <span class="contact-info-aloja-especi">{{$row->website}}</span>
                                 </div>

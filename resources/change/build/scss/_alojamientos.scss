@@ -290,8 +290,65 @@ span.contact-info-aloja-especi {
     .caja-title-aloja{
     	bottom: 50%;
     }
+    .container-contact-aloja{
+    	height: 96px;
+    }
+    .barra-contact{
+    	left: 0;padding: 32px 0px;
+    }
+    .contact-info-aloja{
+    	padding:13px 0px;
+    }
 
+@media(max-width: 1199px) {
+	.div-info-content{
+		display: none;
+	}
+	.bravo_banner_single:before {
+		visibility: hidden;
+	}
+	.banner-aloja-review, .banner-aloja-descrip, .star-rate-aloja{
+		display: none;
+	}
+	.aloja-title {
+	    width: 100%;
+	    text-align: center !important;
+	}
+
+	.caja-title-aloja{
+		width: fit-content;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	}
+	.aloja-title{
+		border-bottom: 4px solid white;
+    	padding-bottom: 5px;
+	}
+}
 @media(max-width: 768px) {
+	.container-contact-sticky {
+    	top: 48px !important;
+    }
+	.barra-contact {
+    	padding: 20px 0px;
+    }
+    .container-contact-aloja {
+	    height: 40px;
+	}
+	.contact-info-aloja {
+	    padding: 5px 0px;
+	}
+	.caja-contact-aloja i {
+	    font-size: 26px;
+	}
+	.aloja-title {
+	    font-size: 2.0625rem !important;
+	}
+	.banner-aloja-ubi span {
+	    padding: 4px 5px;
+	    font-size: 8px;
+	}
 	.alert-few {
 		font-size: 11px;
 		padding-left: 10px;

@@ -6271,10 +6271,20 @@ Object(tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.cuadro-trip-div', {
 
 window.onload = function () {
   $(document).scroll(function () {
-    if ($(document).scrollTop() > 700) {
-      $(".container-contact-sticky").addClass("container-contact-sticky-fixed");
-    } else {
-      $(".container-contact-sticky").removeClass("container-contact-sticky-fixed");
+    if ($(document).width() > 1200) {
+      if ($(document).scrollTop() > 700) {
+        $(".container-contact-sticky").addClass("container-contact-sticky-fixed");
+      } else {
+        $(".container-contact-sticky").removeClass("container-contact-sticky-fixed");
+      }
+    }
+
+    if ($(document).width() < 768) {
+      if ($(document).scrollTop() > 200) {
+        $(".container-contact-sticky").addClass("container-contact-sticky-fixed");
+      } else {
+        $(".container-contact-sticky").removeClass("container-contact-sticky-fixed");
+      }
     }
   });
 
