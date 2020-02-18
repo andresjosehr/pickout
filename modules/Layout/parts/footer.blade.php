@@ -109,18 +109,31 @@
 <script type="text/javascript" src="{{ asset("libs/daterange/daterangepicker.min.js") }}"></script>
 <script src="{{ asset('libs/select2/js/select2.min.js') }}" ></script>
 <script src="{{ asset('js/functions.js?_ver='.config('app.version')) }}"></script>
+
+<style type="text/css">
+    #menutab{
+        transition: all 0.4s;
+        top: -85px;
+    }
+    .menu-fixed{
+        transition-timing-function: linear;
+        position: fixed;
+        z-index: 100000;
+        top: 0px !important;
+        width: -webkit-fill-available;
+        transition: all 0.4s;
+    }   
+</style>
 <script>
    $(window).on('scroll', function() {
       if ($(document).scrollTop() > 156) {
-		$("#menutab").css("transition","0.4s");
-		$("#menutab").css("transition-timing-function","linear");
-		$("#menutab").css("position","fixed");
-		$("#menutab").css("top","0");
-		$("#menutab").css("z-index","100000");
-		$("#menutab").css("width","-webkit-fill-available");
+		$("#menutab").addClass("menu-fixed");
+        if ($(document).width()<768) $("body").css("margin-top","47px");
+        if ($(document).width()>768) $("body").css("margin-top","57.99px");
       }
       else {
-		$("#menutab").css("position","relative");
+		$("#menutab").removeClass("menu-fixed");
+        $("body").css("margin-top","0px");
       }
     });
 </script>
