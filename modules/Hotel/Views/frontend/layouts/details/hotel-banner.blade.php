@@ -7,7 +7,7 @@
         $background='background-color: gray';
     @endphp
 @endif
-    <div class="bravo_banner" style="background-image: url('{{$row->getBannerImageUrlAttribute('full')}}')">
+    <div class="bravo_banner @if(explode("/", Request::url())[count(explode("/", Request::url()))-2]=='alojamientos') bravo_banner_single @endif" style="background-image: url('{{$row->getBannerImageUrlAttribute('full')}}')">
         <div class="background-filter-banner-location"></div>
         <div class="container">
             <div class="bravo_gallery">
@@ -147,4 +147,4 @@
         $background='background-color: gray';
     @endphp
 @endif
-    
+
