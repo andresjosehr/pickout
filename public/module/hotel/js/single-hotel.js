@@ -371,8 +371,11 @@
 
     $('.bravo-video-popup').click(function() {
         let video_url = $(this).data( "src" );
-        let target = $(this).data( "target" );
-        $(target).find(".bravo_embed_video").attr('src',video_url + "?autoplay=0&amp;modestbranding=1&amp;showinfo=0" );
+        let target = $(this).data( "target" );  
+
+        var video_code=video_url.split("/")[video_url.split("/").length-1];
+
+        $(target).find(".bravo_embed_video").attr('src',"https://www.youtube.com/embed/"+video_code+"?autoplay=0&amp;modestbranding=1&amp;showinfo=0" );
     });
 
 
