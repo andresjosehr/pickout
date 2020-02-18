@@ -153,7 +153,7 @@ class HotelController extends Controller
 
     public function detail(Request $request, $slug)
     {
-        $row = $this->hotelClass::where('slug', $slug)->where("status", "publish")->with(['location','translations','hasWishList'])->first();;
+        $row = $this->hotelClass::where('slug', $slug)->where("status", "publish")->with(['location','translations','hasWishList', 'termsByAttributeInListingPage'])->first();;
         if (empty($row)) {
             return redirect('/');
         }

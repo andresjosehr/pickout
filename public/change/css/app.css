@@ -2111,6 +2111,10 @@ span.contact-info-aloja-especi {
   left: -11px !important;
 }
 
+.caja-contact-aloja:hover {
+  text-decoration: none;
+}
+
 .caja-contact-aloja {
   display: -webkit-box;
   display: flex;

@@ -31,9 +31,7 @@ tippy('.cuadro-trip-div', {
 window.onload=function(){
 
 
-  var txt= $('.banner-aloja-descrip').text();
-if(txt.length > 155)
-    $('.banner-aloja-descrip').text(txt.substring(0,150) + '...');
+  
 
 
 $(document).scroll(function () {
