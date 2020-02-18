@@ -2119,6 +2119,10 @@ span.contact-info-aloja-especi {
   display: -webkit-box;
   display: flex;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .caja-contact-aloja:hover i,
@@ -2166,9 +2170,25 @@ span.contact-info-aloja-especi {
 
 .contact-info-aloja {
   padding: 13px 0px;
+  width: 85%;
+  padding: 13px 0px;
 }
 
 @media (max-width: 1199px) {
+  .bravo_wrap .bravo_detail_hotel .bravo_banner .btn-group .has-icon {
+    font-size: 8px !important;
+    padding: 5px 9px !important;
+  }
+
+  .bravo_detail_hotel .bravo_banner_single #Layer_1 {
+    height: 13px;
+    width: 13px;
+  }
+
+  .contact-info-aloja {
+    width: 100%;
+  }
+
   .div-info-content {
     display: none;
   }
@@ -2178,9 +2198,12 @@ span.contact-info-aloja-especi {
   }
 
   .banner-aloja-review,
-  .banner-aloja-descrip,
-  .star-rate-aloja {
+  .banner-aloja-descrip {
     display: none;
+  }
+
+  .star-rate-aloja {
+    top: -8px;
   }
 
   .aloja-title {

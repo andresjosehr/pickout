@@ -100,54 +100,73 @@
             </div>
         </div>
     </div>
+    @php
+        $i=0;
+        if ($row->phone) $i++;
+        if ($row->whatsapp) $i++;
+        if ($row->email) $i++;
+        if ($row->website) $i++;
 
+        if ($i==1) $col='col-12';
+        if ($i==2) $col='col-6';
+        if ($i==3) $col='col-4';
+        if ($i==4) $col='col-3';
+    @endphp
     @for($i=1; $i<3; $i++)
         <div class="container container-contact-aloja @if($i==2) container-contact-sticky @endif">
             <div class="bg-dark position-absolute w-100 barra-contact">
-                    <div class="contact-info-aloja">
+                    <div class="contact-info-aloja row">
                         @if($row->phone)
-                            <a class="caja-contact-aloja mx-md-5 mx-4" href="tel:{{$row->phone}}">
-                                <div>
-                                    <i class="fal fa-phone-alt"></i>
-                                </div>
-                                <div class='div-info-content'>
-                                    <span class="contact-info-aloja-nom"> Telefono </span><br>
-                                    <span class="contact-info-aloja-especi">{{$row->phone}}</span>
-                                </div>
-                            </a>
+                            <div class="{{$col}}">
+                                <a class="caja-contact-aloja" href="tel:{{$row->phone}}">
+                                    <div>
+                                        <i class="fal fa-phone-alt mr-2"></i>
+                                    </div>
+                                    <div class='div-info-content'>
+                                        <span class="contact-info-aloja-nom"> Telefono </span><br>
+                                        <span class="contact-info-aloja-especi">{{$row->phone}}</span>
+                                    </div>
+                                </a>
+                            </div>
                         @endif
                         @if($row->whatsapp)
-                            <a class="caja-contact-aloja mx-md-5 mx-4" href="https://wa.me/{{$row->whatsapp}}">
-                                <div>
-                                    <i class="icofont-brand-whatsapp"></i>
-                                </div>
-                                <div class='div-info-content'>
-                                    <span class="contact-info-aloja-nom"> Whatsapp </span><br>
-                                    <span class="contact-info-aloja-especi">{{$row->whatsapp}}</span>
-                                </div>
-                            </a>
+                            <div class="{{$col}}">
+                                <a class="caja-contact-aloja" href="https://wa.me/{{$row->whatsapp}}">
+                                    <div>
+                                        <i class="icofont-brand-whatsapp mr-2"></i>
+                                    </div>
+                                    <div class='div-info-content'>
+                                        <span class="contact-info-aloja-nom"> Whatsapp </span><br>
+                                        <span class="contact-info-aloja-especi">{{$row->whatsapp}}</span>
+                                    </div>
+                                </a>
+                            </div>
                         @endif
                         @if($row->email)
-                            <a class="caja-contact-aloja mx-md-5 mx-4" href="mailto:{{$row->email}}">
-                                <div>
-                                    <i class="fal fa-envelope-open-text"></i>
-                                </div>
-                                <div class='div-info-content'>
-                                    <span class="contact-info-aloja-nom">Enviar email </span><br>
-                                    <span class="contact-info-aloja-especi">{{$row->email}}</span>
-                                </div>
-                            </a>
+                            <div class="{{$col}}">
+                                <a class="caja-contact-aloja" href="mailto:{{$row->email}}">
+                                    <div>
+                                        <i class="fal fa-envelope-open-text mr-2"></i>
+                                    </div>
+                                    <div class='div-info-content'>
+                                        <span class="contact-info-aloja-nom">Enviar email </span><br>
+                                        <span class="contact-info-aloja-especi">{{$row->email}}</span>
+                                    </div>
+                                </a>
+                            </div>
                         @endif
                         @if($row->website)
-                            <a class="caja-contact-aloja mx-md-5 mx-4" href="{{$row->website}}" target="_blank">
-                                <div>
-                                    <i class="icofont-web"></i>
-                                </div>
-                                <div class='div-info-content'>
-                                    <span class="contact-info-aloja-nom"> Ver sitio </span><br>
-                                    <span class="contact-info-aloja-especi">{{$row->website}}</span>
-                                </div>
-                            </a>
+                            <div class="{{$col}}">
+                                <a class="caja-contact-aloja" href="{{$row->website}}" target="_blank">
+                                    <div>
+                                        <i class="icofont-web mr-2"></i>
+                                    </div>
+                                    <div class='div-info-content'>
+                                        <span class="contact-info-aloja-nom"> Ver sitio </span><br>
+                                        <span class="contact-info-aloja-especi">{{$row->website}}</span>
+                                    </div>
+                                </a>
+                            </div>
                         @endif
                     </div>
             </div>
