@@ -159,7 +159,7 @@
                             <div class="{{$col}}">
                                 <a class="caja-contact-aloja" href="{{$row->website}}" target="_blank">
                                     <div>
-                                        <i class="icofont-web mr-2"></i>
+                                        <i class="fas fa-globe-americas mr-2"></i>
                                     </div>
                                     <div class='div-info-content'>
                                         <span class="contact-info-aloja-nom"> Ver sitio </span><br>
