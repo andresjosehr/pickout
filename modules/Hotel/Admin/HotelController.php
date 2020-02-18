@@ -174,6 +174,7 @@ class HotelController extends AdminController
             'allow_full_day',
             'status',
             'phone',
+            'whatsapp',
             'email',
             'website'
         ];

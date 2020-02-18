@@ -72,7 +72,7 @@
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md-3">
 
                 <div class="form-group">
 
@@ -84,7 +84,19 @@
 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
+
+                <div class="form-group">
+
+                    <label>{{__("Whatsapp")}}</label>
+
+                    <input type="phone" value="{{$row->whatsapp}}" placeholder="{{__("Example: 3")}}" name="whatsapp" class="form-control">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
 
                 <div class="form-group">
 
@@ -96,7 +108,7 @@
 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
 
                 <div class="form-group">
 

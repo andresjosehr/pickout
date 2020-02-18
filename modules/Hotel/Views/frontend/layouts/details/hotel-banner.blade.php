@@ -1,4 +1,12 @@
 @if($row->banner_image_id)
+    @php
+        $background='background-image: url('.$row->getBannerImageUrlAttribute('full').')';
+    @endphp
+@else
+    @php
+        $background='background-color: gray';
+    @endphp
+@endif
     <div class="bravo_banner" style="background-image: url('{{$row->getBannerImageUrlAttribute('full')}}')">
         <div class="background-filter-banner-location"></div>
         <div class="container">
@@ -6,32 +14,36 @@
                 <div class="row div-banner-des">
                     <div class="col-12 position-absolute caja-title-aloja">  
                             <div class="banner-aloja-ubi mb-2">
-                                <span>Chile</span>
-                                <span>Puerto Natales</span>
+                                <span>{{$row->address}}</span>
+                                <span>{{$row->location->name}}</span>
                             </div>
-                            <h1 class="aloja-title">Excursión a Torres del Paine</h1>
+                            <h1 class="aloja-title">{{$translation->title}}</h1>
                     </div>
                     <div class="col-6 position-absolute caja-descrip-aloja">
                             <div class="banner-aloja-review bravo_content">
                                 <div class="g-header">
-                                    <div class="review-score">
-                                        <div class="head">
-                                            <div class="left text-left">
-                                                <span class="head-rating">No Evaluado</span>
-                                                <span class="text-rating">de 0 comentarios</span>
+                                    @if($row->getReviewEnable())
+                                        @if($row->review_data)
+                                            <div class="review-score">
+                                                <div class="head">
+                                                    <div class="left">
+                                                        <span class="head-rating">{{$row->review_data['score_text']}}</span>
+                                                        <span class="text-rating">{{__("from :number reviews",['number'=>$row->review_data['total_review']])}}</span>
+                                                    </div>
+                                                    <div class="score">
+                                                        {{$row->review_data['score_total']}}<span>/5</span>
+                                                    </div>
+                                                </div>
+                                                <div class="foot">
+                                                    {{__(":number% of guests recommend",['number'=>$row->recommend_percent])}}
+                                                </div>
                                             </div>
-                                            <div class="score">
-                                                0<span>/5</span>
-                                            </div>
-                                        </div>
-                                        <div class="foot text-left">
-                                            0% de personas recomiendan
-                                        </div>
-                                    </div>
+                                        @endif
+                                    @endif
                                 </div>
                             </div>
                             <div class="banner-aloja-descrip">
-                                Excursión imprescindible a Torres del Paine. Con un margen de horario adecuado, te permiten explorar el parque a tu ritmo
+                                {!! $row->location->content !!}
                             </div>
                             <div class="star-rate">
                                 <i class="fa fa-star"></i>
@@ -92,7 +104,7 @@
                             </div>
                             <div>
                                 <span class="contact-info-aloja-nom"> Telefono </span><br>
-                                <span class="contact-info-aloja-especi">+56612412200</span>
+                                <span class="contact-info-aloja-especi">{{$row->phone}}</span>
                             </div>
                         </div>
                         <div class="caja-contact-aloja mx-5">
@@ -101,7 +113,7 @@
                             </div>
                             <div>
                                 <span class="contact-info-aloja-nom"> Whatsapp </span><br>
-                                <span class="contact-info-aloja-especi">+565555555</span>
+                                <span class="contact-info-aloja-especi">{{$row->whatsapp}}</span>
                             </div>
                         </div>
                         <div class="caja-contact-aloja ml-5">
@@ -109,8 +121,8 @@
                                 <i class="fal fa-envelope-open-text mr-2"></i>
                             </div>
                             <div>
-                                <span class="contact-info-aloja-nom"> Email </span><br>
-                                <span class="contact-info-aloja-especi">email@gmail.com</span>
+                                <span class="contact-info-aloja-nom">Enviar email </span><br>
+                                <span class="contact-info-aloja-especi">{{$row->email}}</span>
                             </div>
                         </div>
                         <div class="caja-contact-aloja mx-5">
@@ -118,14 +130,21 @@
                                 <i class="icofont-web mr-2"></i>
                             </div>
                             <div>
-                                <span class="contact-info-aloja-nom"> Sitio web </span><br>
-                                <span class="contact-info-aloja-especi">https//sitio.com</span>
+                                <span class="contact-info-aloja-nom"> Ver sitio </span><br>
+                                <span class="contact-info-aloja-especi">{{$row->website}}</span>
                             </div>
                         </div>
                     </div>
             </div>
         </div>
     @endfor
-    
+    @if($row->banner_image_id)
+    @php
+        $background='background-image: url('.$row->getBannerImageUrlAttribute('full').')';
+    @endphp
+@else
+    @php
+        $background='background-color: gray';
+    @endphp
 @endif
-
+    

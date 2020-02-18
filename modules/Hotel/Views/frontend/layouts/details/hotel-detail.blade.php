@@ -1,4 +1,4 @@
-<div class="g-header">
+{{--<div class="g-header">
 
     <div class="left">
 
@@ -80,10 +80,8 @@
 
 </div>
 
-<!-- inicio mod -->
-<div class="g-header">
 
-<!-- <div class="left"> -->
+<div class="g-header">
 
     <div class="g-hotel-feature col-md-12 col-lg-9">
         <div class="row">
@@ -135,9 +133,9 @@
         </div>
     </div>
     
-<!-- </div> -->
 </div>
-<!-- termino mod -->
+
+--}}
 
 @if($row->getGallery())
 

@@ -6270,6 +6270,8 @@ Object(tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.cuadro-trip-div', {
 });
 
 window.onload = function () {
+  var txt = $('.banner-aloja-descrip').text();
+  if (txt.length > 155) $('.banner-aloja-descrip').text(txt.substring(0, 150) + '...');
   $(document).scroll(function () {
     if ($(document).scrollTop() > 700) {
       $(".container-contact-sticky").addClass("container-contact-sticky-fixed");
