@@ -14,8 +14,7 @@
                 <div class="row div-banner-des">
                     <div class="col-12 position-absolute caja-title-aloja">  
                             <div class="banner-aloja-ubi mb-2">
-                                <script type="text/javascript">console.log('<?php print_r($row) ?>')</script>
-                                <a><span>{{$row->address}}</span></a>
+                                <a style="cursor: pointer" onclick="$('html, body').animate({ scrollTop: $('.g-rules').offset().top-50 }, 1800);"><span>{{$row->address}}</span></a>
                                 <a href="{{ url('/location/'.$row->location->slug) }}"><span>{{$row->location->name}}</span></a>
                             </div>
                             <h1 class="aloja-title">{{$translation->title}}</h1>
