@@ -2205,10 +2205,8 @@ span.contact-info-aloja-especi {
 
 @media (max-width: 768px) {
   .caja-title-aloja {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
     padding-right: 0px !important;
-    margin-left: 0px !important;
+    padding-left: 0px !important;
   }
 
   .container-contact-sticky {
@@ -2232,7 +2230,7 @@ span.contact-info-aloja-especi {
   }
 
   .aloja-title {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
   }
 
   .banner-aloja-ubi span {
