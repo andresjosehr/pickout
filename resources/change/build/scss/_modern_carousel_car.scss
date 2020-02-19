@@ -4,6 +4,9 @@
 	}
 }
 
+.bravo_wrap .page-template-content .bravo-list-car .sub-title{
+	color: white !important;
+}
 .container_car .sub-title {
     margin-bottom: 20px!important;
     margin-top: -30px!important;
@@ -18,7 +21,7 @@
 }
 
 .bravo_detail_location .btn.btn-primary {
-    z-index: 999999999;
+    z-index: 99999;
     position: absolute;
     margin-top: 56px !important;
     left: 0;
@@ -229,7 +232,7 @@ div .title-div-location{
 
 @media (max-width: 768px){
 	.bravo_detail_location .btn.btn-primary {
-	    z-index: 999999999;
+	    z-index: 99999;
 	    position: absolute;
 	    margin-top: 56px !important;
 	    left: 0;

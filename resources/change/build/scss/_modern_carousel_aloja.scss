@@ -1,8 +1,37 @@
 .bravo_wrap .bravo-list-hotel .item-loop .list-star .booking-item-rating-stars li .fa{
     font-size: 11px !important;
 }
+
+.bravo_wrap .page-template-content .bravo-list-hotel .modern_carousel_aloja .owl-nav .owl-prev{
+    padding: 76px 22px!important;
+    background: rgba(170, 167, 167, 0.48) !important;
+    border: 0px !important;
+    color: #fff;
+    margin-left: 0px!important;
+    left: 0 !important;
+    position: absolute !important;
+    margin-top: -113px !important;
+}
+.bravo_wrap .page-template-content .bravo-list-hotel .modern_carousel_aloja .owl-nav .owl-next{
+    padding: 76px 22px !important;
+    background: rgba(170, 167, 167, 0.48) !important;
+    border: 0px !important;
+    color: white;
+    margin-left: 0px!important;
+    right: 0 !important;
+    position: absolute !important;
+    margin-top: -113px !important;
+
+}
+#car1 .bravo-list-hotel .owl-nav:not(.disabled){
+    display: none !important;
+}
+
 .modern_carousel_aloja_parent .star-rate-default{
     display: none;
+}
+.modern_carousel_aloja_parent{
+    padding: 0;
 }
 .modern_carousel_aloja_parent{
 	padding-top: 23px !important;

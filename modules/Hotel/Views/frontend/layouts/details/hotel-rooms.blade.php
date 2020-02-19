@@ -90,9 +90,37 @@
                             <div class="col-6 col-md-12">
                                 <h3 class="room-name mb-1">Precio:</h3>
                                 <p class="text-dark room-price mb-1" v-html='room.price_html'></p>  
+
+                                <div class="image image-gallery-aloja" @click="showGallery($event,room.id,room.gallery)">
+                                    <div class="count-gallery" v-if="typeof room.gallery !='undefined' && room.gallery && room.gallery.length > 1" style="position: relative;">
+                                        <i class="fa fa-picture-o"></i>
+                                        @{{room.gallery.length}}
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-6 col-md-12">
                                 <p v-if='room.number_==1' class="alert alert-danger alert-few"><i class="far fa-exclamation-circle mr-1"></i> ¡Solo queda 1 disponible!</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="modal" :id="'modal_room_'+room.id" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">@{{ room.title }}</h5>
+                                            <span class="c-pointer" data-dismiss="modal" aria-label="Close">
+                                                <i class="input-icon field-icon fa">
+                                                    <img src="{{asset('images/ico_close.svg')}}" alt="close">
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="fotorama" data-nav="thumbs" data-width="100%" data-auto="false" data-allowfullscreen="true">
+                                                <a v-for="g in room.gallery" :href="g.large"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div> 

@@ -25,7 +25,8 @@
                 {{$desc}}
 
             </h3>
-
+        @else
+        <br><br>
         @endif
 
         <div class="list-item">

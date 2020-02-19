@@ -1,4 +1,4 @@
-<div class="container @if($style_list === "modern_carousel") container_car @endif">
+<div class="container @if($style_list === "modern_carousel") container_car my-5 @endif">
 
     <div class="bravo-list-car layout_{{$style_list}}">
 
