@@ -27,6 +27,18 @@ tippy('.cuadro-trip-div', {
   plugins: [animateFill]
 });
 
+if ($(document).width()<768) {
+  tippy('.caja-contact-aloja', {
+    content (reference){
+      return $(reference).find(".contact-info-aloja-especi").text();
+    },
+    theme: "white-tippy",
+    interactive: true,
+    animateFill: true,
+    plugins: [animateFill]
+  });
+}
+
 
 window.onload=function(){
 

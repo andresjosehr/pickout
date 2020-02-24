@@ -1,3 +1,7 @@
+#menutab {
+  width: 100%;
+}
+
 @media (max-width: 1023px) {
   li[role=bravo_space] {
     right: 15px !important;
@@ -232,7 +236,6 @@
   }
 
   .depth-1 a {
-    display: -webkit-box !important;
     display: flex !important;
   }
 
@@ -550,7 +553,6 @@ div .modern_carousel_aloja_parent .sub-title {
 .modern_carousel_aloja_parent .info-hover {
   position: absolute;
   top: -125px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   z-index: 999;
 }
@@ -568,7 +570,6 @@ div .modern_carousel_aloja_parent .sub-title {
 
 .modern_carousel_aloja_parent .item-loop:hover .info-hover {
   top: 0px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -585,13 +586,11 @@ div .modern_carousel_aloja_parent .sub-title {
   z-index: 99;
   opacity: 0;
   cursor: pointer;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .modern_carousel_aloja_parent .item-loop:hover:before {
   opacity: 1;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -630,14 +629,12 @@ div .modern_carousel_aloja_parent .sub-title {
 
 .modern_carousel_aloja_parent .item-loop:hover .div-redirect {
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel_aloja_parent .item-loop .div-redirect {
   top: -135px;
   cursor: pointer;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -736,7 +733,6 @@ div .modern_carousel_aloja_parent .sub-title {
   }
 
   .bravo_wrap .modern_carousel_aloja_parent .bravo-list-hotel .item-loop .info .g-price .price .text-price {
-    display: -webkit-box;
     display: flex;
   }
 
@@ -775,21 +771,18 @@ div .modern_carousel_aloja_parent .sub-title {
 
 .cuadro-trip-div:hover {
   background: #254d86 !important;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .cuadro-trip-div:hover span,
 .cuadro-trip-div:hover i {
   color: white !important;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .cuadro-trip-div span,
 .cuadro-trip-div i {
   color: #254d86 !important;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -859,14 +852,12 @@ div div .modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel 
 
 .modern_carousel_gastro_parent .item-loop:hover .div-redirect {
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel_gastro_parent .item-loop .div-redirect {
   top: -135px;
   cursor: pointer;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -965,13 +956,11 @@ div div .modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel 
   z-index: 99;
   opacity: 0;
   cursor: pointer;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .modern_carousel_gastro_parent .item-loop:hover:before {
   opacity: 1;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -979,14 +968,12 @@ div div .modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel 
   position: absolute;
   top: -180px;
   width: 100%;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   z-index: 999;
 }
 
 .modern_carousel_gastro_parent .item-loop:hover .info-hover {
   top: 20px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -1052,7 +1039,6 @@ div div .modern_carousel_gastro_parent .bravo-list-space.layout_modern_carousel 
 
   .modern_carousel_gastro_parent .service-review {
     font-size: 7px;
-    display: -webkit-box;
     display: flex;
     font-weight: 600;
     text-align: center;
@@ -1218,32 +1204,27 @@ div .title-div-location {
 
 .owl-carousel-modern .item-loop:hover .info-hover {
   top: 15px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .owl-carousel-modern .separator {
   margin: 0 88px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .owl-carousel-modern .item-loop:hover .separator {
   margin: 0px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .owl-carousel-modern .item-loop:hover .info-modern .g-price {
   margin-top: -5px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .owl-carousel-modern .info-modern .g-price {
   text-align: center !important;
   margin-top: 222px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -1273,7 +1254,6 @@ div .title-div-location {
   display: block !important;
   position: absolute;
   top: -125px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   z-index: 999;
   width: 100%;
@@ -1295,7 +1275,6 @@ div .title-div-location {
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   cursor: pointer;
 }
@@ -1303,7 +1282,6 @@ div .title-div-location {
 .owl-carousel-modern .item-loop:hover:before {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
@@ -1374,14 +1352,12 @@ div .title-div-location {
 
 .owl-carousel-modern .item-loop:hover .div-redirect {
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .owl-carousel-modern .item-loop .div-redirect {
   top: -135px;
   cursor: pointer;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -1627,7 +1603,6 @@ div .title-div-location {
 .bravo_wrap .page-template-content .bravo-list-tour .modern_carousel .item-tour .info {
   position: absolute;
   top: -45px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -1647,7 +1622,6 @@ div .title-div-location {
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   cursor: pointer;
 }
@@ -1657,13 +1631,11 @@ div .title-div-location {
   top: 100px;
   z-index: 999;
   left: -90px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .bravo_wrap .page-template-content .bravo-list-tour .modern_carousel .item-tour:hover .service-review .list-star {
   left: 17px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -1672,27 +1644,23 @@ div .title-div-location {
   top: -35px;
   font-size: 16px !important;
   color: white !important;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
   z-index: 999;
 }
 
 .modern_carousel .item-tour:hover .location-hover {
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel .item-tour:hover .div-redirect {
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel .item-tour .div-redirect {
   top: -135px;
   cursor: pointer;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -1701,21 +1669,18 @@ div .title-div-location {
   top: -35px;
   z-index: 999;
   color: white !important;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel .item-tour:hover .tipo-hover {
   font-size: 26px !important;
   top: 0px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modern_carousel .item-tour:hover .info {
   position: absolute !important;
   top: 37px !important;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
   z-index: 99;
 }
@@ -1723,7 +1688,6 @@ div .title-div-location {
 .modern_carousel .item-tour:hover:before {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
@@ -1831,7 +1795,6 @@ div .title-div-location {
   .modern_carousel .item-tour:hover .tipo-hover {
     font-size: 19px !important;
     display: block !important;
-    -webkit-transition: all 0.6s;
     transition: all 0.6s;
   }
 
@@ -1887,7 +1850,6 @@ h3.room-name {
 }
 
 .hotel_rooms_form .hotel_list_rooms .room-item .hotel-info .room-meta li .item {
-  display: -webkit-box;
   display: flex;
 }
 
@@ -2118,7 +2080,6 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: -webkit-box;
   display: flex;
 }
 
@@ -2154,7 +2115,6 @@ span.contact-info-aloja-especi {
 }
 
 .caja-contact-aloja {
-  display: -webkit-box;
   display: flex;
   cursor: pointer;
   width: -webkit-fit-content;
@@ -2179,14 +2139,12 @@ span.contact-info-aloja-especi {
   z-index: 9;
   width: 100%;
   max-width: 100%;
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
 .container-contact-sticky-fixed {
   opacity: 1;
   top: 58px;
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -2219,6 +2177,16 @@ span.contact-info-aloja-especi {
   right: 7%;
 }
 
+.tippy-tooltip.white-tippy-theme {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .div-info-content {
+    display: none;
+  }
+}
+
 @media (max-width: 1199px) {
   .bravo_wrap .bravo_detail_hotel .bravo_banner .btn-group .has-icon {
     font-size: 8px !important;
@@ -2232,10 +2200,6 @@ span.contact-info-aloja-especi {
 
   .contact-info-aloja {
     width: 100%;
-  }
-
-  .div-info-content {
-    display: none;
   }
 
   .bravo_banner_single:before {
