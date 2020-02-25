@@ -197,6 +197,25 @@
                     </div>
                 </div>
             </div>
+            <div class="g-form-control col-md-12 mx-0 px-0 input-search-mit" style="display: none;">
+                    <ul class="nav nav-tabs" role="tablist">
+                        @if(!empty($service_types))
+                            @foreach ($service_types as $k => $service_type)
+                            <?php
+                                $allServices = get_bookable_services();
+                                if(empty($allServices[$service_type])) continue;
+                                $module = new $allServices[$service_type];
+                            ?>
+                            <li role="bravo_{{$service_type}}">
+                                <a href="#bravo_{{$service_type}}" class="search_service_{{$service_type}} @if($k == 0) active @endif" aria-controls="bravo_{{$service_type}}" role="tab" data-toggle="tab">
+                                    <i class="{{ $module->getServiceIconFeatured() }}"></i>
+                                    {{$module->getModelName()}}
+                                </a>
+                            </li>
+                            @endforeach
+                       @endif
+                    </ul>
+                </div>
         </div>
     </div>
     <div class="g-button-submit text-center">

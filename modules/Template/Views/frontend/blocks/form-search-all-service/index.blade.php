@@ -12,7 +12,7 @@
                 <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
                 <div class="sub-heading text-center m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs d-none" role="tablist" style="display: none !important;">
                         @if(!empty($service_types))
                             @foreach ($service_types as $k => $service_type)
                             <?php
