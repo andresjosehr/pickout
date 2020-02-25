@@ -2339,10 +2339,15 @@ span.contact-info-aloja-especi {
   .bravo-form-search-all .nav li {
     width: 100%;
     position: initial !important;
+    margin-top: 5px;
   }
 
   .bravo_wrap .search-hostelworld-design-hotel {
     margin-top: 50px;
+  }
+
+  .bravo_wrap .page-template-content .bravo-form-search-all .g-form-control .tab-content {
+    margin-top: -30px;
   }
 }
 
