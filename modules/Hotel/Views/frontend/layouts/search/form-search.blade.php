@@ -1,11 +1,105 @@
-<form action="{{ route("hotel.search") }}" class="form bravo_form" method="get">
-    <div class="g-field-search">
+<style type="text/css">
+    .bravo_wrap .bravo_form .g-field-search{
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .bravo_wrap .bravo_form .g-field-search{
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+    .bravo_wrap .bravo_form .g-button-submit {
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin-right: -1px;
+    }
+    .search-hostelworld-design-hotel{
+        display: block !important;
+    }
+    .search-hostelworld-design-hotel .g-field-search,.search-hostelworld-design-hotel .g-button-submit{
+        flex: none !important;
+        max-width: 100% !important;
+    }
+    .search-hostelworld-design-hotel .g-button-submit{
+        margin: 21px auto !important;
+    }
+    .search-hostelworld-design-hotel .g-button-submit button{
+        border-radius: 3px !important;
+        width: fit-content !important;
+        padding: 12.8px 24px !important;
+    }
+    .bravo_wrap .search-hostelworld-design-hotel{
+        background: transparent;
+    }
+    .bravo_wrap .search-hostelworld-design-hotel .g-field-search{
+        background: #00000063 !important;
+        padding: 8px 21px;
+        border-radius: 3px;
+    }
+    .tab-content:before{
+        display: none;
+    }
+    .search-hostelworld-design-hotel .form-content{
+        background: white;
+        border-radius: 3px;
+    }
+    .bravo_wrap .search-hostelworld-design-hotel .form-content{
+        padding: 9.5px 15px !important;
+        margin-bottom: 12px;
+    }
+
+    .search-hostelworld-design-hotel .label-search{
+        color: white;
+        font-size: 10.4px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .search-hostelworld-design-hotel input::placeholder {
+        color: #6c6c6c !important;
+        font-size: 11px !important;
+        font-weight: 600;
+        opacity: 1; /* Firefox */
+    }
+
+    .search-hostelworld-design-hotel input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #6c6c6c !important;
+        font-size: 11px !important;
+        font-weight: 600;
+    }
+
+    .search-hostelworld-design-hotel input::-ms-input-placeholder { /* Microsoft Edge */
+        color: #6c6c6c !important;
+        font-weight: 600;
+        font-size: 11px !important;
+    }
+
+    .search-hostelworld-design-hotel .render{
+        color: #6c6c6c !important;
+        font-size: 11px !important;
+        font-weight: 600;
+    }
+    .search-hostelworld-design-hotel .check-in-wrapper{
+        max-height: 16px;
+    }
+    .bravo_wrap .page-template-content .bravo-form-search-all .g-form-control .nav-tabs{
+        margin-top: -37px;
+    }
+    .bravo_wrap .search-hostelworld-design-hotel .dropdown-toggle:after{
+        top: 19px !important;
+    }
+
+</style>
+
+<form action="{{ route("hotel.search") }}" class="form bravo_form search-hostelworld-design-hotel" method="get">
+    <div class="g-field-search my-2">
         <div class="row">
-            <div class="col-md-4 border-right">
+            <div class="col-md-12 mx-0 px-0">
                 <div class="form-group">
-                    <i class="field-icon fa icofont-map"></i>
+                    <i class="field-icon fa icofont-map d-none"></i>
                     <div class="form-content">
-                        <label>{{__("Location")}}</label>
+                        {{--<label>{{__("Location")}}</label>--}}
                         <?php
                         $location_name = "";
                         $list_json = [];
@@ -32,14 +126,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 border-right">
+            <div class="col-md-6 mx-0 pr-md-2 px-0 input-search-mit">
                 <div class="form-group">
-                    <i class="field-icon icofont-wall-clock"></i>
-                    <div class="form-content">
+                    <i class="field-icon icofont-wall-clock d-none"></i>
+                    <label class="label-search">{{__("Check In - Out")}}</label>
+                    <div class="form-content mb-0">
                         <div class="form-date-search-hotel">
                             <div class="date-wrapper">
                                 <div class="check-in-wrapper">
-                                    <label>{{__("Check In - Out")}}</label>
                                     <div class="render check-in-render">{{Request::query('start',display_date(strtotime("today")))}}</div>
                                     <span> - </span>
                                     <div class="render check-out-render">{{Request::query('end',display_date(strtotime("+1 day")))}}</div>
@@ -52,12 +146,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 border-right dropdown form-select-guests">
+            <div class="col-md-6 mx-0 pl-md-2 px-0 dropdown form-select-guests input-search-mit">
                 <div class="form-group">
-                    <i class="field-icon icofont-travelling"></i>
-                    <div class="form-content dropdown-toggle" data-toggle="dropdown">
+                    <i class="field-icon icofont-travelling d-none"></i>
+                    <label class="label-search">{{__('Guests')}}</label>
+                    <div class="form-content dropdown-toggle mb-0" data-toggle="dropdown">
                         <div class="wrapper-more">
-                            <label>{{__('Guests')}}</label>
                             @php
                                 $adults = request()->query('adults',1);
                                 $children = request()->query('children',0);
@@ -105,7 +199,7 @@
             </div>
         </div>
     </div>
-    <div class="g-button-submit">
+    <div class="g-button-submit text-center">
         <button class="btn btn-primary btn-search" type="submit">{{__("Search")}}</button>
     </div>
 </form>

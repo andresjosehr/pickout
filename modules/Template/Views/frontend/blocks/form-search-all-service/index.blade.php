@@ -1,9 +1,16 @@
-<div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('{{$bg_image_url}}') !important">
+<link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+
+<div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('{{$bg_image_url}}') !important;min-height: 600px;">
+    <div style="position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);"></div>
     <div class="container" style="z-index: 9;position: relative;">
-        <div class="row">
+        <div class="row" style="max-width: 674px;margin: 0 auto;">
             <div class="col-lg-12">
-                <h1 class="text-heading">{{$title}}</h1>
-                <div class="sub-heading">{{$sub_title}}</div>
+                <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
+                <div class="sub-heading text-center m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
                     <ul class="nav nav-tabs" role="tablist">
                         @if(!empty($service_types))
