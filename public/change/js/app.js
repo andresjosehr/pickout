@@ -6282,6 +6282,10 @@ if ($(document).width() < 768) {
   });
 }
 
+window.MostrarCamposSearch = function () {
+  $(".input-search-mit").show(300);
+};
+
 window.onload = function () {
   $(document).scroll(function () {
     if ($(document).width() > 1200) {

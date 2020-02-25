@@ -45,7 +45,7 @@
     }
     .bravo_wrap .search-hostelworld-design-hotel .form-content{
         padding: 9.5px 15px !important;
-        margin-bottom: 12px;
+        margin-bottom: 0px;
     }
 
     .search-hostelworld-design-hotel .label-search{
@@ -119,14 +119,14 @@
                         $traverse($list_location);
                         ?>
                         <div class="smart-search">
-                            <input type="text" class="smart-search-location parent_text form-control" {{ ( empty(setting_item("hotel_location_search_style")) or setting_item("hotel_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}" value="{{ $location_name }}" data-onLoad="{{__("Loading...")}}"
+                            <input onchange="MostrarCamposSearch()" type="text" class="smart-search-location parent_text form-control" {{ ( empty(setting_item("hotel_location_search_style")) or setting_item("hotel_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}" value="{{ $location_name }}" data-onLoad="{{__("Loading...")}}"
                                    data-default="{{ json_encode($list_json) }}">
                             <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mx-0 pr-md-2 px-0 input-search-mit">
+            <div class="col-md-6 mx-0 pr-md-2 px-0 input-search-mit" style="display: none;">
                 <div class="form-group">
                     <i class="field-icon icofont-wall-clock d-none"></i>
                     <label class="label-search">{{__("Check In - Out")}}</label>
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mx-0 pl-md-2 px-0 dropdown form-select-guests input-search-mit">
+            <div class="col-md-6 mx-0 pl-md-2 px-0 dropdown form-select-guests input-search-mit" style="display: none;">
                 <div class="form-group">
                     <i class="field-icon icofont-travelling d-none"></i>
                     <label class="label-search">{{__('Guests')}}</label>
