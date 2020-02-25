@@ -1,37 +1,37 @@
 <style type="text/css">
-    .bravo_wrap .bravo_form .g-field-search{
+    .bravo_wrap .bravo_form-search .g-field-search{
         flex: 0 0 80%;
         max-width: 80%;
     }
 
-    .bravo_wrap .bravo_form .g-field-search{
+    .bravo_wrap .bravo_form-search .g-field-search{
         flex: 0 0 80%;
         max-width: 80%;
     }
-    .bravo_wrap .bravo_form .g-button-submit {
+    .bravo_wrap .bravo_form-search .g-button-submit {
         flex: 0 0 20%;
         max-width: 20%;
         margin-right: -1px;
     }
-    .search-hostelworld-design-hotel{
+    .bravo_form-search{
         display: block !important;
     }
-    .search-hostelworld-design-hotel .g-field-search,.search-hostelworld-design-hotel .g-button-submit{
+    .bravo_form-search .g-field-search,.search-hostelworld-design-hotel .g-button-submit{
         flex: none !important;
         max-width: 100% !important;
     }
-    .search-hostelworld-design-hotel .g-button-submit{
+    .bravo_form-search .g-button-submit{
         margin: 21px auto !important;
     }
-    .search-hostelworld-design-hotel .g-button-submit button{
+    .bravo_form-search .g-button-submit button{
         border-radius: 3px !important;
         width: fit-content !important;
         padding: 12.8px 24px !important;
     }
-    .bravo_wrap .search-hostelworld-design-hotel{
+    .bravo_wrap .bravo_form-search{
         background: transparent;
     }
-    .bravo_wrap .search-hostelworld-design-hotel .g-field-search{
+    .bravo_wrap .bravo_form-search .g-field-search{
         background: #00000063 !important;
         padding: 8px 21px;
         border-radius: 3px;
@@ -39,16 +39,16 @@
     .tab-content:before{
         display: none;
     }
-    .search-hostelworld-design-hotel .form-content{
+    .bravo_form-search .form-content{
         background: white;
         border-radius: 3px;
     }
-    .bravo_wrap .search-hostelworld-design-hotel .form-content{
+    .bravo_wrap .bravo_form-search .form-content{
         padding: 9.5px 15px !important;
         margin-bottom: 0px;
     }
 
-    .search-hostelworld-design-hotel .label-search{
+    .bravo_form-search .label-search{
         color: white;
         font-size: 10.4px;
         text-transform: uppercase;
@@ -56,43 +56,43 @@
         margin-bottom: 6px;
     }
 
-    .search-hostelworld-design-hotel input::placeholder {
+    .bravo_form-search input::placeholder {
         color: #6c6c6c !important;
         font-size: 11px !important;
         font-weight: 600;
         opacity: 1; /* Firefox */
     }
 
-    .search-hostelworld-design-hotel input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    .bravo_form-search input:-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: #6c6c6c !important;
         font-size: 11px !important;
         font-weight: 600;
     }
 
-    .search-hostelworld-design-hotel input::-ms-input-placeholder { /* Microsoft Edge */
+    .bravo_form-search input::-ms-input-placeholder { /* Microsoft Edge */
         color: #6c6c6c !important;
         font-weight: 600;
         font-size: 11px !important;
     }
 
-    .search-hostelworld-design-hotel .render{
+    .bravo_form-search .render{
         color: #6c6c6c !important;
         font-size: 11px !important;
         font-weight: 600;
     }
-    .search-hostelworld-design-hotel .check-in-wrapper{
+    .bravo_form-search .check-in-wrapper{
         max-height: 16px;
     }
     .bravo_wrap .page-template-content .bravo-form-search-all .g-form-control .nav-tabs{
         margin-top: -37px;
     }
-    .bravo_wrap .search-hostelworld-design-hotel .dropdown-toggle:after{
+    .bravo_wrap .bravo_form-search .dropdown-toggle:after{
         top: 19px !important;
     }
 
 </style>
 
-<form action="{{ route("hotel.search") }}" class="form bravo_form search-hostelworld-design-hotel" method="get">
+<form action="{{ route("hotel.search") }}" class="form bravo_form bravo_form-search search-hostelworld-design-hotel" method="get">
     <div class="g-field-search my-2">
         <div class="row">
             <div class="col-md-12 mx-0 px-0">
@@ -197,25 +197,6 @@
                     </div>
                 </div>
             </div>
-            <div class="g-form-control col-md-12 mx-0 px-0 input-search-mit" style="display: none;">
-                    <ul class="nav nav-tabs" role="tablist">
-                        @if(!empty($service_types))
-                            @foreach ($service_types as $k => $service_type)
-                            <?php
-                                $allServices = get_bookable_services();
-                                if(empty($allServices[$service_type])) continue;
-                                $module = new $allServices[$service_type];
-                            ?>
-                            <li role="bravo_{{$service_type}}">
-                                <a href="#bravo_{{$service_type}}" class="search_service_{{$service_type}} @if($k == 0) active @endif" aria-controls="bravo_{{$service_type}}" role="tab" data-toggle="tab">
-                                    <i class="{{ $module->getServiceIconFeatured() }}"></i>
-                                    {{$module->getModelName()}}
-                                </a>
-                            </li>
-                            @endforeach
-                       @endif
-                    </ul>
-                </div>
         </div>
     </div>
     <div class="g-button-submit text-center">

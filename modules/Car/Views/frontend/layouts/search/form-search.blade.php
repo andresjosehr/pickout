@@ -1,11 +1,11 @@
-<form action="{{ route("car.search") }}" class="form bravo_form" method="get">
+<form action="{{ route("car.search") }}" class="form bravo_form bravo_form-search" method="get">
     <div class="g-field-search">
         <div class="row">
-            <div class="col-md-6 border-right">
+            <div class="col-md-6 pl-0">
                 <div class="form-group">
-                    <i class="field-icon fa icofont-map"></i>
-                    <div class="form-content">
-                        <label>{{__("Location")}}</label>
+                    <i class="field-icon fa icofont-map d-none"></i>
+                    <label class="d-none">{{__("Location")}}</label>
+                    <div class="form-content" style="padding: 5px 15px !important;">
                         <?php
                         $location_name = "";
                         $list_json = [];
@@ -32,14 +32,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 border-right">
+            <div class="col-md-6 pr-0">
                 <div class="form-group">
-                    <i class="field-icon icofont-wall-clock"></i>
+                    <i class="field-icon icofont-wall-clock d-none"></i>
                     <div class="form-content">
                         <div class="form-date-search">
                             <div class="date-wrapper">
                                 <div class="check-in-wrapper">
-                                    <label>{{__("From - To")}}</label>
+                                    <label class="d-none">{{__("From - To")}}</label>
                                     <div class="render check-in-render">{{Request::query('start',display_date(strtotime("today")))}}</div>
                                     <span> - </span>
                                     <div class="render check-out-render">{{Request::query('end',display_date(strtotime("+1 day")))}}</div>
@@ -58,22 +58,3 @@
         <button class="btn btn-primary btn-search" type="submit">{{__("Search")}}</button>
     </div>
 </form>
-<div class="g-form-control col-md-12 mx-0 px-0 input-search-mit" style="display: none;">
-                    <ul class="nav nav-tabs" role="tablist">
-                        @if(!empty($service_types))
-                            @foreach ($service_types as $k => $service_type)
-                            <?php
-                                $allServices = get_bookable_services();
-                                if(empty($allServices[$service_type])) continue;
-                                $module = new $allServices[$service_type];
-                            ?>
-                            <li role="bravo_{{$service_type}}" onclick="ChangeSearch(this)">
-                                <a href="#bravo_{{$service_type}}" id="search_service_{{$service_type}}" class="@if($k == 0) active @endif" aria-controls="bravo_{{$service_type}}" role="tab" data-toggle="tab">
-                                    <i class="{{ $module->getServiceIconFeatured() }}"></i>
-                                    {{$module->getModelName()}}
-                                </a>
-                            </li>
-                            @endforeach
-                       @endif
-                    </ul>
-                </div>

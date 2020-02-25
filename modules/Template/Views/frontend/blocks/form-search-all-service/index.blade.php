@@ -12,6 +12,37 @@
                 <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
                 <div class="sub-heading text-center m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
+                    @if(!empty($service_types))
+                        <div class="col-md-12 mx-0 px-0">
+                            <div class="form-group">
+                                <i class="field-icon fa icofont-map d-none"></i>
+                                <div class="form-content">
+                                    <select onchange="ChangeSelectFormSearch(this)"  class="form-control" style="font-weight: 700;">
+                                        @foreach ($service_types as $k => $service_type)
+                                            <?php
+                                                $allServices = get_bookable_services();
+                                                if(empty($allServices[$service_type])) continue;
+                                                $module = new $allServices[$service_type];
+                                            ?>
+                                            <option value="bravo_{{$service_type}}">{{$module->getModelName()}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                    <script type="text/javascript">
+                        function ChangeSelectFormSearch(e) {
+                            var idForm = $(e).val();
+                            $(".tab-pane.active").fadeOut(300, function(){
+                                $(".tab-pane.active").removeClass("active");
+                                $("#"+idForm).addClass("active");
+                                $("#"+idForm).fadeIn(300);
+                            })
+                        }                        
+                    </script>
+
+
                     <ul class="nav nav-tabs d-none" role="tablist" style="display: none !important;">
                         @if(!empty($service_types))
                             @foreach ($service_types as $k => $service_type)
@@ -37,19 +68,12 @@
                                 if(empty($allServices[$service_type])) continue;
                                 $module = new $allServices[$service_type];
                                 ?>
-                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif" id="bravo_{{$service_type}}">
+                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif" @if($k != 0) style="display: none;" @endif id="bravo_{{$service_type}}">
                                         @include(ucfirst($service_type).'::frontend.layouts.search.form-search')
                                     </div>
                             @endforeach
                         @endif
                     </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div style="color: white;text-align: center;max-width: 300px;margin: 0 auto;">
-                    <i class="fas fa-check"></i>
-                    <span style="font-weight: 900;">Cancelación gratis</span><br>
-                    <span style="    font-size: 12px;line-height: 1.4;display: block;margin-top: 6px;">Reserve con más de 7 días de anticipación para la cancelación gratuita.</span>
                 </div>
             </div>
         </div>

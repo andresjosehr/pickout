@@ -1,11 +1,11 @@
-<form action="{{url(app_get_locale(false,false,'/').config('tour.tour_route_prefix'))}}" class="form bravo_form" method="get">
+<form action="{{url(app_get_locale(false,false,'/').config('tour.tour_route_prefix'))}}" class="form bravo_form bravo_form-search" method="get">
     <div class="g-field-search">
         <div class="row">
-            <div class="col-md-6 border-right">
+            <div class="col-md-6 pl-0">
                 <div class="form-group">
-                    <i class="field-icon fa icofont-map"></i>
-                    <div class="form-content">
-                        <label>{{__("Location")}}</label>
+                    <i class="field-icon fa icofont-map d-none"></i>
+                    <div class="form-content" style="padding: 5px 15px !important;">
+                        <label class="d-none">{{__("Location")}}</label>
                         <?php
                         $location_name = "";
                         $list_json = [];
@@ -32,14 +32,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 border-right">
+            <div class="col-md-6 pr-0">
                 <div class="form-group">
-                    <i class="field-icon icofont-wall-clock"></i>
+                    <i class="field-icon icofont-wall-clock d-none"></i>
                     <div class="form-content">
                         <div class="form-date-search">
                             <div class="date-wrapper">
                                 <div class="check-in-wrapper">
-                                    <label>{{__("From - To")}}</label>
+                                    <labe class=""> {{-- {{__("From - To")}} --}}</label>
                                     <div class="render check-in-render">{{Request::query('start',display_date(strtotime("today")))}}</div>
                                     <span> - </span>
                                     <div class="render check-out-render">{{Request::query('end',display_date(strtotime("+1 day")))}}</div>
