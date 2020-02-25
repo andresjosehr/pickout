@@ -45,6 +45,13 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12">
+                <div style="color: white;text-align: center;max-width: 300px;margin: 0 auto;">
+                    <i class="fas fa-check"></i>
+                    <span style="font-weight: 900;">Cancelación gratis</span><br>
+                    <span style="    font-size: 12px;line-height: 1.4;display: block;margin-top: 6px;">Reserve con más de 7 días de anticipación para la cancelación gratuita.</span>
+                </div>
+            </div>
         </div>
     </div>
     <div style="background: linear-gradient(0deg, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 4%, rgba(0,212,255,0) 100%); height: 200px; position: absolute; bottom: 0; width: 100%; z-index: 0;"></div>
