@@ -1,11 +1,11 @@
 <form action="{{ route("car.search") }}" class="form bravo_form bravo_form-search" method="get">
     <div class="g-field-search">
         <div class="row">
-            <div class="col-md-6 pl-0">
+            <div class="col-md-6 pr-md-2 px-0">
                 <div class="form-group">
                     <i class="field-icon fa icofont-map d-none"></i>
                     <label class="d-none">{{__("Location")}}</label>
-                    <div class="form-content" style="padding: 5px 15px !important;">
+                    <div class="form-content input-first">
                         <?php
                         $location_name = "";
                         $list_json = [];
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 pr-0">
+            <div class="col-md-6 pl-md-2 px-0 mt-md-0 mt-3">
                 <div class="form-group">
                     <i class="field-icon icofont-wall-clock d-none"></i>
                     <div class="form-content">

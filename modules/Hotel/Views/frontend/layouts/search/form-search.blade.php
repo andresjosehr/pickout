@@ -35,6 +35,8 @@
         background: #00000063 !important;
         padding: 8px 21px;
         border-radius: 3px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
     .tab-content:before{
         display: none;

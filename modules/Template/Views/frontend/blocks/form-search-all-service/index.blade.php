@@ -1,5 +1,4 @@
 <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
-
 <div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('{{$bg_image_url}}') !important;min-height: 600px;">
     <div style="position: absolute;
     width: 100%;
@@ -13,11 +12,12 @@
                 <div class="sub-heading text-center m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
                     @if(!empty($service_types))
-                        <div class="col-md-12 mx-0 px-0">
-                            <div class="form-group">
+                        <div class="col-md-12 mx-0 px-0 col-first-input">
+                            <div class="form-group" style="padding: 0px 6px;">
                                 <i class="field-icon fa icofont-map d-none"></i>
-                                <div class="form-content">
-                                    <select onchange="ChangeSelectFormSearch(this)"  class="form-control" style="font-weight: 700;">
+                                <div class="form-content" style="z-index: 9;position: relative;">
+                                    <select onchange="ChangeSelectFormSearch(this)"  class="form-control" style="font-weight: 700;height: 44px;">
+                                        <option value="que_buscas">¿Que Buscas?</option>
                                         @foreach ($service_types as $k => $service_type)
                                             <?php
                                                 $allServices = get_bookable_services();
@@ -33,12 +33,16 @@
                     @endif
                     <script type="text/javascript">
                         function ChangeSelectFormSearch(e) {
-                            var idForm = $(e).val();
-                            $(".tab-pane.active").fadeOut(300, function(){
-                                $(".tab-pane.active").removeClass("active");
-                                $("#"+idForm).addClass("active");
-                                $("#"+idForm).fadeIn(300);
-                            })
+                            $("option[value='que_buscas']").remove()
+                            $(".col-first-input").addClass("col-first-input2")
+                            if ($(e).val()!="que_buscas") {
+                                var idForm = $(e).val();
+                                $(".tab-pane.active").fadeOut(300, function(){
+                                    $(".tab-pane.active").removeClass("active");
+                                    $("#"+idForm).addClass("active");
+                                    $("#"+idForm).fadeIn(300);
+                                })
+                            }
                         }                        
                     </script>
 
@@ -68,7 +72,7 @@
                                 if(empty($allServices[$service_type])) continue;
                                 $module = new $allServices[$service_type];
                                 ?>
-                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif" @if($k != 0) style="display: none;" @endif id="bravo_{{$service_type}}">
+                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif" style="display: none;" id="bravo_{{$service_type}}">
                                         @include(ucfirst($service_type).'::frontend.layouts.search.form-search')
                                     </div>
                             @endforeach
