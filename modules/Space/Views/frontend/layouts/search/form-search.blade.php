@@ -57,7 +57,7 @@
                             <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">
 
                         </div>
-
+                        <i class="far fa-map-marked-alt icon-input-search"></i>
                     </div>
 
                 </div>

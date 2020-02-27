@@ -60,21 +60,21 @@
 
     .bravo_form-search input::placeholder {
         color: #6c6c6c !important;
-        font-size: 11px !important;
+        font-size: 14px !important;
         font-weight: 600;
         opacity: 1; /* Firefox */
     }
 
     .bravo_form-search input:-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: #6c6c6c !important;
-        font-size: 11px !important;
+        font-size: 14px !important;
         font-weight: 600;
     }
 
     .bravo_form-search input::-ms-input-placeholder { /* Microsoft Edge */
         color: #6c6c6c !important;
         font-weight: 600;
-        font-size: 11px !important;
+        font-size: 14px !important;
     }
 
     .bravo_form-search .render{
@@ -125,6 +125,7 @@
                                    data-default="{{ json_encode($list_json) }}">
                             <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">
                         </div>
+                        <i class="far fa-map-marked-alt icon-input-search"></i>
                     </div>
                 </div>
             </div>
@@ -145,6 +146,7 @@
                             <input type="hidden" class="check-out-input" value="{{Request::query('end',display_date(strtotime("+1 day")))}}" name="end">
                             <input type="text" class="check-in-out" name="date" value="{{Request::query('date',date("Y-m-d")." - ".date("Y-m-d",strtotime("+1 day")))}}">
                         </div>
+                        <i class="far fa-calendar-alt icon-input-search-peq"></i>
                     </div>
                 </div>
             </div>
@@ -167,6 +169,7 @@
                         </span>
                             </div>
                         </div>
+                        <i class="far fa-users icon-input-search-peq"></i>
                     </div>
                     <div class="dropdown-menu select-guests-dropdown" >
                         <input type="hidden" name="adults" value="{{request()->query('adults',1)}}" min="1" max="20">

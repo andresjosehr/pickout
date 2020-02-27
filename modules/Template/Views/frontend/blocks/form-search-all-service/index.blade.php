@@ -1,10 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
 <div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('{{$bg_image_url}}') !important;min-height: 600px;">
-    <div style="position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);"></div>
+    <div style="position: absolute;width: 100%;height: 100%;top: 0;background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);"></div>
     <div class="container" style="z-index: 9;position: relative;">
         <div class="row" style="max-width: 674px;margin: 0 auto;">
             <div class="col-lg-12">
@@ -16,7 +12,7 @@
                             <div class="form-group" style="padding: 0px 6px;">
                                 <i class="field-icon fa icofont-map d-none"></i>
                                 <div class="form-content" style="z-index: 9;position: relative;">
-                                    <select onchange="ChangeSelectFormSearch(this)"  class="form-control" style="font-weight: 700;height: 44px;">
+                                    <select id="select-service-search" onchange="ChangeSelectFormSearch(this)"  class="form-control" style="font-weight: 700;height: 44px;">
                                         <option value="que_buscas">¿Que Buscas?</option>
                                         @foreach ($service_types as $k => $service_type)
                                             <?php
@@ -27,6 +23,7 @@
                                             <option value="bravo_{{$service_type}}">{{$module->getModelName()}}</option>
                                         @endforeach
                                     </select>
+                                    <i class="far fa-search icon-input-search"></i>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +69,7 @@
                                 if(empty($allServices[$service_type])) continue;
                                 $module = new $allServices[$service_type];
                                 ?>
-                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif" style="display: none;" id="bravo_{{$service_type}}">
+                                    <div role="tabpanel" class="tab-pane @if($k == 0) active @endif div-form-search" style="display: none;" id="bravo_{{$service_type}}">
                                         @include(ucfirst($service_type).'::frontend.layouts.search.form-search')
                                     </div>
                             @endforeach

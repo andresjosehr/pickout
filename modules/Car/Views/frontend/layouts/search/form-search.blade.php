@@ -5,7 +5,7 @@
                 <div class="form-group">
                     <i class="field-icon fa icofont-map d-none"></i>
                     <label class="d-none">{{__("Location")}}</label>
-                    <div class="form-content input-first">
+                    <div class="form-content input-first input-first-cal">
                         <?php
                         $location_name = "";
                         $list_json = [];
@@ -29,6 +29,7 @@
                                    data-default="{{ json_encode($list_json) }}">
                             <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">
                         </div>
+                        <i class="far fa-map-marked-alt icon-input-search-peq"></i>
                     </div>
                 </div>
             </div>
@@ -49,6 +50,7 @@
                             <input type="hidden" class="check-out-input" value="{{Request::query('end',display_date(strtotime("+1 day")))}}" name="end">
                             <input type="text" class="check-in-out" name="date" value="{{Request::query('date',date("Y-m-d")." - ".date("Y-m-d",strtotime("+1 day")))}}">
                         </div>
+                        <i class="far fa-calendar-alt icon-input-search-peq"></i>
                     </div>
                 </div>
             </div>
