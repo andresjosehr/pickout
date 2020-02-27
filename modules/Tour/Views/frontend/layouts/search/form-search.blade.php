@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="g-button-submit">
+    <div class="g-button-submit text-center">
         <button class="btn btn-primary btn-search" type="submit">{{__("Search")}}</button>
     </div>
 </form>

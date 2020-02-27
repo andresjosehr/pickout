@@ -2405,7 +2405,7 @@ span.contact-info-aloja-especi {
   }
 
   .col-md-12.mx-0.px-0.col-first-input2:before {
-    height: 156% !important;
+    height: 132% !important;
     transition: all 0.2s;
   }
 
@@ -2424,7 +2424,7 @@ span.contact-info-aloja-especi {
   }
 
   .bravo_form {
-    margin-top: 50px;
+    margin-top: 39px;
   }
 
   .bravo_wrap .page-template-content .bravo-form-search-all .g-form-control .tab-content {
