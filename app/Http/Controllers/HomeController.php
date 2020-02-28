@@ -40,12 +40,10 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        //if (request()->getHttpHost()==) {
-        //    return redirect('https://pickout.cl/servicios/rent-a-car');
-        //}
-        //return  request()->getHttpHost();
+        if (request()->getHttpHost()=="rentacarpuertonatales.cl") {
+            return redirect('https://pickout.cl/servicios/rent-a-car');
+        }
 
-        ?><script type="text/javascript">console.log('<?php print_r(request()->getHttpHost()); ?>')</script><?php
                                     
         $home_page_id = setting_item('home_page_id');
         if($home_page_id && $page = Page::where("id",$home_page_id)->where("status","publish")->first())
