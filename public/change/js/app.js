@@ -6228,13 +6228,13 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
-/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
-/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tippy.js/dist/backdrop.css */ "./node_modules/tippy.js/dist/backdrop.css");
-/* harmony import */ var tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tippy.js/animations/shift-away.css */ "./node_modules/tippy.js/animations/shift-away.css");
-/* harmony import */ var tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
+/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
+/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tippy.js/dist/backdrop.css */ "./node_modules/tippy.js/dist/backdrop.css");
+/* harmony import */ var tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_backdrop_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tippy.js/animations/shift-away.css */ "./node_modules/tippy.js/animations/shift-away.css");
+/* harmony import */ var tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(tippy_js_animations_shift_away_css__WEBPACK_IMPORTED_MODULE_4__);
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/build/js/app"], [
 /* 0 */
 
@@ -6262,23 +6262,23 @@ function (module, exports, __webpack_require__) {
 
 
 
-Object(tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.cuadro-trip-div', {
+Object(tippy_js__WEBPACK_IMPORTED_MODULE_1__["default"])('.cuadro-trip-div', {
   content: function content(reference) {
     return $(reference).find(".info-tooltip-trip span").text();
   },
   animateFill: true,
-  plugins: [tippy_js__WEBPACK_IMPORTED_MODULE_0__["animateFill"]]
+  plugins: [tippy_js__WEBPACK_IMPORTED_MODULE_1__["animateFill"]]
 });
 
 if ($(document).width() < 768) {
-  Object(tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.caja-contact-aloja', {
+  Object(tippy_js__WEBPACK_IMPORTED_MODULE_1__["default"])('.caja-contact-aloja', {
     content: function content(reference) {
       return $(reference).find(".contact-info-aloja-especi").text();
     },
     theme: "white-tippy",
     interactive: true,
     animateFill: true,
-    plugins: [tippy_js__WEBPACK_IMPORTED_MODULE_0__["animateFill"]]
+    plugins: [tippy_js__WEBPACK_IMPORTED_MODULE_1__["animateFill"]]
   });
 }
 

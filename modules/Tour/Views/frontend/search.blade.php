@@ -10,15 +10,15 @@
                 <h1>
                     {{setting_item_with_lang("tour_page_search_title")}}
                 </h1>
-            </div>
-        </div>
-        <div class="bravo_form_search">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-12">
-                        @include('Tour::frontend.layouts.search.form-search')
-                    </div>
-                </div>
+                <div class="bravo_form_search mt-5">
+		            <div class="container">
+		                <div class="row">
+		                    <div class="col-lg-12 col-md-12">
+		                        @include('Tour::frontend.layouts.search.form-search')
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
             </div>
         </div>
         <div class="container">

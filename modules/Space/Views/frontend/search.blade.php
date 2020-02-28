@@ -21,28 +21,28 @@
                 {{__("Search for Spaces")}}
 
                 </h1>
+                <div class="bravo_form_search mt-5">
+
+		            <div class="container">
+
+		                <div class="row">
+
+		                    <div class="col-lg-12 col-md-12">
+
+		                        @include('Space::frontend.layouts.search.form-search')
+
+		                    </div>
+
+		                </div>
+
+		            </div>
+
+		        </div>
 
             </div>
 
         </div>
 
-        <div class="bravo_form_search">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-lg-12 col-md-12">
-
-                        @include('Space::frontend.layouts.search.form-search')
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="container">
 
