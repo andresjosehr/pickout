@@ -39,7 +39,13 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
+    {   
+        //if (request()->getHttpHost()==) {
+        //    return redirect('https://pickout.cl/servicios/rent-a-car');
+        //}
+        //return  request()->getHttpHost();
+
+        ?><script type="text/javascript">console.log('<?php print_r(request()->getHttpHost()); ?>')</script><?php
                                     
         $home_page_id = setting_item('home_page_id');
         if($home_page_id && $page = Page::where("id",$home_page_id)->where("status","publish")->first())
