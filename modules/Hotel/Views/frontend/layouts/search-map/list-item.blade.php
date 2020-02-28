@@ -1,13 +1,13 @@
-<div class="bravo-list-item bravo-list-hotel @if(!$rows->count()) not-found @endif">
+<div class="bravo-list-item bravo-list-hotel @if(!$rows->count()) not-found @endif px-2">
     @if($rows->count())
         <div class="text-paginate">
             <span class="count-string">{{ __("Showing :from - :to of :total Hotels",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
         </div>
-        <div class="list-item">
-            <div class="row">
+        <div class="list-item list-item list-item-map">
+            <div class="row mx-0">
                 @foreach($rows as $row)
-                    <div class="col-lg-4 col-md-6">
-                        @include('Hotel::frontend.layouts.search.loop-grid')
+                    <div class="col-lg-12 col-md-12 px-1">
+                        @include('Hotel::frontend.layouts.search.loop-grid-map')
                     </div>
                 @endforeach
             </div>

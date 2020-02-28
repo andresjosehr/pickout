@@ -10,21 +10,26 @@
 @endsection
 @section('content')
     <div class="bravo_search_tour bravo_search_space">
-        <div class="bravo_form_search_map">
-            @include('Hotel::frontend.layouts.search-map.form-search-map')
-        </div>
-        <div class="bravo_search_map">
-            <div class="results_map p-0">
-                <div class="map-loading d-none">
-                    <div class="st-loader"></div>
-                </div>
-                <div id="bravo_results_map" class="results_map_inner"></div>
-                <div id="marker_details" class="marker_details"></div>
+        <div class="row w-100 h-100 mx-0 px-0">
+            <div class="col-2 bravo_form_search_map w-100 h-100 px-0">
+            	<h3 class='px-2'>Filtrar por</h3>
+                    @include('Hotel::frontend.layouts.search-map.form-search-map')
             </div>
-            <div class="results_item">
-                @include('Hotel::frontend.layouts.search-map.advance-filter')
-                <div class="listing_items">
-                    @include('Hotel::frontend.layouts.search-map.list-item')
+            <div class="col-4 bravo_search_map w-100 h-100 px-0">
+                <div class="results_item">
+                    @include('Hotel::frontend.layouts.search-map.advance-filter')
+                    <div class="listing_items">
+                        @include('Hotel::frontend.layouts.search-map.list-item')
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 bravo_search_map w-100 h-100 px-0">
+                <div class="results_map p-0">
+                    <div class="map-loading d-none">
+                        <div class="st-loader"></div>
+                    </div>
+                    <div id="bravo_results_map" class="results_map_inner h-100"></div>
+                    {{-- <div id="marker_details" class="marker_details"></div> --}}
                 </div>
             </div>
         </div>
