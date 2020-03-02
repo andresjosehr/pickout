@@ -1,6 +1,10 @@
 <div class="filter-item">
     <div class="form-group form-date-field form-date-search clearfix  has-icon">
-        <i class="field-icon icofont-wall-clock"></i>
+        {{-- <i class="field-icon icofont-wall-clock"></i> --}}
+        <div class="filter-title mb-2 d-flex">
+          <i class="far fa-calendar-alt text-dark fx-1 mr-2 icon_new_search"></i>
+          <span class="float-left w-100" style="font-size: 14px !important;font-weight: 600;color: #4b4b4b;">Fecha de reserva</span>
+        </div>
         <div class="date-wrapper clearfix">
             <div class="check-in-wrapper d-flex align-items-center">
                 <div class="render check-in-render">{{Request::query('start',display_date(strtotime("today")))}}</div>

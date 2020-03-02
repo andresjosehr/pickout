@@ -1,24 +1,75 @@
 jQuery(function($) {
     $.fn.bravoAutocomplete = function(options) {
+        console.log(this)
         return this.each(function() {
             var $this = $(this);
             var main = $(this).closest(".smart-search");
             var textLoading = options.textLoading;
-            main.append('<div class="bravo-autocomplete on-message"><div class="list-item"></div><div class="message">' + textLoading + '</div></div>');
-            $(document).on("click.Bst", function(event) {
-                if (main.has(event.target).length === 0 && !main.is(event.target)) {
-                    main.find('.bravo-autocomplete').removeClass('show')
-                } else {
-                    if (options.dataDefault.length > 0) {
-                        main.find('.bravo-autocomplete').addClass('show')
+            var urlParams = new URLSearchParams(window.location.search);
+            var myParam = urlParams.get('_layout');
+            var mostrar = "";
+
+            if (myParam=="map") {
+                mostrar="show";
+
+            } else{
+                $(document).on("click.Bst", function(event) {
+                    if (main.has(event.target).length === 0 && !main.is(event.target)) {
+                        main.find('.bravo-autocomplete').removeClass('show')
+                    } else {
+                        if (options.dataDefault.length > 0) {
+                            main.find('.bravo-autocomplete').addClass('show')
+                        }
                     }
+                });
+            }
+            main.append('<div class="bravo-autocomplete on-message '+mostrar+'">'+
+                            '<div class="list-item"></div>'+
+                            '<div class="message">' + textLoading + '</div>'+
+                        '</div>');
+
+            // $(document).on("click.Bst", function(event) {
+            //     if (main.has(event.target).length === 0 && !main.is(event.target)) {
+            //         main.find('.bravo-autocomplete').removeClass('show')
+            //     } else {
+            //         if (options.dataDefault.length > 0) {
+            //             main.find('.bravo-autocomplete').addClass('show')
+            //         }
+            //     }
+            // });
+
+            if ($(this).hasClass("smart-search-location")) {
+                    var inputType='radio';
+                    var inputAttr='name="input-location-search"';
+                    var inputClass='';
+                } else{
+                    var inputType='checkbox';
+                    var inputAttr='';
+                    var inputClass='input-term-search';
                 }
-            });
+
             if (options.dataDefault.length > 0) {
                 var items = '';
-                for (var index in options.dataDefault) {
+
+                if (myParam=="map") {
+                    for (var index in options.dataDefault) {
+                        var item = options.dataDefault[index];
+                           items+='<div class="my-1">'+
+                                        '<label class="container-checkbox" style="color:black;">'+item.title+
+                                          '<input type="'+inputType+'" '+inputAttr+' class="input-search-map '+inputClass+'" data-id="' + item.id + '" data-text="' + item.title + '">'+
+                                          '<span class="checkmark"></span>'+
+                                        '</label>'+
+                                    '</div>'
+                    }
+                } else{
+
+                    for (var index in options.dataDefault) {
                     var item = options.dataDefault[index];
-                    items += '<div class="item" data-id="' + item.id + '" data-text="' + item.title + '"> <i class="' + options.iconItem + '"></i> ' + item.title + ' </div>'
+                    items += '<div class="item" data-id="' + item.id + '" data-text="' + item.title + '"> '+
+                                '<i class="' + options.iconItem + '"></i> ' + item.title + 
+                             '</div>'
+                    }
+
                 }
                 main.find('.bravo-autocomplete .list-item').html(items);
                 main.find('.bravo-autocomplete').removeClass("on-message")
@@ -78,6 +129,39 @@ jQuery(function($) {
                     main.find('.bravo-autocomplete').addClass('show')
                 })
             }
+            main.find('.bravo-autocomplete').on('click', '.input-search-map', function() {
+                var id = $(this).attr('data-id'),
+                    text = $(this).attr('data-text');
+                if (id.length > 0 && text.length > 0) {
+                    text = text.replace(/-/g, "");
+                    text = trimFunc(text, ' ');
+                    text = trimFunc(text, '-');
+
+                    if (main.find("input[type='checkbox']").hasClass("input-term-search")) {
+                        var itemschecked=[];
+                        var i=0;
+                        $(".input-term-search").map(function(){
+                            if ($(this).is(':checked')) {
+                                itemschecked[i]=$(this).attr('data-id');
+                                i++;
+                            }
+                        });
+                    } else{
+                        itemschecked=id;
+                    }
+
+                    main.find('.child_id').val(itemschecked).trigger("change");
+                } else {
+                    console.log("Cannot select!")
+                }
+
+                // setTimeout(function() {
+                //     main.find('.bravo-autocomplete').removeClass('show')
+                // }, 100)
+
+            });
+
+
             main.find('.bravo-autocomplete').on('click', '.item', function() {
                 var id = $(this).attr('data-id'),
                     text = $(this).attr('data-text');
@@ -94,6 +178,36 @@ jQuery(function($) {
                     main.find('.bravo-autocomplete').removeClass('show')
                 }, 100)
             });
+
+
+
+            window.SendTermsSearchMap=function(e){
+                var id = $(e).attr('data-id');
+                if (id.length > 0) {
+
+                        var itemschecked=[];
+                        var i=0;
+                        $(".input-term-search").map(function(){
+                            if ($(this).is(':checked')) {
+                                itemschecked[i]=$(this).attr('data-id');
+                                i++;
+                            }
+                        });
+
+                    main.find('.child_id').val(itemschecked).trigger("change");
+                } else {
+                    console.log("Cannot select!")
+                }
+            }
+                // setTimeout(function() {
+                //     main.find('.bravo-autocomplete').removeClass('show')
+                // }, 100)
+
+
+
+
+
+
             var trimFunc = function(s, c) {
                 if (c === "]") c = "\\]";
                 if (c === "\\") c = "\\\\";

@@ -6,7 +6,7 @@
         <div class="list-item list-item list-item-map">
             <div class="row mx-0">
                 @foreach($rows as $row)
-                    <div class="col-lg-12 col-md-12 px-1">
+                    <div class="col-lg-12 col-md-12 px-1" id="aloja_{{$row->id}}">
                         @include('Hotel::frontend.layouts.search.loop-grid-map')
                     </div>
                 @endforeach

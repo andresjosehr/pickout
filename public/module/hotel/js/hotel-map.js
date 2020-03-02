@@ -63,23 +63,41 @@ jQuery(function ($) {
 	});
 
 
+	$('.filter-item .check-in-out').change(function () {
+		if (window.callbackHotelMapSearch!=undefined || window.callbackHotelMapSearch=="pending") {
+			window.callbackHotelMapSearch.abort();
+		}
+		reloadForm();
+	});
+
+
+	$('.filter-item .filter-price').change(function () {
+		if (window.callbackHotelMapSearch!=undefined || window.callbackHotelMapSearch=="pending") {
+			window.callbackHotelMapSearch.abort();
+		}
+		reloadForm();
+	});
 
 	$('.bravo_form_search_map .smart-search .child_id').change(function () {
-
+		if (window.callbackHotelMapSearch!=undefined || window.callbackHotelMapSearch=="pending") {
+			window.callbackHotelMapSearch.abort();
+		}
 		reloadForm();
 
 	});
 
-
-
 	$('.bravo_form_search_map .input-filter').change(function () {
-
+		if (window.callbackHotelMapSearch!=undefined || window.callbackHotelMapSearch=="pending") {
+			window.callbackHotelMapSearch.abort();
+		}
 		reloadForm();
 
 	});
 
 	$('.bravo_form_search_map .btn-filter,.btn-apply-advances').click(function () {
-
+		if (window.callbackHotelMapSearch!=undefined || window.callbackHotelMapSearch=="pending") {
+			window.callbackHotelMapSearch.abort();
+		}
 		reloadForm();
 
 	});
@@ -92,11 +110,11 @@ jQuery(function ($) {
 
 
 
-	function reloadForm(){
+	window.reloadForm= function reloadForm(){
 
 		$('.map_loading').show();
-
-		$.ajax({
+		$('.loader-map-search').fadeIn(300);
+		window.callbackHotelMapSearch = $.ajax({
 
 			data:$('.bravo_form_search_map input,select,textarea,#advance_filters input,select,textarea').serialize()+'&_ajax=1',
 
@@ -107,6 +125,7 @@ jQuery(function ($) {
 			type:'get',
 
 			success:function (json) {
+				$('.loader-map-search').fadeOut(300);
 
 				$('.map_loading').hide();
 
@@ -172,8 +191,9 @@ jQuery(function ($) {
 	function reloadFormByUrl(url){
 
         $('.map_loading').show();
+        $('.loader-map-search').fadeIn(300);
 
-        $.ajax({
+        window.callbackHotelMapSearch = $.ajax({
 
             url:url,
 
@@ -182,6 +202,7 @@ jQuery(function ($) {
             type:'get',
 
             success:function (json) {
+            	$('.loader-map-search').fadeOut(300);
 
                 $('.map_loading').hide();
 

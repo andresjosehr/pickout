@@ -178,6 +178,10 @@
         }
     };
 
+
+   
+
+
     OsmMapEngine.prototype.clearMarkers = function (markers) {
 
         for(var i = 0; i < this.markers.length; i++){
@@ -429,6 +433,7 @@
 
     };
 
+
     GmapEngine.prototype.addMarker2 = function (marker) {
 
         var m = new google.maps.Marker({
@@ -509,21 +514,43 @@
 			// 	});
 			// });
 
+            var styleInfoWindow='<style>.gm-style-iw{max-width: 654px!important;padding: 0 !important;width: 419px;} .gm-style-iw .location-default, .gm-style-iw .service-review, .gm-style-iw .info-normal, .gm-style-iw .content-map{margin-top:10px} .gm-style-iw .item-loop{margin-bottom:0px !important}.gm-style-iw-d{max-width:100% !important}</style>'
+
 			var me = this;
 			m.addListener('click', function() {
-			    //
+                //
                 for(var i = 0 ; i < me.infoboxs.length ; i++){
                     me.infoboxs[i].close();
                 }
-                //ib.open(me.map,this);
-                //alert(marker.id);
+                
                 document.getElementById('marker_details').innerHTML = marker.infobox;
-			    me.map.panTo(ib.getPosition());
+                me.map.panTo(ib.getPosition());
 
                 if(window.lazyLoadInstance){
                     window.lazyLoadInstance.update();
                 }
-			});
+            });
+
+             m.addListener('mouseover', function() {
+                 if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
+                    infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
+
+                    setTimeout(function(){ 
+                        infowindow.open(map,m);
+                    }, 120);
+                }
+
+            });
+
+            m.addListener('mouseout', function() {
+                setTimeout(function(){ 
+                    infowindow.close();
+                }, 120);
+            });
+
+
+            var infowindow = new google.maps.InfoWindow({
+            });
 
 
         }

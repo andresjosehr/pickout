@@ -1,8 +1,10 @@
-<div class="filter-item filter-simple dropdown">
+<div class="filter-item filter-simple dropdown ">
     <div class="form-group dropdown-toggle" data-toggle="dropdown" >
-        <span class="filter-title">{{__('Price filter')}} <i class="fa fa-angle-down"></i></span>
-    </div>
-    <div class="filter-dropdown dropdown-menu dropdown-menu-right">
+        <div class="filter-title mb-2">
+          <i class="far fa-money-bill-wave text-dark fx-1 mr-2 icon_new_search"></i>
+          <span class="float-left w-100" style="font-size: 14px !important;font-weight: 600;color: #4b4b4b;">{{__('Price filter')}}</span>
+        </div>
+        <div class="filter-dropdown dropdown-menu dropdown-menu-right show price-map-modify pt-0">
         <div class="bravo-filter-price">
             <?php
             $price_min = $pri_from = $hotel_min_max_price[0];
@@ -20,11 +22,11 @@
                    data-from="{{$pri_from}}"
                    data-to="{{$pri_to}}"
                    readonly="" value="{{$price_range}}">
-            <div class="text-right">
+            {{-- <div class="text-right">
                 <br>
                 <a href="#" onclick="return false;" class="btn btn-primary btn-sm btn-apply-advances">{{__("APPLY")}}</a>
-
-            </div>
+            </div> --}}
         </div>
+    </div>
     </div>
 </div>
