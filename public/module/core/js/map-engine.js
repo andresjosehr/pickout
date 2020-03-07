@@ -514,39 +514,53 @@
 			// 	});
 			// });
 
-            var styleInfoWindow='<style>.gm-style-iw{max-width: 654px!important;padding: 0 !important;width: 419px;} .gm-style-iw .location-default, .gm-style-iw .service-review, .gm-style-iw .info-normal, .gm-style-iw .content-map{margin-top:10px} .gm-style-iw .item-loop{margin-bottom:0px !important}.gm-style-iw-d{max-width:100% !important}</style>'
+            var styleInfoWindow='<style>.gm-style-iw{max-width: 340px!important;padding: 0 !important;width: 419px;} .gm-style-iw .location-default, .gm-style-iw .service-review, .gm-style-iw .info-normal, .gm-style-iw .content-map{margin-top:10px} .gm-style-iw .item-loop{margin-bottom:0px !important}.gm-style-iw-d{max-width:100% !important} .has-search-map .bravo_search_map .results_map .item-loop .list-star .booking-item-rating-stars li .fa{ font-size: 11px; color:#fa5636; } .has-search-map .has-search-map .bravo_search_map .results_map .item-loop .thumb-image{ width:100%; padding-bottom: 0% !important;}</style>'
 
-			var me = this;
-			m.addListener('click', function() {
-                //
-                for(var i = 0 ; i < me.infoboxs.length ; i++){
-                    me.infoboxs[i].close();
-                }
+			// var me = this;
+			// m.addListener('click', function() {
+   //              //
+   //              for(var i = 0 ; i < me.infoboxs.length ; i++){
+   //                  me.infoboxs[i].close();
+   //              }
                 
-                document.getElementById('marker_details').innerHTML = marker.infobox;
-                me.map.panTo(ib.getPosition());
+   //              document.getElementById('marker_details').innerHTML = marker.infobox;
+   //              me.map.panTo(ib.getPosition());
 
-                if(window.lazyLoadInstance){
-                    window.lazyLoadInstance.update();
-                }
-            });
+   //              if(window.lazyLoadInstance){
+   //                  window.lazyLoadInstance.update();
+   //              }
+   //          });
 
-             m.addListener('mouseover', function() {
-                 if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
-                    infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
+            //  m.addListener('mouseover', function() {
+            //      if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
+            //         infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
 
-                    setTimeout(function(){ 
-                        infowindow.open(map,m);
-                    }, 120);
-                }
+            //         setTimeout(function(){ 
+            //             infowindow.open(map,m);
+            //         }, 120);
+            //     }
 
-            });
+            // });
 
-            m.addListener('mouseout', function() {
-                setTimeout(function(){ 
-                    infowindow.close();
-                }, 120);
-            });
+            // m.addListener('mouseout', function() {
+            //     setTimeout(function(){ 
+            //         infowindow.close();
+            //     }, 120);
+            // });
+
+
+            	m.addListener('click', function() {
+            		console.log(marker.id)
+            		if ($(document).width()<768) {
+		                 if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
+		                    infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
+
+		                    setTimeout(function(){ 
+		                        infowindow.open(map,m);
+		                    }, 120);
+		                }
+	                }
+            	});
 
 
             var infowindow = new google.maps.InfoWindow({

@@ -570,6 +570,15 @@
 }
 
 @media (max-width: 768px) {
+  .bravo_wrap .bravo_form .g-field-search,
+  .bravo_wrap .bravo_form .g-field-search .col-md-12 {
+    margin-top: 25px;
+  }
+
+  .gm-style-iw.gm-style-iw-c {
+    max-width: 93vw !important;
+  }
+
   .has-search-map .bravo_search_map .results_map {
     height: 100% !important;
   }
