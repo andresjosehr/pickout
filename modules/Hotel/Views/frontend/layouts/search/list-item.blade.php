@@ -62,7 +62,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div style="height: 100%">
+        <div style="height: 100%; width: 100%">
             <iframe src="https://pickout.cl/alojamientos?_layout=map" height="100%" width="100%" frameborder="0"></iframe>
         </div>
       </div>

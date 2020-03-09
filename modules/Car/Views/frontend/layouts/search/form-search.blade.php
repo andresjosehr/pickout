@@ -1,6 +1,6 @@
 <form action="{{ route("car.search") }}" class="form bravo_form bravo_form-search" method="get">
     <div class="g-field-search">
-        <div class="row">
+        <div class="row row-car-second">
             <div class="col-md-6 pr-md-2 px-0">
                 <div class="form-group">
                     <i class="field-icon fa icofont-map d-none"></i>
