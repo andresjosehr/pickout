@@ -48,13 +48,13 @@
     </div>
 
     <div class="col-12 d-block d-md-none" style="position: fixed;bottom: 0px;background:#106fef;z-index: 9;padding: 10px 20px;text-align: center;color:white;">
-        <i class="far fa-map-marked-alt fx-1 mr-2 icon_new_search" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;" onclick="OpenMapIframe()"></i>
+        <i class="far fa-map-marked-alt fx-1 mr-2 icon_new_search" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;"></i>
     </div>
 
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style='overflow-y: auto !important;'>
-  <div class="modal-dialog" role="document" style="height: 100vw;padding: 0px !important;width: 100%;left: 0;margin-left: 0px;margin-top: 0px;">
+  <div class="modal-dialog" role="document" style="height: 100vh;padding: 0px !important;width: 100vw;left: 0;margin-left: 0px;margin-top: 0px;">
     <div class="modal-content" style="height: 100%">
       <div class="modal-header" style="height: 100%">
         <div>
