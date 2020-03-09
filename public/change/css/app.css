@@ -570,6 +570,10 @@
 }
 
 @media (max-width: 768px) {
+  .gmnoprint {
+    display: none !important;
+  }
+
   .bravo_wrap .bravo_form .g-field-search,
   .bravo_wrap .bravo_form .g-field-search .col-md-12 {
     margin-top: 25px;
@@ -2752,6 +2756,10 @@ span.contact-info-aloja-especi {
 @media (max-width: 766px) {
   .row-search-second {
     margin-top: 22px;
+  }
+
+  .has-search-map .bravo_wrap .bravo_search_tour .bravo_form_search_map .filter-item {
+    width: 100%;
   }
 
   .bravo_wrap .bravo_form-search .form-content.input-first-cal {

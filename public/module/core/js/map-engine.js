@@ -119,6 +119,7 @@
     OsmMapEngine.prototype.addMarker2 = function (marker) {
 
         var options = {
+        	mapTypeControl: false,
             icon_options:{
                 iconUrl:''
             }

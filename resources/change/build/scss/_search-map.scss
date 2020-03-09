@@ -165,6 +165,9 @@
 	}
 }
 @media (max-width: 768px){
+	.gmnoprint{
+		display: none !important;
+	}
 	.bravo_wrap .bravo_form .g-field-search, .bravo_wrap .bravo_form .g-field-search .col-md-12{
 		margin-top: 25px;
 	}
