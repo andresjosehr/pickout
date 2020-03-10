@@ -543,11 +543,11 @@
 
             });
 
-            // m.addListener('mouseout', function() {
-            //     setTimeout(function(){ 
-            //         infowindow.close();
-            //     }, 120);
-            // });
+            m.addListener('mouseout', function() {
+                setTimeout(function(){ 
+                    infowindow.close();
+                }, 120);
+            });
 
 
             	m.addListener('click', function() {
