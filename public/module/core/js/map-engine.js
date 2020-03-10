@@ -515,7 +515,7 @@
 			// 	});
 			// });
 
-            var styleInfoWindow='<style>.gm-style-iw{max-width: 340px!important;padding: 0 !important;width: 419px;} .gm-style-iw .location-default, .gm-style-iw .service-review, .gm-style-iw .info-normal, .gm-style-iw .content-map{margin-top:10px} .gm-style-iw .item-loop{margin-bottom:0px !important}.gm-style-iw-d{max-width:100% !important} .has-search-map .bravo_search_map .results_map .item-loop .list-star .booking-item-rating-stars li .fa{ font-size: 11px; color:#fa5636; } .has-search-map .has-search-map .bravo_search_map .results_map .item-loop .thumb-image{ width:100%; padding-bottom: 0% !important;}</style>'
+            var styleInfoWindow='<style>.gm-style-iw{max-width: 340px!important;padding: 0 !important;width: 419px;} .gm-style-iw .location-default, .gm-style-iw .service-review, .gm-style-iw .info-normal, .gm-style-iw .content-map{margin-top:10px} .gm-style-iw .item-loop{margin-bottom:0px !important}.gm-style-iw-d{max-width:100% !important} .has-search-map .bravo_search_map .results_map .item-loop .list-star .booking-item-rating-stars li .fa{ font-size: 11px; color:#fa5636; } .has-search-map .has-search-map .bravo_search_map .results_map .item-loop .thumb-image{ width:100%; padding-bottom: 0% !important;} .gm-style .gm-style-iw-d{ overflow: hidden !important; }</style>'
 
 			// var me = this;
 			// m.addListener('click', function() {
@@ -543,11 +543,11 @@
 
             });
 
-            m.addListener('mouseout', function() {
-                setTimeout(function(){ 
-                    infowindow.close();
-                }, 120);
-            });
+            // m.addListener('mouseout', function() {
+            //     setTimeout(function(){ 
+            //         infowindow.close();
+            //     }, 120);
+            // });
 
 
             	m.addListener('click', function() {
