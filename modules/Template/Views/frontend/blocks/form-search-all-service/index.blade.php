@@ -5,7 +5,7 @@
         <div class="row" style="max-width: 674px;margin: 0 auto;">
             <div class="col-lg-12">
                 <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
-                <div class="sub-heading text-center pt-3 pt-md-0 m-n3">{{$sub_title}}</div>
+                <div class="sub-heading text-center pt-2 pt-md-0 m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
                     @if(!empty($service_types))
                         <div class="col-md-12 mx-0 px-0 col-first-input">
