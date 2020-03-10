@@ -532,22 +532,22 @@
    //              }
    //          });
 
-            //  m.addListener('mouseover', function() {
-            //      if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
-            //         infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
+             m.addListener('mouseover', function() {
+                 if ($("#aloja_"+marker.id).prop("innerHTML")!=undefined) {
+                    infowindow.setContent($("#aloja_"+marker.id).prop("innerHTML")+styleInfoWindow);
 
-            //         setTimeout(function(){ 
-            //             infowindow.open(map,m);
-            //         }, 120);
-            //     }
+                    setTimeout(function(){ 
+                        infowindow.open(map,m);
+                    }, 120);
+                }
 
-            // });
+            });
 
-            // m.addListener('mouseout', function() {
-            //     setTimeout(function(){ 
-            //         infowindow.close();
-            //     }, 120);
-            // });
+            m.addListener('mouseout', function() {
+                setTimeout(function(){ 
+                    infowindow.close();
+                }, 120);
+            });
 
 
             	m.addListener('click', function() {
