@@ -81,11 +81,11 @@
                 <div class="descrip-div-banner">
                     <div>
                         <span class="text-white font-weight-bold" style="font-size: 18px;text-shadow: .0625rem .125rem .125rem #000;text-transform: uppercase;">
-                            <i class="far fa-credit-card"></i> Cancelación gratuita.
+                            <i class="far fa-credit-card"></i> Ahorra dinero
                         </span>
                     </div>
                     <div class="mt-1">
-                        <span class="text-white" style="text-shadow: .0625rem .125rem .125rem #000;">Reserva con más de 7 días de antelación para optar a cancelación gratuita</span>
+                        <span class="text-white" style="text-shadow: .0625rem .125rem .125rem #000;">Contacta directamente a tú servicio y evita comisiones de intermediarios</span>
                     </div>
                 </div>
             </div>
