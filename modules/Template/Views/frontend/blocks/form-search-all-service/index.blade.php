@@ -77,6 +77,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-12 text-center mt-4 mt-md-2">
+                <div class="descrip-div-banner">
+                    <div>
+                        <span class="text-white font-weight-bold" style="font-size: 18px;text-shadow: .0625rem .125rem .125rem #000;text-transform: uppercase;">
+                            <i class="far fa-credit-card"></i> Cancelación gratuita.
+                        </span>
+                    </div>
+                    <div class="mt-1">
+                        <span class="text-white" style="text-shadow: .0625rem .125rem .125rem #000;">Reserva con más de 7 días de antelación para optar a cancelación gratuita</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div style="background: linear-gradient(0deg, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 4%, rgba(0,212,255,0) 100%); height: 200px; position: absolute; bottom: 0; width: 100%; z-index: 0;"></div>

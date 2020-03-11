@@ -2032,7 +2032,16 @@ div .title-div-location {
   }
 }
 
+.descrip-div-banner {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
+  .descrip-div-banner {
+    width: 100%;
+  }
+
   #car1 .owl-next {
     right: -35px !important;
   }
