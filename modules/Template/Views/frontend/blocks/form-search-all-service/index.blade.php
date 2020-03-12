@@ -9,7 +9,7 @@
     <div class="w-100 h-100" style="background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);z-index: 10;position: absolute;width: 100vw !important;height: 100% !important;top: 0;pointer-events: none;"></div>
     <div class="container" style="z-index: 9;position: relative;pointer-events: none;">
         <div class="row" style="max-width: 674px;margin: 0 auto;">
-            <div class="col-lg-12">
+            <div class="col-lg-12" style="pointer-events: all;">
                 <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
                 <div class="sub-heading text-center pt-2 pt-md-0 m-n3">{{$sub_title}}</div>
                 <div class="g-form-control">
