@@ -138,12 +138,12 @@ class MediaController extends Controller
                 if (empty($imagedata)) {
                     throw new \Exception(__("Can not get image dimensions"));
                 }
-                if (!empty($config['max_width']) and $imagedata[0] > $config['max_width']) {
-                    throw new \Exception(__("Maximum width allowed is: :number", ['number' => $config['max_width']]));
-                }
-                if (!empty($config['max_height']) and $imagedata[1] > $config['max_height']) {
-                    throw new \Exception(__("Maximum height allowed is: :number", ['number' => $config['max_height']]));
-                }
+                // if (!empty($config['max_width']) and $imagedata[0] > $config['max_width']) {
+                //     throw new \Exception(__("Maximum width allowed is: :number", ['number' => $config['max_width']]));
+                // }
+                // if (!empty($config['max_height']) and $imagedata[1] > $config['max_height']) {
+                //     throw new \Exception(__("Maximum height allowed is: :number", ['number' => $config['max_height']]));
+                // }
 
             }
         }

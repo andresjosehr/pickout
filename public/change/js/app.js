@@ -6262,6 +6262,17 @@ function (module, exports, __webpack_require__) {
 
 
 
+
+
+if (window.image360 == true) {
+  pannellum.viewer('bravo-form-search-all456', {
+    "type": "equirectangular",
+    "panorama": $("#bravo-form-search-all456").attr("data-image"),
+    "autoLoad": true,
+    "autoRotate": -2
+  });
+}
+
 Object(tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.cuadro-trip-div', {
   content: function content(reference) {
     return $(reference).find(".info-tooltip-trip span").text();

@@ -1,7 +1,13 @@
 <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
-<div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('{{$bg_image_url}}') !important;min-height: 600px;">
-    <div style="position: absolute;width: 100%;height: 100%;top: 0;background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);"></div>
-    <div class="container" style="z-index: 9;position: relative;">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script>window.image360={{$image360}}</script>
+<div class="bravo-form-search-all" style="position: relative;background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));min-height: 600px; @if($image360=="false")background-image: url('{{$bg_image_url}}') @endif ;">
+@if ($image360=="true")
+    <div class="w-100 h-100" data-image='{{$bg_image_url}}' id='bravo-form-search-all456' style="z-index: 9;position: absolute;width: 100vw !important;height: 100% !important;top: 0;"></div>
+@endif
+    <div class="w-100 h-100" style="background: radial-gradient(circle, rgba(2,0,36,0) 50%, rgba(0,0,0,0.7651435574229692) 100%, rgba(0,212,255,0) 100%);z-index: 10;position: absolute;width: 100vw !important;height: 100% !important;top: 0;pointer-events: none;"></div>
+    <div class="container" style="z-index: 9;position: relative;pointer-events: none;">
         <div class="row" style="max-width: 674px;margin: 0 auto;">
             <div class="col-lg-12">
                 <h1 class="text-heading text-center" style="font-family: 'Trade Winds';">{{$title}}</h1>
@@ -91,6 +97,6 @@
             </div>
         </div>
     </div>
-    <div style="background: linear-gradient(0deg, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 4%, rgba(0,212,255,0) 100%); height: 200px; position: absolute; bottom: 0; width: 100%; z-index: 0;"></div>
+    <div style="background: linear-gradient(0deg, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 0%, rgba(76,76,76,1) 4%, rgba(0,212,255,0) 100%); height: 200px; position: absolute; bottom: 0; width: 100%; z-index: 11;pointer-events: none;"></div>
     <div class="triangle-5" style="width: 60px; height: 30px; border-top: solid 30px rgb(76, 76, 76); border-left: solid 30px transparent; border-right: solid 30px transparent; position: absolute; bottom: -29px; left: 0; right: 0; margin: auto;"></div>
 </div>

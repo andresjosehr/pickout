@@ -18,6 +18,20 @@ import tippy, {animateFill}  from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/dist/backdrop.css';
 import 'tippy.js/animations/shift-away.css';
+import 'tippy.js/animations/shift-away.css';
+
+if (window.image360==true) {
+  pannellum.viewer('bravo-form-search-all456', {
+      "type": "equirectangular",
+      "panorama": $("#bravo-form-search-all456").attr("data-image"),
+      "autoLoad": true,
+      "autoRotate": -2
+  });
+}
+
+
+
+
 
 tippy('.cuadro-trip-div', {
   content (reference){

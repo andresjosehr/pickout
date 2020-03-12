@@ -41,6 +41,21 @@ class FormSearchAllService extends BaseBlock
                     'type'  => 'uploader',
                     'label' => __('Background Image Uploader')
                 ],
+                [
+                    'id'            => 'image360',
+                    'type'          => 'radios',
+                    'label'         => __('¿Imagen 360?'),
+                    'values'        => [
+                        [
+                            'value'   => 'true',
+                            'name' => __("Si")
+                        ],
+                        [
+                            'value'   => 'false',
+                            'name' => __("No")
+                        ]
+                    ]
+                ],
             ]
         ]);
     }
