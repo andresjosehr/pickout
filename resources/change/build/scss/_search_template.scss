@@ -55,6 +55,7 @@
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 6px;
+        color: white !important;
     }
 
     .bravo_form-search input::placeholder {
@@ -97,7 +98,9 @@
 
 
 
-
+.bravo_wrap .bravo_form .g-button-submit{
+    max-width: 20% !important;
+}
 
 
  .col-md-12.mx-0.px-0.col-first-input:before {
@@ -154,6 +157,9 @@
 	.g-field-search {
 		margin-top: -7px !important;
 	}
+    .bravo_wrap .page-template-content .bravo-form-search-all .g-form-control {
+        margin: 35px 0 0 !important;
+    }
 
 @media (min-width: 766px){
 	.bravo_wrap .bravo_form-search .form-content.input-first{
