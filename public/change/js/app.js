@@ -6297,7 +6297,26 @@ window.MostrarCamposSearch = function () {
   $(".input-search-mit").show(300);
 };
 
+window.MostrarDestinos = function () {
+  var i = 0;
+  var escondido = false;
+  $(".location-column").map(function () {
+    if ($(this).is(":hidden") && i <= 5) {
+      $(this).fadeIn(200);
+      i++;
+    }
+  });
+};
+
 window.onload = function () {
+  var i = 0;
+  $(".location-column").map(function () {
+    if ($(document).width() < 768 && i >= 5) {
+      $(this).hide();
+    }
+
+    i++;
+  });
   $(document).scroll(function () {
     if ($(document).width() > 1200) {
       if ($(document).scrollTop() > 700) {

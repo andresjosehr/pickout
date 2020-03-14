@@ -58,7 +58,28 @@ window.MostrarCamposSearch=function() {
 }
 
 
+ window.MostrarDestinos=function() {
+        var i= 0;
+        var escondido=false;
+          $(".location-column").map(function(){
+              if($(this).is(":hidden") && i<=5){
+                  $(this).fadeIn(200)
+              i++
+          }
+          
+        });
+
+}
+
 window.onload=function(){
+
+    var i=0;
+        $(".location-column").map(function(){
+            if($(document).width()<768 && i>=5){
+                $(this).hide()
+            }
+            i++;
+        })
 
 
   

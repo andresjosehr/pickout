@@ -72,11 +72,22 @@
 
                     @endphp
 
-                    <div class="col-lg-{{$size_col}} {{$size_col2}} col-md-6 {{$layout}}-column">
+                    <div class="col-lg-{{$size_col}} {{$size_col2}} col-md-6 {{$layout}}-column location-column">
 
                         @include('Location::frontend.blocks.list-locations.loop')
 
                     </div>
+                    <div class="col-lg-{{$size_col}} {{$size_col2}} col-md-6 {{$layout}}-column location-column">
+
+                        @include('Location::frontend.blocks.list-locations.loop')
+
+                    </div>
+                    <div class="col-lg-{{$size_col}} {{$size_col2}} col-md-6 {{$layout}}-column location-column">
+
+                        @include('Location::frontend.blocks.list-locations.loop')
+
+                    </div>
+
                     @php 
                         if (!$corto && $j==2) {
                             $j=0;
@@ -95,7 +106,7 @@
             </div>
 
         </div>
-
+            <button type="button" class="btn btn-primary mt-4 d-block d-md-none w-100 btn-mostrar-destinos" onclick="MostrarDestinos()">Mas destinos</button>
     </div>
 
 </div>
