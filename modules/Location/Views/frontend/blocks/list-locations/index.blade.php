@@ -77,7 +77,7 @@
                         @include('Location::frontend.blocks.list-locations.loop')
 
                     </div>
-                    
+
 
                     @php 
                         if (!$corto && $j==2) {
@@ -97,7 +97,7 @@
             </div>
 
         </div>
-            <button type="button" class="btn btn-primary mt-4 d-block d-md-none w-100 btn-mostrar-destinos" onclick="MostrarDestinos()">Mas destinos</button>
+            <button type="button" class="btn btn-outline-primary mt-4 d-block d-md-none w-100 btn-mostrar-destinos" onclick="MostrarDestinos()" style="border: 1px solid;">Mas destinos</button>
     </div>
 
 </div>
