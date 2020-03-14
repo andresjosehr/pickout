@@ -66,7 +66,7 @@ window.MostrarCamposSearch=function() {
                   $(this).fadeIn(200)
               i++
           }
-          
+
         });
 
 }
@@ -80,6 +80,10 @@ window.onload=function(){
             }
             i++;
         })
+        if (i<6) {
+          $(".btn-mostrar-destinos").removeClass("d-block")
+          $(".btn-mostrar-destinos").addClass("d-none")
+        }
 
 
   

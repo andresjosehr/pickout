@@ -77,6 +77,7 @@
                         @include('Location::frontend.blocks.list-locations.loop')
 
                     </div>
+                    
 
                     @php 
                         if (!$corto && $j==2) {

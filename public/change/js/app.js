@@ -6317,6 +6317,12 @@ window.onload = function () {
 
     i++;
   });
+
+  if (i < 6) {
+    $(".btn-mostrar-destinos").removeClass("d-block");
+    $(".btn-mostrar-destinos").addClass("d-none");
+  }
+
   $(document).scroll(function () {
     if ($(document).width() > 1200) {
       if ($(document).scrollTop() > 700) {
