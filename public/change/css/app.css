@@ -2175,8 +2175,8 @@ div .hotel_rooms_form .hotel_list_rooms .room-item,
 
 .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item,
 .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image {
-  min-height: 141px !important;
-  max-height: 141px !important;
+  min-height: 150px !important;
+  max-height: 150px !important;
 }
 
 .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item {
@@ -2451,6 +2451,7 @@ span.contact-info-aloja-especi {
 .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image .content .desc {
   background: transparent !important;
   margin-top: -10px !important;
+  text-shadow: 0 0 4px rgba(51, 51, 51, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -2459,7 +2460,9 @@ span.contact-info-aloja-especi {
   }
 
   .bravo_wrap .page-template-content .bravo-list-locations .list-item .destination-item .image .content .title {
-    font-size: 20px;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 4px rgba(51, 51, 51, 0.5);
   }
 
   .image-gallery-aloja {
